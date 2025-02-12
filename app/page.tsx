@@ -1,7 +1,7 @@
 
 import { Header } from "./components/Header";
 import Testing from "./components/Testing";
-import Integrations from "./components/design";
+
 
 export default function Home(){
   return (
@@ -12,7 +12,6 @@ export default function Home(){
       <div>
       <Testing />
       </div>
-      <Integrations />
     </div>
   );
 }
