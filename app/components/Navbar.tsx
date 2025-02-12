@@ -35,7 +35,7 @@ export default function Navbar() {
             <a href="#top">
                 <Image src={assets.logo} alt='' className='w-28 cursor-pointer mr-14' />
             </a>
-            <ul className={`hidden md:flex items-center gap-6 lg:gap-8 rounded-full px-12 py-3 ${isScroll ? "" : "bg-white shadow-sm bg-opacity-50"}`}>
+            <ul className={`hidden md:flex items-center gap-6 lg:gap-8 rounded-full px-12 py-3 font-medium text-lg ${isScroll ? "" : "bg-white shadow-sm bg-opacity-50"}`}>
                 <li><a href="/">Home</a></li>
                 <li><a href="/about">About us</a></li>
                 <li><a href="#services">Services</a></li>
@@ -43,10 +43,16 @@ export default function Navbar() {
                 <li><a href="#contact">Contact me</a></li>
             </ul>
             <div className='flex items-center gap-4'>
-                 <div>
+                 <div className="font-medium text-lg">
                     signin
                  </div>
-                <a href='#contact' className='hidden lg:flex items-center gap-3 px-10 py-2.5 border border-gray-500 rounded-2xl ml-4 hover:bg-[rgb(57,124,247)]'>Speak to sales</a>
+<a
+  href="#contact"
+  className="hidden lg:flex items-center gap-3 px-10 py-2.5 border font-medium text-lg border-gray-500 rounded-2xl ml-4 relative overflow-hidden group"
+>
+  <span className="relative z-10">Speak to sales</span>
+  <span className="absolute inset-0 bg-[rgb(57,124,247)] scale-x-0 origin-left transition-transform duration-1000 ease-out group-hover:scale-x-100"></span>
+</a>
                 <button className='block md:hidden ml-3' onClick={openMenu}>
                     <Image src={assets.menu_bar} alt='' className='w-6' />
                 </button>
