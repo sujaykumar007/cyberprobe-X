@@ -1,4 +1,4 @@
-import { About } from "./components/About";
+
 
 export default function Home() {
   return (
@@ -6,7 +6,6 @@ export default function Home() {
       <div className="max-w-3xl text-center mb-12">
         <h1 className="text-5xl font-bold mb-4 text-black">home component</h1>
       </div>
-      <About />
     </div>
   );
 }
