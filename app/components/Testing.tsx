@@ -6,14 +6,7 @@ const Testing = () => {
   return (
     <div id="services" className="w-full px-4 sm:px-10 lg:px-16 py-10 scroll-mt-20">
       {/* Heading */}
-      <h2 className="text-center text-xl sm:text-3xl lg:text-4xl font-bold">
-        Cyber Security Experts Offering a Modern
-      </h2>
-      <p className="text-center max-w-3xl mx-auto mt-4 mb-8 text-gray-600 text-sm sm:text-base lg:text-lg leading-relaxed">
-        Lorem ipsum dolor sit amet consectetur adipisicing elit. Quidem, aliquam debitis molestiae necessitatibus id
-        laboriosam modi eos sit dolorum iste totam et, adipisci inventore aperiam, nisi iusto provident fugiat
-        doloremque?
-      </p>
+      
 
       {/* Service Cards */}
       <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-8 my-10">

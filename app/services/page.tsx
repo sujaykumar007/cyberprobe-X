@@ -1,7 +1,7 @@
 
 
-import * as React from "react";
-import { ServiceCard } from "@/components/ui/ServiceCard";
+import * as React from "react"
+import { ServiceCard } from "@/app/components/ServiceCard"
 
 export default function Home() {
   return (

@@ -1,4 +1,5 @@
 import { Card, CardContent, CardHeader, CardTitle } from "@/components/ui/card";
+import MarqueeDemo from "../components/clients";
 
 export default function About() {
   const services = [
@@ -75,6 +76,10 @@ export default function About() {
           ))}
         </div>
       </div>
+    <div className="text-center">
+      <h1 className="font-bold text-5xl">Our Clients</h1>
+      <MarqueeDemo />
+    </div>
     </div>
   );
 }
