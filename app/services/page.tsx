@@ -2,6 +2,7 @@
 
 import * as React from "react"
 import { ServiceCard } from "@/app/components/ServiceCard"
+import Testimonials from "../components/servicesUsedBy"
 
 export default function Home() {
   return (
@@ -40,7 +41,9 @@ export default function Home() {
             drawerTitle="API Integration Testing" 
           />
         </div>
+        
       </div>
+      <Testimonials />
     </div>
   )
 }

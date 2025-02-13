@@ -1,7 +1,7 @@
-
 import { FiArrowRight } from "react-icons/fi";
 import Image from "next/image";
 import { assets } from "../assets/assets";
+import { NumberTicker } from "@/components/magicui/number-ticker";
 
 export const Header = () => {
   return (
@@ -23,11 +23,15 @@ export const Header = () => {
       {/* ✅ Stats Section - Centered & Responsive */}
       <div className="grid grid-cols-1 sm:grid-cols-3 gap-6 text-lg sm:text-xl md:text-2xl font-medium w-full max-w-3xl mt-6">
         <div className="flex flex-col items-center">
-          <span className="text-yellow-500 font-bold text-2xl sm:text-3xl">3000+</span>
+        <span className="text-yellow-500 font-bold text-2xl sm:text-3xl">
+            <NumberTicker value={100} className="text-yellow-500 text-2xl sm:text-3xl font-bold" />+M
+          </span>
           <span className="text-gray-300">Clients Secured</span>
         </div>
         <div className="flex flex-col items-center">
-          <span className="text-yellow-500 font-bold text-2xl sm:text-3xl">21M+</span>
+          <span className="text-yellow-500 font-bold text-2xl sm:text-3xl">
+            <NumberTicker value={100} className="text-yellow-500 text-2xl sm:text-3xl font-bold" />+M
+          </span>
           <span className="text-gray-300">Attacks Prevented</span>
         </div>
         <div className="flex flex-col items-center">
