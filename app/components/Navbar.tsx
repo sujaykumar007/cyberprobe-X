@@ -3,6 +3,7 @@
 import { assets } from "../assets/assets";
 import Image from "next/image";
 import { useState, useEffect, useRef } from "react";
+import Link from 'next/link'
 
 export default function Navbar() {
     const [isScroll, setIsScroll] = useState(false);
@@ -36,9 +37,9 @@ export default function Navbar() {
                 <Image src={assets.logo} alt='' className='w-28 cursor-pointer mr-14' />
             </a>
             <ul className={`hidden md:flex items-center gap-6 lg:gap-8 rounded-full px-12 py-3 font-medium text-lg ${isScroll ? "" : "bg-white shadow-sm bg-opacity-50"}`}>
-                <li><a href="/">Home</a></li>
-                <li><a href="/about">About us</a></li>
-                <li><a href="#services">Services</a></li>
+                <li><Link href="/">Home</Link></li>
+                <li><Link href="/about">About us</Link></li>
+                <li><Link href="/services">Services</Link></li>
                 <li><a href="#work">My Work</a></li>
                 <li><a href="#contact">Contact me</a></li>
             </ul>
