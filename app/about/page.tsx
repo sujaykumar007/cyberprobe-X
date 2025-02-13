@@ -76,8 +76,10 @@ export default function About() {
           ))}
         </div>
       </div>
-      
+    <div className="text-center">
+      <h1 className="font-bold text-5xl">Our Clients</h1>
       <MarqueeDemo />
+    </div>
     </div>
   );
 }
