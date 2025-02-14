@@ -1,6 +1,10 @@
+
 import * as React from "react";
 import { ServiceCard } from "@/app/components/ServiceCard";
 import '../styles/colors.css'
+import Testimonials from "../components/servicesUsedBy"
+
+
 export default function Home() {
   return (
     <div className="w-full py-24 md:py-32 px-4 md:px-12 mx-auto">
@@ -60,11 +64,16 @@ export default function Home() {
             ]}
           />
         </div>
+        
       </div>
+
 
      
      
       </div>
+
+      <Testimonials />
+
     </div>
   );
 }

@@ -1,8 +1,8 @@
-
 import { FiArrowRight } from "react-icons/fi";
 import Image from "next/image";
 import { assets } from "../assets/assets";
 import "../styles/colors.css"
+import { NumberTicker } from "@/components/magicui/number-ticker";
 export const Header = () => {
   return (
     <div className="flex flex-col items-center justify-center text-white px-4 py-12 text-center space-y-8">
@@ -30,6 +30,9 @@ export const Header = () => {
         <div className="flex flex-col items-center">
           <span className= "font-bold text-2xl sm:text-3xl" style={{color:'var(--primary-darkyellow)' }}>21M+</span>
           <span style={{color:'var(--primary-gray)' }}>Attacks Prevented</span>
+
+      
+
         </div>
         <div className="flex flex-col items-center">
           <span className= "font-bold text-2xl sm:text-3xl" style={{color:'var(--primary-darkyellow)' }}>4.6/5</span>
