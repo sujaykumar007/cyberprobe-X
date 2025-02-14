@@ -3,7 +3,7 @@ import Image from "next/image";
 
 export default function Footer() {
   return (
-    <footer className="px-4 py-10 sm:px-8 mb-6 lg:mb-12 text-white bg-gray-900 rounded-3xl w-[95%] mx-auto">
+    <footer className="px-4 py-10 sm:px-8 mb-6 lg:mb-12 text-white  rounded-3xl w-[95%] mx-auto" style={{ backgroundColor: "var( --background-dark)"}}>
 
       <div className="container mx-auto px-4 sm:px-8 lg:px-16">
         <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-4 gap-8">
@@ -20,8 +20,8 @@ export default function Footer() {
 
          
           <div>
-            <h3 className="text-gray-400 font-semibold">Pentest</h3>
-            <ul className="mt-3 space-y-2 text-white">
+            <h3 className="font-semibold" style={{ color: "var( --primary-light)"}}>Pentest</h3>
+            <ul className="mt-3 space-y-2" style={{ color: "var( --primary-white)"}}>
               <li className="hover:text-blue-500 cursor-pointer">Pentest Platform</li>
               <li className="hover:text-blue-500 cursor-pointer">DAST Scanner</li>
               <li className="hover:text-blue-500 cursor-pointer">API Security</li>
@@ -32,8 +32,8 @@ export default function Footer() {
           </div>
 
           <div>
-            <h3 className="text-gray-400 font-semibold">Services</h3>
-            <ul className="mt-3 space-y-2 text-white">
+            <h3 className="font-semibold" style={{ color: "var( --primary-light)"}}>Services</h3>
+            <ul className="mt-3 space-y-2" style={{ color: "var( --primary-white)"}}>
               <li className="hover:text-blue-500 cursor-pointer">Cloud Security</li>
               <li className="hover:text-blue-500 cursor-pointer">Compliance</li>
               <li className="hover:text-blue-500 cursor-pointer">Threat Detection</li>
@@ -43,8 +43,8 @@ export default function Footer() {
           </div>
 
           <div>
-            <h3 className="text-gray-400 font-semibold">Company</h3>
-            <ul className="mt-3 space-y-2 text-white">
+            <h3 className="font-semibold" style={{ color: "var( --primary-light)"}}>Company</h3>
+            <ul className="mt-3 space-y-2" style={{ color: "var( --primary-white)"}}>
               <li className="hover:text-blue-500 cursor-pointer">About Us</li>
               <li className="hover:text-blue-500 cursor-pointer">Careers</li>
               <li className="hover:text-blue-500 cursor-pointer">Blog</li>
