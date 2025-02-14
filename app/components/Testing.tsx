@@ -5,12 +5,9 @@ import '../styles/colors.css'
 
 const Testing = () => {
   return (
-    <div id="services" className="w-full px-4 sm:px-10 lg:px-16 py-10 scroll-mt-20">
-      {/* Heading */}
+    <div id="services" className="w-full px-4 sm:px-10 lg:px-16  ">
       
-
-      {/* Service Cards */}
-      <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-8 my-10 " >
+      <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-8 md:my-10 " >
         {serviceData.slice(0, 3).map(({ icon, title, description }, index) => (
           <div
             key={index}
