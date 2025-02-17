@@ -50,7 +50,16 @@ export default {
   				'3': 'hsl(var(--chart-3))',
   				'4': 'hsl(var(--chart-4))',
   				'5': 'hsl(var(--chart-5))'
-  			}
+  			},
+  			'background-dark': 'var(--background-dark)',
+  			'primary-black': 'var(--primary-black)',
+  			'primary-white': 'var(--primary-white)',
+  			'primary-yellow': 'var(--primary-yellow)',
+  			'text-light': 'var(--text-light)',
+  			'text-gray': 'var(--text-gray)',
+  			'primary-hover': 'var(--primary-hover)',
+  			'primary-blue': 'var(--primary-blue)',
+  			'primary-darkyellow': 'var(--primary-darkyellow)'
   		},
   		height: {
   			'1000': '800px'

@@ -1,5 +1,5 @@
 import { Card, CardContent, CardHeader, CardTitle } from "@/components/ui/card";
-import MarqueeDemo from "../components/clients";
+import { MarqueeDemo} from "../custom-components/clients";
 
 export default function About() {
   const services = [
@@ -30,13 +30,13 @@ export default function About() {
   ];
 
   return (
-    <div className="w-[95%] py-24 md:py-32 px-4 md:px-12 mx-auto">
+    <div className="w-[100%] py-24 md:py-32  md:px-12  bg-black">
       {/* Main Container */}
-      <div className="w-full min-h-[600px] flex flex-col items-center rounded-3xl bg-gradient-to-r from-blue-600 to-indigo-800 text-white px-6 md:px-12 relative">
+      <div className="w-full min-h-[600px] flex flex-col items-center rounded-3xl bg-black text-white px-6 md:px-12 relative">
         
         {/* Heading and Description */}
         <div className="absolute top-10 left-1/2 transform -translate-x-1/2 w-full md:w-[70%] text-center">
-          <h1 className="text-4xl md:text-6xl font-bold mb-6">Cyberprob X</h1>
+          <h1 className="text-4xl md:text-6xl font-bold mb-6 text-primary-yellow">Cyberprob X</h1>
           <p className="text-lg md:text-2xl font-semibold">
             Security consultancy focusing on bringing the benefits of Penetration Testing
           </p>
@@ -76,9 +76,9 @@ export default function About() {
           ))}
         </div>
       </div>
-    <div className="text-center">
-      <h1 className="font-bold text-5xl">Our Clients</h1>
-      <MarqueeDemo />
+    <div className="text-center mt-14">
+      <h1 className="font-bold text-5xl text-white mb-10">Our Clients</h1>
+ <MarqueeDemo />
     </div>
     </div>
   );

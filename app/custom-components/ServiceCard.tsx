@@ -22,7 +22,7 @@ export const ServiceCard = ({ title, description, drawerTitles }: ServiceCardPro
       <p className="text-sm md:text-base text-gray-600 mb-4">{description}</p>
       <Drawer>
   <DrawerTrigger asChild>
-    <Button variant="outline" className="hover:bg-blue-500 hover:text-white text-black">
+    <Button variant="outline" className="hover:bg-[#91ff00]   text-black">
       Read More
     </Button>
   </DrawerTrigger>

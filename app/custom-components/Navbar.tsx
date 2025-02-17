@@ -7,9 +7,7 @@ import Link from 'next/link'
 
 export default function Navbar() {
     const [isScroll, setIsScroll] = useState(false)
-    const [isMenuOpen, setIsMenuOpen] = useState(false) // Track menu state
-
-    const sideMenuRef = useRef<HTMLUListElement | null>(null)
+    const [isMenuOpen, setIsMenuOpen] = useState(false)
 
     const openMenu = () => {
         setIsMenuOpen(true)
@@ -29,15 +27,16 @@ export default function Navbar() {
     }, [])
 
     return (
-        <nav className={`w-full pt-10 lg:pt-4 fixed px-5 lg:px-16 xl:px-[10%] py-4 flex items-center justify-between z-50 transition-all duration-300 ${isScroll ? "bg-white backdrop-blur-lg shadow-md" : ""}`}>
+        <nav className={`w-full  pt-10 lg:pt-4 fixed px-5 lg:px-16 xl:px-[10%] py-4 flex items-center justify-between z-50 transition-all duration-300 ${isScroll ? "bg-white backdrop-blur-lg shadow-md" : ""}`}> 
+
             
-            {/* ✅ Logo */}
+            {/* Logo */}
             <a href="#top">
                 <Image src={assets.logo} alt='Logo' className='w-28 lg:w-36 cursor-pointer' />
             </a>
 
-            {/* ✅ Desktop Menu - Hidden on Mobile */}
-            <ul className={`hidden lg:flex items-center gap-6 lg:gap-10 rounded-full px-12 py-3 font-medium text-lg ${isScroll ? "text-gray-800" : "text-white font-bold text-xl"}`}>
+            {/* ✅ Desktop Menu */}
+            <ul className={`hidden lg:flex items-center gap-6 lg:gap-10 rounded-full px-12 py-3 font-medium text-lg text-gray-800 ${isScroll ? "" : "text-white"}`}>
                 <li><Link href="/">Home</Link></li>
                 <li><Link href="/about">About Us</Link></li>
                 <li><Link href="/services">Services</Link></li>
@@ -45,31 +44,28 @@ export default function Navbar() {
                 <li><a href="#contact">Contact Me</a></li>
             </ul>
 
-            {/* ✅ Right Section (Sign-in & CTA Button) */}
-            <div className='flex items-center gap-4'>
-                <div className={`font-medium text-lg ${isScroll ? "text-gray-800" : "text-white"}`}>
-                    Sign in
-                </div>
-                <a href="#contact" className={`hidden lg:flex items-center gap-3 px-10 py-2.5 border font-medium text-lg border-gray-500 rounded-2xl ml-4 relative overflow-hidden group transition-colors duration-500 ${isScroll ? "text-gray-800 hover:text-black" : "text-white hover:text-black"}`}>
+            {/* ✅ Right Section */}
+            <div className={`flex items-center gap-4 ${isScroll ? "" : "text-white"}`}>
+                <div className={`font-medium text-lg text-gray-800 ${isScroll ? "" : "text-white"} `}>Sign in</div>
+                
+                <a href="#contact" className={`hidden lg:flex items-center gap-3 px-10 py-2.5 border font-medium text-lg border-gray-500 rounded-2xl ml-4 relative overflow-hidden group transition-colors duration-500 text-gray-800 hover:text-black ${isScroll ? "" : "text-white"}`}>
                     <span className="relative z-10">Speak to Sales</span>
                     <span className="absolute inset-0 bg-[#91ff00] scale-x-0 origin-left transition-transform duration-1000 ease-out group-hover:scale-x-100"></span>
                 </a>
 
-                {/* ✅ Hamburger Menu Button - Visible Only on Mobile */}
-                <button className='block lg:hidden ml-3' onClick={openMenu}>
+                {/* ✅ Hamburger Menu */}
+                <button className="block lg:hidden ml-3" onClick={openMenu}>
                     <Image src={assets.menu_bar} alt='Menu' className='w-6' />
                 </button>
             </div>
 
             {/* ✅ Mobile Side Menu */}
-            <ul 
-                ref={sideMenuRef} 
-                className={`fixed top-0 right-0 w-full sm:w-64 h-screen bg-white shadow-lg py-20 px-10 transform transition-transform duration-500 ease-in-out z-50 
-                ${isMenuOpen ? "translate-x-0" : "translate-x-full"}`}
-            >
+            <ul className={`fixed top-0 right-0 w-64 h-screen bg-white shadow-lg py-20 px-10 transform transition-transform duration-500 ease-in-out z-[1000] 
+                ${isMenuOpen ? "translate-x-0" : "translate-x-full"}`}>
+                
                 {/* Close Button */}
                 <div className='absolute right-6 top-6 cursor-pointer' onClick={closeMenu}>
-                    <Image src={assets.logo} alt='Close' className='w-10' />
+                    <span className="text-3xl">×</span> {/* Unicode close icon */}
                 </div>
 
                 {/* Mobile Menu Links */}
@@ -82,4 +78,3 @@ export default function Navbar() {
         </nav>
     )
 }
- 

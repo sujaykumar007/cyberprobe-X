@@ -51,9 +51,9 @@ const testimonials = [
 
 export default function Testimonials() {
   return (
-    <section className="py-12 mt-12 bg-gray-50 bg-[radial-gradient(hsl(227,100%,80%,40%),hsl(200,70%,73%,60%),hsl(200,70%,73%,60%),hsl(227,100%,80%,40%),hsl(var(--background))_60%)]">
+    <section className="py-12 mt-12 bg-black">
       <div className="container mx-auto px-6 text-center">
-        <h2 className="text-4xl font-bold text-gray-900">Loved by engineering & security teams globally</h2>
+        <h2 className="text-4xl font-bold text-white" >Loved by engineering & security teams globally</h2>
         <div className="mt-8 grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-6">
           {testimonials.map((testimonial, index) => (
             <Card key={index} className="p-6 shadow-lg rounded-2xl bg-white">
