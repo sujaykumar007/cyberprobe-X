@@ -40,8 +40,7 @@ export default function Navbar() {
                 <li><Link href="/">Home</Link></li>
                 <li><Link href="/about">About Us</Link></li>
                 <li><Link href="/services">Services</Link></li>
-                <li><a href="#work">My Work</a></li>
-                <li><a href="#contact">Contact Me</a></li>
+                <li><a href="#contact">Contact Us</a></li>
             </ul>
 
             {/* ✅ Right Section */}
@@ -72,8 +71,7 @@ export default function Navbar() {
                 <li className="text-lg font-medium text-gray-800 my-4"><a onClick={closeMenu} href="#top">Home</a></li>
                 <li className="text-lg font-medium text-gray-800 my-4"><a onClick={closeMenu} href="#about">About Me</a></li>
                 <li className="text-lg font-medium text-gray-800 my-4"><a onClick={closeMenu} href="#services">Services</a></li>
-                <li className="text-lg font-medium text-gray-800 my-4"><a onClick={closeMenu} href="#work">My Work</a></li>
-                <li className="text-lg font-medium text-gray-800 my-4"><a onClick={closeMenu} href="#contact">Contact</a></li>
+                <li className="text-lg font-medium text-gray-800 my-4"><a onClick={closeMenu} href="#contact">Contact Us</a></li>
             </ul>
         </nav>
     )

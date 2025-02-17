@@ -1,5 +1,6 @@
 import { Card, CardContent, CardHeader, CardTitle } from "@/components/ui/card";
 import { MarqueeDemo} from "../custom-components/clients";
+import { Carousel, CarouselContent, CarouselItem, CarouselNext, CarouselPrevious } from "@/components/ui/carousel";
 
 export default function About() {
   const services = [
@@ -27,6 +28,25 @@ export default function About() {
       title: "Penetration Testing Services",
       desc: "Assess and measure your cyber security through Penetration Testing to allow you to manage the identified issues",
     },
+  ];
+
+  const WhyUs = [
+    {
+      title: "Continuous Penetration Testing",
+      desc: "CyberProbeX employs a proven methodology combining automated scanning with expert manual testing. ",
+    },
+    {
+      title: "Actionable Insights",
+      desc: "Benefit from comprehensive reporting, actionable remediation advice, and continuous support, tailored to strengthen your security posture against evolving threats.",
+    },
+    {
+      title: "Competitive Pen Test Prices",
+      desc: "Our prices are highly competitive without sacrificing quality, keeping you protected",
+    },
+    {
+      title: "Certified Security Experts",
+      desc: "Our Pen test teams are qualified by industry recognized certification bodies, including CREST",
+    }
   ];
 
   return (
@@ -59,9 +79,49 @@ export default function About() {
         </div>
       </div>
 
+      {/* why us section */}
+      <div className="px-4 md:ml-10 md:px-12 py-20 w-full flex flex-col md:flex-row items-center justify-center mb-28">
+  {/* Text Section */}
+  <div className="text-center md:text-left w-full md:w-[40%] mb-8 md:mb-0">
+    <h1 className="text-2xl sm:text-4xl md:text-5xl lg:text-6xl font-extrabold leading-tight text-white">
+      Why Choose
+    </h1>
+    <h1 className="text-primary-yellow text-3xl sm:text-5xl md:text-6xl lg:text-7xl font-extrabold mt-4 ">
+      CyberProbeX
+    </h1>
+    <h1 className="text-2xl sm:text-4xl md:text-5xl lg:text-6xl font-extrabold leading-tight text-white mt-4">
+      Pen Testing
+    </h1>
+  </div>
+
+  {/* Carousel Section */}
+  <div className="w-full md:w-[60%] lg:w-[50%] ">
+    <Carousel className="w-[60%]">
+      <CarouselContent className="flex">
+        {WhyUs.map((service, index) => (
+          <CarouselItem key={index} className="min-w-full md:min-w-[50%] lg:min-w-[33.33%]">
+            <Card className="bg-black text-white shadow-lg p-6">
+              <CardHeader>
+                <CardTitle className="text-xl text-primary-yellow font-semibold">
+                  {service.title}
+                </CardTitle>
+              </CardHeader>
+              <CardContent className="text-md px-6 pb-6">
+                {service.desc}
+              </CardContent>
+            </Card>
+          </CarouselItem>
+        ))}
+      </CarouselContent>
+      <CarouselPrevious  />
+      <CarouselNext  />
+    </Carousel>
+  </div>
+</div>
+
       {/* Services Section */}
-      <div className="py-20 mt-10 px-4 md:px-12 rounded-3xl bg-[radial-gradient(hsl(200,70%,73%,60%),hsl(227,100%,80%,40%),hsl(var(--background))_60%)]">
-        <h2 className="text-4xl md:text-7xl font-bold text-center mb-12 text-black">Our Services</h2>
+      <div className=" mt-10 px-4 md:px-12 rounded-3xl ">
+        <h2 className="text-4xl md:text-7xl font-bold text-center mb-12 text-primary-yellow"> Major Services</h2>
 
         <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
           {services.map((service, index) => (
