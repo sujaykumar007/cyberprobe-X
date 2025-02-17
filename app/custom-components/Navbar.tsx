@@ -32,7 +32,7 @@ export default function Navbar() {
             
             {/* Logo */}
             <a href="#top">
-                <Image src={assets.logo} alt='Logo' className='w-28 lg:w-36 cursor-pointer' />
+                <Image src={assets.newlogo} alt='Logo' className='w-28  lg:w-36 cursor-pointer' />
             </a>
 
             {/* ✅ Desktop Menu */}
@@ -68,10 +68,10 @@ export default function Navbar() {
                 </div>
 
                 {/* Mobile Menu Links */}
-                <li className="text-lg font-medium text-gray-800 my-4"><a onClick={closeMenu} href="#top">Home</a></li>
-                <li className="text-lg font-medium text-gray-800 my-4"><a onClick={closeMenu} href="#about">About Me</a></li>
-                <li className="text-lg font-medium text-gray-800 my-4"><a onClick={closeMenu} href="#services">Services</a></li>
-                <li className="text-lg font-medium text-gray-800 my-4"><a onClick={closeMenu} href="#contact">Contact Us</a></li>
+                <li className="text-lg font-medium text-gray-800 my-4"><a onClick={closeMenu} href="/">Home</a></li>
+                <li className="text-lg font-medium text-gray-800 my-4"><a onClick={closeMenu} href="/about">About Me</a></li>
+                <li className="text-lg font-medium text-gray-800 my-4"><a onClick={closeMenu} href="/services">Services</a></li>
+                <li className="text-lg font-medium text-gray-800 my-4"><a onClick={closeMenu} href="/contact">Contact Us</a></li>
             </ul>
         </nav>
     )
