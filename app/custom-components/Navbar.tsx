@@ -32,10 +32,12 @@ export default function Navbar() {
         <nav className={`w-full fixed px-5 lg:px-16 xl:px-[10%] py-4 flex items-center justify-between z-50 transition-all duration-300 
             ${isScroll ? "bg-white backdrop-blur-lg shadow-md" : "bg-transparent"}`}>
 
-            {/* ✅ Logo */}
-            <a href="#top">
-                <Image src={assets.newlogo} alt='Logo' className='w-28 lg:w-36 cursor-pointer' />
-            </a>
+
+            
+            {/* Logo */}
+            <Link href="#top">
+                <Image src={assets.newlogo} alt='Logo' className='w-56 lg:w-36 cursor-pointer' />
+            </Link>
 
             {/* ✅ Desktop Menu */}
             <ul className={`hidden lg:flex items-center gap-6 lg:gap-10 px-12 py-3 font-medium text-lg transition-all duration-300 
@@ -43,16 +45,19 @@ export default function Navbar() {
                 <li><Link href="/">Home</Link></li>
                 <li><Link href="/about">About Us</Link></li>
                 <li><Link href="/services">Services</Link></li>
-                <li><a href="#contact">Contact Us</a></li>
+                <li><Link href="/contact">Contact Us</Link></li>
             </ul>
 
             {/* ✅ Right Section */}
-            <div className={`flex items-center gap-4 transition-all duration-300 ${isScroll ? "text-gray-800" : "text-white"}`}>
-                <a href="#contact" className={`hidden lg:flex items-center gap-3 px-8 py-2.5 border font-medium text-lg rounded-2xl relative overflow-hidden group transition-all duration-500
-                    ${isScroll ? "border-gray-500 text-gray-800 hover:text-black" : "border-white text-white hover:text-gray-200"}`}>
+
+            <div className={`flex items-center gap-4 ${isScroll ? "" : "text-white"}`}>
+                <div className={`font-medium text-lg text-gray-800 ${isScroll ? "" : "text-white"} `}>Sign in</div>
+                
+                <Link href="#contact" className={`hidden lg:flex items-center gap-3 px-10 py-2.5 border font-medium text-lg border-gray-500 rounded-2xl ml-4 relative overflow-hidden group transition-colors duration-500 text-gray-800 hover:text-black ${isScroll ? "" : "text-white"}`}>
                     <span className="relative z-10">Speak to Sales</span>
-                    <span className="absolute inset-0 bg-[#91ff00] scale-x-0 origin-left transition-transform duration-700 ease-out group-hover:scale-x-100"></span>
-                </a>
+                    <span className="absolute inset-0 bg-[#91ff00] scale-x-0 origin-left transition-transform duration-1000 ease-out group-hover:scale-x-100"></span>
+                </Link>
+
 
                 {/* ✅ Hamburger Menu */}
                 <button className="block lg:hidden ml-3 z-50" onClick={() => setIsMenuOpen(true)}>
@@ -75,13 +80,14 @@ export default function Navbar() {
                 </button>
 
                 {/* Mobile Menu Links */}
-                <ul className="space-y-6 mt-6 text-lg font-medium text-gray-800">
-                    <li><Link href="/" onClick={() => setIsMenuOpen(false)}>Home</Link></li>
-                    <li><Link href="/about" onClick={() => setIsMenuOpen(false)}>About Us</Link></li>
-                    <li><Link href="/services" onClick={() => setIsMenuOpen(false)}>Services</Link></li>
-                    <li><a href="#contact" onClick={() => setIsMenuOpen(false)}>Contact Us</a></li>
-                </ul>
-            </div>
+
+
+                <li className="text-lg font-medium text-gray-800 my-4"><Link onClick={closeMenu} href="/">Home</Link></li>
+                <li className="text-lg font-medium text-gray-800 my-4"><Link onClick={closeMenu} href="/about">About Me</Link></li>
+                <li className="text-lg font-medium text-gray-800 my-4"><Link onClick={closeMenu} href="/services">Services</Link></li>
+                <li className="text-lg font-medium text-gray-800 my-4"><Link onClick={closeMenu} href="/contact">Contact Us</Link></li>
+            </ul>
+
         </nav>
     )
 }

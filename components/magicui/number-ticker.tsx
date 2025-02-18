@@ -29,12 +29,13 @@ export function NumberTicker({
   const isInView = useInView(ref, { once: true, margin: "0px" });
 
   useEffect(() => {
-    isInView &&
+    if (isInView) {
       setTimeout(() => {
         motionValue.set(direction === "down" ? 0 : value);
       }, delay * 1000);
+    }
   }, [motionValue, isInView, delay, value, direction]);
-
+  
   useEffect(
     () =>
       springValue.on("change", (latest) => {
@@ -51,11 +52,12 @@ export function NumberTicker({
   return (
     <span
       ref={ref}
+      style={{ color: "var(--primary-darkyellow)" }} // Move inline style here
       className={cn(
-        "inline-block tabular-nums tracking-wider style={{color:'var(--primary-darkyellow)' } dark:text-white",
+        "inline-block tabular-nums tracking-wider dark:text-white", // Remove invalid style syntax
         className,
       )}
       {...props}
     />
   );
-}
+}  
