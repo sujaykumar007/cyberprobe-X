@@ -51,11 +51,12 @@ export function NumberTicker({
   return (
     <span
       ref={ref}
+      style={{ color: "var(--primary-darkyellow)" }} // Move inline style here
       className={cn(
-        "inline-block tabular-nums tracking-wider style={{color:'var(--primary-darkyellow)' } dark:text-white",
+        "inline-block tabular-nums tracking-wider dark:text-white", // Remove invalid style syntax
         className,
       )}
       {...props}
     />
   );
-}
+}  

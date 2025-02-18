@@ -2,7 +2,7 @@
 
 import { assets } from "../assets/assets"
 import Image from "next/image"
-import { useState, useEffect, useRef } from "react"
+import { useState, useEffect } from "react"
 import Link from 'next/link'
 
 export default function Navbar() {
@@ -32,7 +32,7 @@ export default function Navbar() {
             
             {/* Logo */}
             <a href="#top">
-                <Image src={assets.newlogo} alt='Logo' className='w-28  lg:w-36 cursor-pointer' />
+                <Image src={assets.newlogo} alt='Logo' className='w-56 h-12 lg:w-36 cursor-pointer' />
             </a>
 
             {/* ✅ Desktop Menu */}
@@ -40,7 +40,7 @@ export default function Navbar() {
                 <li><Link href="/">Home</Link></li>
                 <li><Link href="/about">About Us</Link></li>
                 <li><Link href="/services">Services</Link></li>
-                <li><a href="#contact">Contact Us</a></li>
+                <li><a href="/contact">Contact Us</a></li>
             </ul>
 
             {/* ✅ Right Section */}
