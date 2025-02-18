@@ -24,7 +24,6 @@ export default function ConatctUs() {
           </div>
         </div>
       </div>
-     
     </div>
   )
 }
