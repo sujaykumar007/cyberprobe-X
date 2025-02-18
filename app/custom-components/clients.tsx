@@ -11,7 +11,7 @@ const reviews = [
     img: assets.newlogo,
   },
   {
-    name: "Jill",
+    name: "manoj",
     username: "@jill",
     body: "I don't know what to say. I'm speechless. This is amazing.",
     img: assets.newlogo,
