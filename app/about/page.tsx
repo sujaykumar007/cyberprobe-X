@@ -87,7 +87,7 @@ export default function About() {
     <h1 className="text-2xl sm:text-4xl md:text-5xl lg:text-6xl font-extrabold leading-tight text-white">
       Why Choose
     </h1>
-    <h1 className="text-primary-yellow text-3xl sm:text-5xl md:text-6xl lg:text-7xl font-extrabold mt-3 sm:mt-4 text-white">
+    <h1 className="text-primary-yellow text-3xl sm:text-5xl md:text-6xl lg:text-7xl font-extrabold mt-3 sm:mt-4 ">
       CyberProbeX
     </h1>
     <h1 className="text-2xl sm:text-4xl md:text-5xl lg:text-6xl font-extrabold leading-tight text-white mt-3 sm:mt-4">
@@ -126,7 +126,7 @@ export default function About() {
 
       {/* Services Section */}
       <div className=" mt-10 px-4 md:px-12 rounded-3xl ">
-        <h2 className="text-4xl md:text-7xl font-bold text-center mb-12 text-white"> Major Services</h2>
+        <h2 className="text-4xl md:text-7xl font-bold text-center mb-12 text-primary-yellow"> Major Services</h2>
 
         <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
           {services.map((service, index) => (

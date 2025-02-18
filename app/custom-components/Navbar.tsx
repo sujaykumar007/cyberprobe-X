@@ -27,12 +27,12 @@ export default function Navbar() {
     }, [])
 
     return (
-        <nav className={`w-full  pt-10 lg:pt-4 fixed px-5 lg:px-16 xl:px-[10%] py-4 flex items-center justify-between z-50 transition-all duration-300 ${isScroll ? "bg-white backdrop-blur-lg shadow-md" : ""}`}> 
+        <nav className={`w-full pt-10 lg:pt-4 fixed px-5 lg:px-16 xl:px-[10%] py-4 flex items-center justify-between z-50 transition-all duration-300 ${isScroll ? "bg-white backdrop-blur-lg shadow-md" : ""}`}> 
 
             
             {/* Logo */}
             <Link href="#top">
-                <Image src={assets.newlogo} alt='Logo' className='w-56 h-10 lg:w-36 cursor-pointer' />
+                <Image src={assets.newlogo} alt='Logo' className='w-56  lg:w-36 cursor-pointer' />
             </Link>
 
             {/* ✅ Desktop Menu */}
@@ -45,7 +45,6 @@ export default function Navbar() {
 
             {/* ✅ Right Section */}
             <div className={`flex items-center gap-4 ${isScroll ? "" : "text-white"}`}>
-                <div className={`font-medium text-lg text-gray-800 ${isScroll ? "" : "text-white"} `}>Sign in</div>
                 
                 <Link href="#contact" className={`hidden lg:flex items-center gap-3 px-10 py-2.5 border font-medium text-lg border-gray-500 rounded-2xl ml-4 relative overflow-hidden group transition-colors duration-500 text-gray-800 hover:text-black ${isScroll ? "" : "text-white"}`}>
                     <span className="relative z-10">Speak to Sales</span>
