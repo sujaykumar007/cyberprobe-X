@@ -6,7 +6,7 @@ import { NumberTicker } from "@/components/magicui/number-ticker"
 export const Header = () => {
   return (
     <div className="flex flex-col lg:flex-row items-center justify-center mt-10  text-white px-4 py-12 text-center">
-      <div className="text-2xl sm:text-4xl md:text-5xl lg:text-6xl font-extrabold leading-tight max-w-5xl">
+      <div className="text-2xl sm:text-3xl md:text-4xl lg:text-5xl font-extrabold leading-tight max-w-5xl">
         <h1 className="mb-2">Find and fix every single</h1>
         <h1 className="text-[var(--primary-yellow)]">Vulnerability in your web app</h1>
         <h1>
