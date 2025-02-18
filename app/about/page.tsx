@@ -79,49 +79,54 @@ export default function About() {
         </div>
       </div>
 
-      {/* why us section */}
-      <div className="px-4 md:ml-10 md:px-12 py-20 w-full flex flex-col md:flex-row items-center justify-center mb-28">
+  {/* Why Us Section */}
+<div className="px-4 md:ml-10 md:px-12 py-16 w-80% sm:max-[20%] md:max-[10%]  flex flex-col md:flex-row items-center justify-center overflow-hidden m-4 ">
+  
   {/* Text Section */}
-  <div className="text-center md:text-left w-full md:w-[40%] mb-8 md:mb-0">
+  <div className="text-center md:text-left w-full md:w-[40%] mb-10 md:mb-0">
     <h1 className="text-2xl sm:text-4xl md:text-5xl lg:text-6xl font-extrabold leading-tight text-white">
       Why Choose
     </h1>
-    <h1 className="text-primary-yellow text-3xl sm:text-5xl md:text-6xl lg:text-7xl font-extrabold mt-4 ">
+    <h1 className="text-primary-yellow text-3xl sm:text-5xl md:text-6xl lg:text-7xl font-extrabold mt-3 sm:mt-4 text-white">
       CyberProbeX
     </h1>
-    <h1 className="text-2xl sm:text-4xl md:text-5xl lg:text-6xl font-extrabold leading-tight text-white mt-4">
+    <h1 className="text-2xl sm:text-4xl md:text-5xl lg:text-6xl font-extrabold leading-tight text-white mt-3 sm:mt-4">
       Pen Testing
     </h1>
   </div>
 
   {/* Carousel Section */}
-  <div className="w-full md:w-[60%] lg:w-[50%] ">
-    <Carousel className="w-[60%]">
+  <div className="w-full max-w-[90%] sm:max-w-[80%] md:max-w-[60%] lg:max-w-[50%] flex justify-center ">
+    <Carousel className="w-full">
       <CarouselContent className="flex">
         {WhyUs.map((service, index) => (
-          <CarouselItem key={index} className="min-w-full md:min-w-[50%] lg:min-w-[33.33%]">
-            <Card className="bg-black text-white shadow-lg p-6">
+          <CarouselItem 
+            key={index} 
+            className="min-w-full sm:min-w-[70%] md:min-w-[50%] lg:min-w-[33.33%]"
+          >
+            <Card className="bg-black text-white shadow-lg p-5 sm:p-6 m-5">
               <CardHeader>
-                <CardTitle className="text-xl text-primary-yellow font-semibold">
+                <CardTitle className="text-xl sm:text-2xl text-primary-yellow font-semibold">
                   {service.title}
                 </CardTitle>
               </CardHeader>
-              <CardContent className="text-md px-6 pb-6">
+              <CardContent className="text-md px-3 sm:px-6 pb-4 sm:pb-6">
                 {service.desc}
               </CardContent>
             </Card>
           </CarouselItem>
         ))}
       </CarouselContent>
-      <CarouselPrevious  />
-      <CarouselNext  />
+      <CarouselPrevious />
+      <CarouselNext />
     </Carousel>
   </div>
+
 </div>
 
       {/* Services Section */}
       <div className=" mt-10 px-4 md:px-12 rounded-3xl ">
-        <h2 className="text-4xl md:text-7xl font-bold text-center mb-12 text-primary-yellow"> Major Services</h2>
+        <h2 className="text-4xl md:text-7xl font-bold text-center mb-12 text-white"> Major Services</h2>
 
         <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
           {services.map((service, index) => (
