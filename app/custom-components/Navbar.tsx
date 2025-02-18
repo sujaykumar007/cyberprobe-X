@@ -68,10 +68,10 @@ export default function Navbar() {
                 </div>
 
                 {/* Mobile Menu Links */}
-                <li className="text-lg font-medium text-gray-800 my-4"><a onClick={closeMenu} href="/">Home</a></li>
-                <li className="text-lg font-medium text-gray-800 my-4"><a onClick={closeMenu} href="/about">About Me</a></li>
-                <li className="text-lg font-medium text-gray-800 my-4"><a onClick={closeMenu} href="/services">Services</a></li>
-                <li className="text-lg font-medium text-gray-800 my-4"><a onClick={closeMenu} href="/contact">Contact Us</a></li>
+                <li className="text-lg font-medium text-gray-800 my-4"><Link onClick={closeMenu} href="/">Home</Link></li>
+                <li className="text-lg font-medium text-gray-800 my-4"><Link onClick={closeMenu} href="/about">About Me</Link></li>
+                <li className="text-lg font-medium text-gray-800 my-4"><Link onClick={closeMenu} href="/services">Services</Link></li>
+                <li className="text-lg font-medium text-gray-800 my-4"><Link onClick={closeMenu} href="/contact">Contact Us</Link></li>
             </ul>
         </nav>
     )
