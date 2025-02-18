@@ -31,26 +31,26 @@ export default function Navbar() {
 
             
             {/* Logo */}
-            <a href="#top">
-                <Image src={assets.newlogo} alt='Logo' className='w-56 h-12 lg:w-36 cursor-pointer' />
-            </a>
+            <Link href="#top">
+                <Image src={assets.newlogo} alt='Logo' className='w-56 lg:w-36 cursor-pointer' />
+            </Link>
 
             {/* ✅ Desktop Menu */}
             <ul className={`hidden lg:flex items-center gap-6 lg:gap-10 rounded-full px-12 py-3 font-medium text-lg text-gray-800 ${isScroll ? "" : "text-white"}`}>
                 <li><Link href="/">Home</Link></li>
                 <li><Link href="/about">About Us</Link></li>
                 <li><Link href="/services">Services</Link></li>
-                <li><a href="/contact">Contact Us</a></li>
+                <li><Link href="/contact">Contact Us</Link></li>
             </ul>
 
             {/* ✅ Right Section */}
             <div className={`flex items-center gap-4 ${isScroll ? "" : "text-white"}`}>
                 <div className={`font-medium text-lg text-gray-800 ${isScroll ? "" : "text-white"} `}>Sign in</div>
                 
-                <a href="#contact" className={`hidden lg:flex items-center gap-3 px-10 py-2.5 border font-medium text-lg border-gray-500 rounded-2xl ml-4 relative overflow-hidden group transition-colors duration-500 text-gray-800 hover:text-black ${isScroll ? "" : "text-white"}`}>
+                <Link href="#contact" className={`hidden lg:flex items-center gap-3 px-10 py-2.5 border font-medium text-lg border-gray-500 rounded-2xl ml-4 relative overflow-hidden group transition-colors duration-500 text-gray-800 hover:text-black ${isScroll ? "" : "text-white"}`}>
                     <span className="relative z-10">Speak to Sales</span>
                     <span className="absolute inset-0 bg-[#91ff00] scale-x-0 origin-left transition-transform duration-1000 ease-out group-hover:scale-x-100"></span>
-                </a>
+                </Link>
 
                 {/* ✅ Hamburger Menu */}
                 <button className="block lg:hidden ml-3" onClick={openMenu}>
