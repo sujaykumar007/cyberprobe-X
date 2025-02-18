@@ -10,8 +10,7 @@ export default function Footer() {
           
             <div>
               <div className="flex items-center gap-2">
-                <Image src={assets.whiteastra} alt="Logo" width={50} height={40} />
-                <span className="font-bold text-xl">Astra</span>
+                <Image src={assets.newlogo} alt="Logo" width={50} height={40} />
               </div>
               <p className="mt-3 text-gray-300 text-sm">
                 Lorem ipsum dolor sit, amet consectetur adipisicing elit. Cumque ex facere facilis, totam cum voluptas animi quod consectetur mollitia quam eos dolor cupiditate excepturi perspiciatis sunt repudiandae blanditiis accusantium dignissimos!
