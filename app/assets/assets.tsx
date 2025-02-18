@@ -2,7 +2,7 @@ import logo from './astra.webp'
 import menu_bar from './image copy.png'
 import dashbord from './Dashbord.webp'
 import whiteastra from './astraa.webp'
-import newlogo from "./2.png"
+import newlogo from "./4.png"
 
 export const assets={
      logo,
