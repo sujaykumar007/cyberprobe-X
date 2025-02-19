@@ -47,7 +47,7 @@ export default function About() {
                 key={index} 
                 className="min-w-[50%] sm:min-w-[30%] md:min-w-[40%] lg:min-w-[33.33%]"
               >
-                <Card className="bg-black text-white shadow-lg p-5 sm:p-6">
+                <Card className="bg-black text-white shadow-lg p-5 sm:p-6 m-3">
                   <CardHeader>
                     <CardTitle className="text-xl sm:text-2xl text-primary-yellow font-semibold">
                       {service.title}
