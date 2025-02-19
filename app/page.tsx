@@ -5,6 +5,7 @@ import Testing from "./custom-components/Testing";
 import { VelocityScrolling } from "./custom-components/VelocityScrolling";
 import WhyUs from "./custom-components/whyUs";
 import SwiperComponent from "./custom-components/swiper";
+import SwiperComponents from "./custom-components/swiperComponents";
 
 
 export default function Home(){  
@@ -25,6 +26,9 @@ export default function Home(){
       </div>
       <div>
       <SwiperComponent/>
+      </div>
+      <div className="w-[100%] container">
+      <SwiperComponents/>
       </div>
     </div>
   );
