@@ -15,7 +15,7 @@ const Testing = () => {
             style={{ backgroundColor: "var(--primary-white)" }}
           >
             <div className="flex justify-center sm:justify-start" >
-              <Image src={icon} alt={title} width={40} height={40} />
+              <Image src={icon} alt={title}  />
             </div>
             <h3 className="text-lg my-4 text-white-800 font-semibold" style={{ color: "var(--primary-black)" }}>{title}</h3>
             <p className="text-sm text-gray-600 leading-5" style={{ color: "var(--primary-gray)" }}>{description}</p>

@@ -14,7 +14,7 @@ export default function Home(){
       <div className="mb-10" style={{ marginTop: -40 }}>
         <VelocityScrolling />
       </div>
-      <div >
+      <div className="w-[100%] container">
         <WhyUs />
       </div>
       <div>
