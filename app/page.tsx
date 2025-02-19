@@ -1,7 +1,10 @@
+
 import { Header } from "./custom-components/Header";
+
 import Testing from "./custom-components/Testing";
 import { VelocityScrolling } from "./custom-components/VelocityScrolling";
 import WhyUs from "./custom-components/whyUs";
+import SwiperComponent from "./custom-components/swiper";
 
 
 export default function Home(){  
@@ -19,6 +22,9 @@ export default function Home(){
       </div>
       <div>
       <Testing />
+      </div>
+      <div>
+      <SwiperComponent/>
       </div>
     </div>
   );
