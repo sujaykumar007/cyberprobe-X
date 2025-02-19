@@ -1,13 +1,12 @@
-import logo from './detect.jpg'
+import logo from './cyber.jpg'
 import menu_bar from './menu.png'
 import dashbord from './Dashbord.webp'
 import whiteastra from './detect.jpg'
 import menubutton from './menu-white.png'
 import newlogo from "./4.png"
-import linkedinlogo from './linkedin .png'
-import xlogo from './twitter.png'
-import whatsapp from './whatsapp.png'
-import facebook from './facebook.png'
+import logoX from "./twitter.png"
+
+
 
 export const assets={
      logo,
@@ -16,11 +15,11 @@ export const assets={
      whiteastra,
      newlogo,
      menubutton,
-     linkedinlogo,
-     xlogo,
-     whatsapp,
-     facebook
-    
+
+     logoX
+
+
+   
      
 }
 export const serviceData = [

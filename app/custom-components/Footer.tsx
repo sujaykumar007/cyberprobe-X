@@ -10,34 +10,21 @@ export default function Footer() {
           
             <div>
               <div className="flex items-center gap-2">
-                <Image src={assets.newlogo} alt="Logo" width={100}  />
+
+                <Image src={assets.newlogo} alt="Logo" width={80}   />
+
               </div>
               <p className="mt-3 text-gray-300 text-sm">
                 Lorem ipsum dolor sit, amet consectetur adipisicing elit. Cumque ex facere facilis, totam cum voluptas animi quod consectetur mollitia quam eos dolor cupiditate excepturi perspiciatis sunt repudiandae blanditiis accusantium dignissimos!
               </p>
-              <div className="flex gap-3 mt-4">
-              <Image 
-  src={assets.whatsapp} 
-  alt="likedin" 
-  className="w-8 transition duration-200  hover:invert"
-/>
-                <Image 
-  src={assets.xlogo} 
-  alt="likedin" 
-  className="w-8 transition duration-200  hover:invert"
-/>
 
-<Image 
-  src={assets.facebook} 
-  alt="likedin" 
-  className="w-8 transition duration-200  hover:invert"
-/>
-<Image 
-  src={assets.linkedinlogo} 
-  alt="likedin" 
-  className="w-8"
-/>
-              </div>
+              <button className="hover:opacity-300 transition flex gap-5 mt-4">
+              <Image src={assets.logoX} className="w-5" alt="twitter" />
+              <Image src={assets.logoX} className="w-5" alt="twitter" />
+              <Image src={assets.logoX} className="w-5" alt="twitter" />
+        </button>
+
+    
             </div>
 
             <div>

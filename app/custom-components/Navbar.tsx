@@ -51,11 +51,19 @@ export default function Navbar() {
                     <span className="absolute inset-0 bg-[#91ff00] scale-x-0 origin-left transition-transform duration-1000 ease-out group-hover:scale-x-100"></span>
                 </Link>
 
-                
-                    <button className="block lg:hidden ml-3" onClick={openMenu}> 
-                      <Image src={isScroll? assets.menu_bar : assets.menubutton} alt='' className='w-6'></Image>
-                  </button>
+
+                {/* ✅ Hamburger Menu */}
+                <button onClick={openMenu}>
+            <Image 
+                src={isScroll ? assets.menu_bar : assets.menubutton} 
+                alt="Menu" 
+                className="w-6 block lg:hidden ml-3"
+            />
+        </button>
+
             </div>
+           
+
 
             {/* ✅ Mobile Side Menu */}
             <ul className={`fixed top-0 right-0 w-64 h-screen bg-white shadow-lg py-20 px-10 transform transition-transform duration-500 ease-in-out z-[1000] 
