@@ -5,7 +5,7 @@ import whiteastra from './detect.jpg'
 import menubutton from './menu-white.png'
 import newlogo from "./4.png"
 import logoX from "./twitter.png"
-
+import astra from './Dashbord.webp'
 
 
 export const assets={
@@ -16,10 +16,9 @@ export const assets={
      newlogo,
      menubutton,
 
-     logoX
+     logoX,
+      astra
 
-
-   
      
 }
 export const serviceData = [
