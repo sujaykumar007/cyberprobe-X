@@ -1,11 +1,10 @@
 
 import { Header } from "./custom-components/Header";
-
-import Testing from "./custom-components/Testing";
 import { VelocityScrolling } from "./custom-components/VelocityScrolling";
 import WhyUs from "./custom-components/whyUs";
 import SwiperComponent from "./custom-components/swiper";
 import SwiperComponents from "./custom-components/swiperComponents";
+import Advantage from "./custom-components/Advantage";
 
 
 export default function Home(){  
@@ -31,6 +30,11 @@ export default function Home(){
       <div className="w-[100%] container">
       <SwiperComponents/>
       </div>
+      <div className="w-[100%] container">
+        
+        <Advantage/>
+      </div>
+     
     </div>
   );
 }
