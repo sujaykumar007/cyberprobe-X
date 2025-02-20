@@ -3,7 +3,7 @@ import React from "react";
 import { Swiper, SwiperSlide } from "swiper/react";
 import "swiper/css";
 import "swiper/css/effect-cards";
-import { EffectCards } from "swiper/modules";
+import { Autoplay, EffectCards } from "swiper/modules";
 
 const SwiperComponent: React.FC = () => {
   return (
@@ -22,7 +22,11 @@ const SwiperComponent: React.FC = () => {
             grabCursor={true}
             loop={true}
             autoplay={{ delay: 3000, disableOnInteraction: false }}
-            modules={[EffectCards]}
+            modules={[EffectCards,Autoplay]}
+           
+            centeredSlides={true}
+            pagination={{ clickable: true }}
+         
             className="w-full max-w-xs sm:max-w-sm md:max-w-md lg:max-w-lg xl:max-w-xl h-80"
           >
             <SwiperSlide className="flex items-center justify-center bg-blue-500 text-white text-xl font-bold p-4 rounded-lg">
