@@ -51,6 +51,7 @@ export default function Navbar() {
                     <span className="absolute inset-0 bg-[#91ff00] scale-x-0 origin-left transition-transform duration-1000 ease-out group-hover:scale-x-100"></span>
                 </Link>
 
+
                 {/* ✅ Hamburger Menu */}
                 <button onClick={openMenu}>
             <Image 
@@ -59,6 +60,7 @@ export default function Navbar() {
                 className="w-6 block lg:hidden ml-3"
             />
         </button>
+
             </div>
            
 

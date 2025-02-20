@@ -13,7 +13,7 @@ export default function Services() {
   className="w-full min-h-[600px] flex flex-col items-center justify-center rounded-3xl text-white px-6 md:px-12 relative text-center"
   style={{ backgroundColor: "var(--primary-blue)" }}
 >
-        <h1 className="text-4xl md:text-6xl font-bold mb-6" style={{color:"var(--primary-yellow)"}}>Our Services</h1>
+        <h1 className="text-4xl md:text-6xl font-bold mb-6 sm:mt-5" style={{color:"var(--primary-yellow)"}}>Our Services</h1>
         <p className="text-lg md:text-2xl font-semibold max-w-3xl">
           Security consultancy focusing on bringing the benefits of Penetration Testing
         </p>
