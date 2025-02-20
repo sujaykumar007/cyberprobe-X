@@ -23,7 +23,7 @@ export default function About() {
 
   return (
    
-    <div className="flex flex-col lg:flex-row items-center justify-center mt-10  px-4 py-12 text-center container md:[w-60%] sm:[w-80%]">
+    <div className="flex flex-col lg:flex-row items-center justify-center  px-4 md:py-12 text-center container md:[w-60%] sm:[w-80%]">
     
       {/* Text Section */}
       <div className="text-center md:text-left w-full md:w-[40%] mb-10 md:mb-0">
