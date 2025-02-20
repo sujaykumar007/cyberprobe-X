@@ -1,4 +1,3 @@
-
 import { Header } from "./custom-components/Header";
 import { VelocityScrolling } from "./custom-components/VelocityScrolling";
 import WhyUs from "./custom-components/whyUs";
@@ -41,7 +40,6 @@ export default function Home(){
       <div className="w-[100%] container">
         <Traning />
       </div>
-     
     </div>
   );
 }
