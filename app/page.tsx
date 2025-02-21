@@ -37,7 +37,7 @@ export default function Home(){
       <div className="w-[100%] container">
         <Stats/>
       </div>
-      <div className="w-[100%] container">
+      <div className="w-[100%] container">``
         <Traning />
       </div>
     </div>
