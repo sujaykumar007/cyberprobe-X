@@ -45,9 +45,11 @@ const SwiperComponent: React.FC = () => {
           <Swiper
             effect={"cards"}
             grabCursor={true}
+
             autoplay={{ delay: 3000, disableOnInteraction: false }}
             modules={[EffectCards,Autoplay]}
             className="w-full max-w-xs sm:max-w-sm md:max-w-md lg:max-w-lg xl:max-w-xl h-[400px] "
+
           >
            { content.map((item, index) => (
             <SwiperSlide className="flex items-center justify-center  bg-black border text-white text-xl font-bold p-4 rounded-lg" key={index}>

@@ -1,4 +1,3 @@
-
 import { Header } from "./custom-components/Header";
 import { VelocityScrolling } from "./custom-components/VelocityScrolling";
 import WhyUs from "./custom-components/whyUs";
@@ -6,6 +5,7 @@ import SwiperComponent from "./custom-components/swiper";
 import SwiperComponents from "./custom-components/swiperComponents";
 import Advantage from "./custom-components/Advantage";
 import Stats from "./custom-components/stats";
+import { Traning } from "./custom-components/Traning";
 
 
 export default function Home(){  
@@ -37,7 +37,9 @@ export default function Home(){
       <div className="w-[100%] container">
         <Stats/>
       </div>
-     
+      <div className="w-[100%] container">
+        <Traning />
+      </div>
     </div>
   );
 }
