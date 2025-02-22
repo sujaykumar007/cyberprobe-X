@@ -1,6 +1,6 @@
 import { assets } from "../assets/assets";
 import Image from "next/image";
-
+import Link from "next/link";
 export default function Footer() {
   return (
     <div className="bg-black">
@@ -53,10 +53,11 @@ export default function Footer() {
             <div>
               <h3 className="font-semibold text-primary-light">Company</h3>
               <ul className="mt-3 space-y-2 text-primary-white">
-                <li className="hover:text-primary-hover cursor-pointer">About Us</li>
-                <li className="hover:text-primary-hover cursor-pointer">Careers</li>
-                <li className="hover:text-primary-hover cursor-pointer">Blog</li>
-                <li className="hover:text-primary-hover cursor-pointer">Contact</li>
+                <li className="hover:text-primary-hover cursor-pointer"><Link href="/">Home</Link></li>
+                <li className="hover:text-primary-hover cursor-pointer"><Link href="/about">About Us</Link></li>
+                <li className="hover:text-primary-hover cursor-pointer"><Link href="/services">Services</Link></li>
+                <li className="hover:text-primary-hover cursor-pointer"><Link href="/contact">Contact Us</Link></li>
+          
               </ul>
             </div>
           </div>
