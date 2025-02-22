@@ -17,9 +17,9 @@ interface ServiceCardProps {
 
 export const ServiceCard = ({ title, description, drawerTitles }: ServiceCardProps) => {
   return (
-    <div className="border rounded-lg shadow-xl p-6 flex flex-col items-center text-center bg-white opacity-90 hover:opacity-100 transition-all duration-300 ease-in-out transform hover:scale-105 hover:shadow-lg">
-      <h3 className="text-lg md:text-xl font-semibold mb-2 text-black ">{title}</h3>
-      <p className="text-sm md:text-base text-gray-600 mb-4">{description}</p>
+    <div className="border rounded-lg shadow-xl p-6 flex flex-col items-center text-centerbg-blak opacity-90 hover:opacity-100 transition-all duration-300 ease-in-out transform hover:scale-105 hover:shadow-lg">
+      <h3 className="text-lg md:text-xl font-semibold mb-2 text-primary-yellow ">{title}</h3>
+      <p className="text-sm md:text-base text-white mb-4">{description}</p>
       <Drawer>
   <DrawerTrigger asChild>
     <Button variant="outline" className="hover:bg-[#91ff00]   text-black">

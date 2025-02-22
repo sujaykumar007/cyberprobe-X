@@ -3,10 +3,11 @@ import menu_bar from './menu.png'
 import dashbord from './Dashbord.webp'
 import whiteastra from './detect.jpg'
 import menubutton from './menu-white.png'
-import newlogo from "./4.png"
+import newlogo from "./black.png"
 import logoX from "./twitter.png"
 import astra from './Dashbord.webp'
 
+import whitelogo from './white.png'
 
 
 export const assets={
@@ -18,7 +19,8 @@ export const assets={
      menubutton,
 
      logoX,
-      astra
+      astra,
+      whitelogo
 
      
 }

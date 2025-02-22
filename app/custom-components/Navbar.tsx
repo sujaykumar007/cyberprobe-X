@@ -32,7 +32,12 @@ export default function Navbar() {
             
             {/* Logo */}
             <Link href="#top">
-                <Image src={assets.newlogo} alt='Logo' className='w-56  lg:w-36 cursor-pointer' />
+            
+                <Image 
+                src={isScroll ? assets.newlogo : assets.whitelogo} 
+                alt="Menu" 
+                className="w-[100%] cursor-pointer h-10"
+            />
             </Link>
 
             {/* ✅ Desktop Menu */}
