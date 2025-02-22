@@ -53,11 +53,13 @@ export default function Footer() {
             <div>
               <h3 className="font-semibold text-primary-light">Company</h3>
               <ul className="mt-3 space-y-2 text-primary-white">
+
               <li className="hover:text-primary-hover cursor-pointer"><Link href='/'>Home</Link></li>
                 <li className="hover:text-primary-hover cursor-pointer"><Link href='/about'>About Us</Link></li>
                 <li className="hover:text-primary-hover cursor-pointer"><Link href='/services'>Services</Link></li>
               
                 <li className="hover:text-primary-hover cursor-pointer"><Link href='/contact'>Contact</Link></li>
+
               </ul>
             </div>
           </div>
