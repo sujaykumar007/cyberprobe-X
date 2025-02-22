@@ -20,18 +20,20 @@ export default function Services() {
         <div className="max-w-7xl mx-auto mt-10 md:mt-20 lg:mt-32 px-4 sm:px-6 lg:px-8 mb-10">
         <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-4 gap-8 place-items-center">
           <ServiceCard
-            title="Security Testing" 
+            title="Penetration Testing" 
             description="Ensuring system security by identifying vulnerabilities." 
             drawerTitles={[
               "Web Application Penetration Testing",
-              "Mobile Application Security",
-              "Cloud Security Assessment",
-              "Security Testing",
-              "Cloud Security Assessment",
-              "Security Testing",
-              "Security Testing",
-              "Cloud Security Assessment",
-              "Security Testing",
+              "Network Penetration Testing",
+              'Mobile Application Penetration Testing',
+              'Social Enginnering',
+              "PSN Compliance Audit",
+              "API Penetration Testing",
+              "CREST OVS Web Application Testing",
+              "Deskpot Application Penetration",
+              "IoT Penetration Testing",
+              
+              "OT Penetration Testing",
             ]}
           />
           <ServiceCard 
