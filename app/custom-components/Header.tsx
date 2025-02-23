@@ -15,9 +15,9 @@ export const Header = () => {
 
   
       </video>
-      <div className="absolute inset-0 flex items-center justify-center bg-black bg-opacity-50">
+      <div className="absolute inset-0 flex items-center justify-center bg-black bg-opacity-70">
         <h1 className="text-white text-5xl md:text-7xl font-bold drop-shadow-lg">
-          Cyber Probex : <span className="text-primary-yellow">Defense</span> Starts  with <span className="text-primary-yellow">Offence</span>
+          <span className="text-primary-yellow">Defense</span> Starts  with <span className="text-primary-yellow">Offence</span>
         </h1>
       </div>
     </header>
