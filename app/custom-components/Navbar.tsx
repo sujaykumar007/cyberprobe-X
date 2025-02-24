@@ -4,7 +4,6 @@ import { assets } from "../assets/assets"
 import Image from "next/image"
 import { useState, useEffect } from "react"
 import Link from 'next/link'
-import { ScrollProgressDemo } from "./ScrollProgress"
 
 export default function Navbar() {
     const [isScroll, setIsScroll] = useState(false)
@@ -46,15 +45,14 @@ export default function Navbar() {
                 <li><Link href="/">Home</Link></li>
                 <li><Link href="/about">About Us</Link></li>
                 <li><Link href="/services">Services</Link></li>
-                <li><Link href="/contact">Contact Us</Link></li>
             </ul>
 
             {/* ✅ Right Section */}
             <div className={`flex items-center gap-4 ${isScroll ? "" : "text-white"}`}>
                 
                 <Link href="/contact" className={`hidden lg:flex items-center gap-3 px-10 py-2.5 border font-medium text-lg border-gray-500 rounded-2xl ml-4 relative overflow-hidden group transition-colors duration-500 text-gray-800 hover:text-black ${isScroll ? "" : "text-white"}`}>
-                    <span className="relative z-10">Speak to Sales</span>
-                    <span className="absolute inset-0 bg-[#91ff00] scale-x-0 origin-left transition-transform duration-1000 ease-out group-hover:scale-x-100"></span>
+                    <span className="relative z-10">Contact Us</span>
+                    <span className="absolute inset-0 bg-[#b1d450] scale-x-0 origin-left transition-transform duration-1000 ease-out group-hover:scale-x-100"></span>
                 </Link>
 
 

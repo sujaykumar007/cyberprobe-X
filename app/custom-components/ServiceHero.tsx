@@ -5,7 +5,7 @@ export default function ServiceHero() {
     const services = [
         {
           id: 1,
-          name: "web application Pentestistings",
+          name: "web application Pentestisting",
           description: "Identifying and fixing security vulnerabilities in web applications",
         },
         {

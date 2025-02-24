@@ -1,10 +1,11 @@
+import Image from "next/image";
 import ConatctUs from "../custom-components/contactSection";
-
 
 export default function Contact() {
   return (
-    <div className="w-full  md:py-10 px-4 md:px-12 mx-auto bg-black">
+    <div
+      className=" relative w-full md:py-10 px-4 md:px-12 mx-auto bg-black  bg-cover bg-center bg-no-repeat">
       <ConatctUs />
-     </div>
-  );
+    </div>
+  )
 }

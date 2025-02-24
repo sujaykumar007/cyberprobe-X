@@ -6,9 +6,8 @@ import SwiperComponents from "./custom-components/swiperComponents";
 import Advantage from "./custom-components/Advantage";
 import Stats from "./custom-components/stats";
 import { Traning } from "./custom-components/Traning";
-import { ScrollProgressDemo } from "./custom-components/ScrollProgress";
 
-
+    
 export default function Home(){  
  
   return (

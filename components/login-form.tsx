@@ -22,7 +22,6 @@ export function LoginForm({ className, ...props }: React.ComponentPropsWithoutRe
   }
 
   function handleSubmit(e: React.FormEvent<HTMLFormElement>) {
-    e.preventDefault()
     console.log("Form Data:", formData)
     axios.post("/api/email", formData).then((res) => {
       console.log(res)
@@ -30,19 +29,19 @@ export function LoginForm({ className, ...props }: React.ComponentPropsWithoutRe
   }
 
   return (
-    <form className={cn("flex flex-col gap-6 border p-14 rounded-xl", className)} {...props} onSubmit={handleSubmit}>
+    <form className={cn("flex h-[450px] flex-col gap-6 border p-20 rounded-xl", className)} {...props} onSubmit={handleSubmit}>
       <div className="grid gap-6">
-        <div className="grid gap-2 text-primary-yellow">
+        <div className="grid gap-2 text-primary-yellow ">
           <Label htmlFor="name">Name</Label>
-          <Input id="name" type="text" placeholder="adam" required className="text-white" value={formData.name} onChange={handleChange} />
+          <Input  id="name" type="text" placeholder="adam" required className="p-5 text-white" value={formData.name} onChange={handleChange} />
         </div>
-        <div className="grid gap-2 text-primary-yellow">
+        <div className="grid gap-2 text-primary-yellow ">
           <Label htmlFor="email">Email</Label>
-          <Input id="email" type="email" placeholder="xyz@example.com" required className="text-white" value={formData.email} onChange={handleChange} />
+          <Input id="email" type="email" placeholder="xyz@example.com" required className="p-5 text-white" value={formData.email} onChange={handleChange} />
         </div>
-        <div className="grid gap-2 text-primary-yellow">
+        <div className="grid gap-2 text-primary-yellow ">
           <Label htmlFor="number">Phone No.</Label>
-          <Input id="number" type="text" required placeholder="+91 1234567890" className="text-white" value={formData.number} onChange={handleChange} />
+          <Input id="number" type="text" required placeholder="+91 1234567890" className="p-5 text-white" value={formData.number} onChange={handleChange} />
         </div>
         <Button variant="outline" className="w-full" type="submit">
           Submit

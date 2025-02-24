@@ -18,29 +18,34 @@ import { assets } from "../assets/assets";
 const cardData = [
   {
     image:assets.card1,
-    title: "Astronomy Wonders",
-    description: "Discover the mysteries of the universe and beyond.",
+    title: "PCI DSS Compliance",
+    description: "Secure payment transactions and meet compliance requirements.",
   },
   {
     image:assets.card2,
-    title: "Future of Technology",
-    description: "How AI and automation are shaping the world.",
+    title: "Regulatory Compliance",
+    description: " Ensure adherence to industry regulations and cybersecurity frameworks.",
   },
   {
     image:assets.card3,
-    title: "Beauty of Nature",
-    description: "Explore breathtaking landscapes and wildlife.",
+    title: "VCISO",
+    description: " On-demand cybersecurity leadership to strengthen your security strategy.",
   },
   {
     image:assets.card4,
-    title: "Space Exploration",
-    description: "Latest advancements in interstellar travel.",
+    title: "ISO27001 Certification",
+    description: " Achieve global information security standards with expert guidance..",
   },
   {
     image:assets.card5,
-    title: "Mental Health Awareness",
-    description: "Learn how to maintain a healthy mind and body.",
+    title: "Risk Assessment",
+    description: " Identify, analyze, and mitigate cybersecurity risks to protect your business..",
   },
+  {
+    image:assets.card6,
+    title: "IT Security Audit",
+    description: " In-depth assessment to identify vulnerabilities and enhance security posture.",
+  }
 ];
 
 const SwiperComponent: React.FC = () => {

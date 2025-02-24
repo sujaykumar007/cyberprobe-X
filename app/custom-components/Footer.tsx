@@ -11,12 +11,11 @@ export default function Footer() {
             <div>
               <div className="flex items-center gap-2">
 
-                <Image src={assets.newlogo} alt="Logo" width={80}   />
+                <Image src={assets.whitelogo} alt="Logo" width={80}   />
 
               </div>
               <p className="mt-3 text-gray-300 text-sm">
-                Lorem ipsum dolor sit, amet consectetur adipisicing elit. Cumque ex facere facilis, totam cum voluptas animi quod consectetur mollitia quam eos dolor cupiditate excepturi perspiciatis sunt repudiandae blanditiis accusantium dignissimos!
-              </p>
+              CyberProbex specializes in Network Security, API Security, Mobile & Web Application Security Audits, ISO 27001 Compliance, and vCISO Services. We help businesses strengthen their security posture with cutting-edge solutions and expert assessments.              </p>
 
               <button className="hover:opacity-300 transition flex gap-5 mt-4">
               <Image src={assets.logoX} className="w-5" alt="twitter" />
@@ -30,23 +29,23 @@ export default function Footer() {
             <div>
               <h3 className="font-semibold text-primary-light">Pentest</h3>
               <ul className="mt-3 space-y-2 text-primary-white">
-                <li className="hover:text-primary-hover cursor-pointer">Pentest Platform</li>
-                <li className="hover:text-primary-hover cursor-pointer">DAST Scanner</li>
-                <li className="hover:text-primary-hover cursor-pointer">API Security</li>
-                <li className="hover:text-primary-hover cursor-pointer">Web Pentest</li>
-                <li className="hover:text-primary-hover cursor-pointer">Mobile Pentest</li>
-                <li className="hover:text-primary-hover cursor-pointer">Network Pentest</li>
+                <li className="hover:text-[#b1d450] cursor-pointer">Pentest Platform</li>
+                <li className="hover:text-[#b1d450] cursor-pointer">DAST Scanner</li>
+                <li className="hover:text-[#b1d450] cursor-pointer">API Security</li>
+                <li className="hover:text-[#b1d450] cursor-pointer">Web Pentest</li>
+                <li className="hover:text-[#b1d450] cursor-pointer">Mobile Pentest</li>
+                <li className="hover:text-[#b1d450] cursor-pointer">Network Pentest</li>
               </ul>
             </div>
 
             <div>
               <h3 className="font-semibold text-primary-light">Services</h3>
               <ul className="mt-3 space-y-2 text-primary-white">
-                <li className="hover:text-primary-hover cursor-pointer">Cloud Security</li>
-                <li className="hover:text-primary-hover cursor-pointer">Compliance</li>
-                <li className="hover:text-primary-hover cursor-pointer">Threat Detection</li>
-                <li className="hover:text-primary-hover cursor-pointer">SOC Monitoring</li>
-                <li className="hover:text-primary-hover cursor-pointer">Risk Assessment</li>
+                <li className="hover:text-[#b1d450] cursor-pointer">Cloud Security</li>
+                <li className="hover:text-[#b1d450] cursor-pointer">Compliance</li>
+                <li className="hover:text-[#b1d450] cursor-pointer">Threat Detection</li>
+                <li className="hover:text-[#b1d450] cursor-pointer">SOC Monitoring</li>
+                <li className="hover:text-[#b1d450] cursor-pointer">Risk Assessment</li>
               </ul>
             </div>
 

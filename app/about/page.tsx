@@ -65,9 +65,9 @@ export default function About() {
         {/* Cards Section */}
         <div className="mt-60 w-full grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6 px-4 pb-10 md:px-12 md:pb-0">
           {["Detect", "Protect", "Respond"].map((title, index) => (
-            <Card key={index} className="bg-white text-black shadow-lg transition-transform duration-300 hover:-translate-y-3">
+            <Card key={index} className="bg-black text-white shadow-lg transition-transform duration-300 hover:-translate-y-3">
               <CardHeader className="flex items-center">
-                <CardTitle className="text-2xl font-sans font-semibold">{title}</CardTitle>
+                <CardTitle className="text-2xl font-sans font-semibold text-primary-yellow">{title}</CardTitle>
               </CardHeader>
               <CardContent className="text-lg ml-8">
                 {title === "Detect" && "We use expert-led tools to detect vulnerabilities, identifying risks in infrastructure, applications, and networks."}
@@ -125,7 +125,7 @@ export default function About() {
 </div>
 
       {/* Services Section */}
-      <div className=" mt-10 px-4 md:px-12 rounded-3xl ">
+      {/* <div className=" mt-10 px-4 md:px-12 rounded-3xl ">
         <h2 className="text-4xl md:text-7xl font-bold text-center mb-12 text-primary-yellow"> Major Services</h2>
 
         <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
@@ -140,7 +140,7 @@ export default function About() {
             </Card>
           ))}
         </div>
-      </div>
+      </div> */}
     <div className="text-center mt-14">
       <h1 className="font-bold text-5xl text-white mb-10">Our Clients</h1>
  <MarqueeDemo />

@@ -16,6 +16,8 @@ import card5 from './card5.jpg'
 import card6 from './card6.jpg'
 
 
+
+
 export const assets={
      logo,
      menu_bar,

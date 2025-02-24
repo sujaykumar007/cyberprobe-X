@@ -9,7 +9,6 @@ import {
   CardTitle
 } from "@/components/ui/card"
 import { motion, useInView } from "framer-motion"
-import { Text } from "lucide-react"
 import { useRef } from "react"
 
 const services = [
@@ -97,8 +96,8 @@ export function ServiceCard() {
   return (
     <div className="flex flex-col items-center gap-8 w-full px-4 overflow-hidden">
       {services.map((service, index) => {
-        const ref = useRef(null)
-        const isInView = useInView(ref, { once: false, margin: "-50px" })
+          const ref = useRef(null)
+          const isInView = useInView(ref, { once: false, margin: "-50px" })
         const isEven = service.id % 2 === 0
 
         return (
