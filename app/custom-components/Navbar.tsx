@@ -4,6 +4,7 @@ import { assets } from "../assets/assets"
 import Image from "next/image"
 import { useState, useEffect } from "react"
 import Link from 'next/link'
+import { ScrollProgressDemo } from "./ScrollProgress"
 
 export default function Navbar() {
     const [isScroll, setIsScroll] = useState(false)
@@ -65,6 +66,8 @@ export default function Navbar() {
                 className="w-6 block lg:hidden ml-3"
             />
         </button>
+      
+
 
             </div>
            
