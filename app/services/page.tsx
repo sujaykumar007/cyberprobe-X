@@ -2,7 +2,6 @@
 import * as React from "react";
 import '../styles/colors.css'
 import { ServiceCard } from "../custom-components/ServiceCard";
-import Testimonials from "../custom-components/servicesUsedBy";
 
 
 export default function Services() {
