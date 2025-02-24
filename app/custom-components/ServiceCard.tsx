@@ -1,47 +1,52 @@
-
+import { BorderBeam } from "@/components/magicui/border-beam";
 import { Button } from "@/components/ui/button";
 import {
-  Drawer,
-  
-  DrawerContent,
+  Card,
+  CardContent,
+  CardDescription,
+  CardFooter,
+  CardHeader,
+  CardTitle,
+} from "@/components/ui/card";
 
-  DrawerTitle,
-  DrawerTrigger,
-} from "@/components/ui/drawer";
 
-interface ServiceCardProps {
-  title: string;
-  description: string;
-  drawerTitles: string[];
-}
 
-export const ServiceCard = ({ title, description, drawerTitles }: ServiceCardProps) => {
+const services = [
+  {
+    id: 1,
+    name: "web application pentestisting",
+    description: "Enter your credentials to access your account.",
+  },
+  {
+    id: 2,
+    name: "web application pentestisting",
+    description: "Enter your credentials to access your account.",
+  },
+  {
+    id: 3,
+    name: "web application pentestisting",
+    description: "Enter your credentials to access your account.",
+  },
+];
+
+
+export function ServiceCard() {
   return (
-    <div className="border rounded-lg shadow-xl p-6 flex flex-col items-center text-centerbg-blak opacity-90 hover:opacity-100 transition-all duration-300 ease-in-out transform hover:scale-105 hover:shadow-lg">
-      <h3 className="text-lg md:text-xl font-semibold mb-2 text-primary-yellow ">{title}</h3>
-      <p className="text-sm md:text-base text-white mb-4">{description}</p>
-      <Drawer>
-  <DrawerTrigger asChild>
-    <Button variant="outline" className="hover:bg-[#91ff00]   text-black">
-      Read More
-    </Button>
-  </DrawerTrigger>
-  <DrawerContent 
-    className="fixed inset-x-0 mx-auto bottom-0 h-[40vh] w-[90%] bg-white rounded-t-lg shadow-lg overflow-y-auto"
-  >
-    <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-4 gap-0">
-      {drawerTitles.map((drawerTitle, index) => (
-        <DrawerTitle 
-          key={index} 
-          className="border-l-4 border-transparent hover:border-l-blue-800 hover:bg-gray-300 p-4 rounded-r-lg"
-        >
-          {drawerTitle}
-        </DrawerTitle>
-      ))}
-    </div>
-  </DrawerContent>
-</Drawer>
-
+    <div className="grid grid-cols-1 md:grid-cols-3 gap-4 md:gap-8">  
+   { services.map((service, index) => (
+      <Card className="relative w-[550px] py-12 overflow-hidden  bg-black border-opacity-35 border-gray-700">
+        <CardHeader>
+          <CardTitle className="text-white">{service.name}</CardTitle>
+          <CardDescription>
+            {service.description}
+          </CardDescription>
+        </CardHeader>
+        <CardContent>
+        </CardContent>
+        <BorderBeam duration={8} size={100} />
+      </Card>
+    ))}
+    
     </div>
   );
-};
+}
