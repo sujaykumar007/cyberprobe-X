@@ -11,32 +11,33 @@ import Image from "next/image";
 // Import Swiper styles
 import "swiper/css";
 import "swiper/css/effect-coverflow";
-import "swiper/css/pagination";
+// import "swiper/css/pagination";
+import { assets } from "../assets/assets";
 
 // Sample card data (Replace with real data)
 const cardData = [
   {
-    image: "/images/astro.jpg",
+    image:assets.card1,
     title: "Astronomy Wonders",
     description: "Discover the mysteries of the universe and beyond.",
   },
   {
-    image: "/images/tech.jpg",
+    image:assets.card2,
     title: "Future of Technology",
     description: "How AI and automation are shaping the world.",
   },
   {
-    image: "/images/nature.jpg",
+    image:assets.card3,
     title: "Beauty of Nature",
     description: "Explore breathtaking landscapes and wildlife.",
   },
   {
-    image: "/images/space.jpg",
+    image:assets.card4,
     title: "Space Exploration",
     description: "Latest advancements in interstellar travel.",
   },
   {
-    image: "/images/health.jpg",
+    image:assets.card5,
     title: "Mental Health Awareness",
     description: "Learn how to maintain a healthy mind and body.",
   },
@@ -44,7 +45,7 @@ const cardData = [
 
 const SwiperComponent: React.FC = () => {
   return (
-    <div className="flex justify-center items-center w-full overflow-hidden bg-black">
+    <div className="flex justify-center items-center w-full overflow-hidden bg-black ">
     <Swiper
       effect="coverflow"
       grabCursor={true}
@@ -72,7 +73,8 @@ const SwiperComponent: React.FC = () => {
     >
       {cardData.map((card, index) => (
         <SwiperSlide key={index} className="w-full border-2 border-white shadow-xl rounded-lg">
-          <div className="bg-black rounded-xl border-2 border-white shadow-lg p-5 text-center flex flex-col items-center text-white">
+          <div className="bg-black rounded-xl  shadow-lg p-5 text-center flex flex-col items-center text-white gap-4">
+          <h3 className="text-lg font-semibold text-primary-yellow ">{card.title}</h3>
             <Image
               src={card.image}
               alt={card.title}
@@ -80,7 +82,7 @@ const SwiperComponent: React.FC = () => {
               height={200}
               className="rounded-lg mb-4 w-full h-[200px] object-cover"
             />
-            <h3 className="text-lg font-semibold text-white">{card.title}</h3>
+         
             <p className="text-sm text-white mt-2">{card.description}</p>
           </div>
         </SwiperSlide>

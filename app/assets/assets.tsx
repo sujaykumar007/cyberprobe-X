@@ -8,6 +8,12 @@ import logoX from "./twitter.png"
 import astra from './Dashbord.webp'
 
 import whitelogo from './white.png'
+import card1 from './card1.jpg'
+import card2 from './card2.jpg'
+import card3 from './card3.jpeg'
+import card4 from './card4.jpg'
+import card5 from './card5.jpg'
+import card6 from './card6.jpg'
 
 
 export const assets={
@@ -20,7 +26,14 @@ export const assets={
 
      logoX,
       astra,
-      whitelogo
+      whitelogo,
+      card1,
+      card2,
+      card3,
+      card4,
+      card5,
+      card6
+
 
      
 }
