@@ -1,10 +1,14 @@
-
+"use client"
 
 import { LoginForm } from "@/components/login-form"
 
 export default function ConatctUs() {
+
+
+
+
   return (
-    <div className="flex flex-col justify-center pt-36 md:pt-0 gap-14 md:grid min-h-svh lg:grid-cols-2">
+    <div className="flex flex-col justify-center pt-36 md:pt-0 gap-14  min-h-svh ">
         <div className="flex felx-col justify-center items-center">
 
          <div className="relative  bg-black lg:block">
@@ -20,7 +24,7 @@ export default function ConatctUs() {
         </div>
         <div className="flex flex-1 items-center justify-center">
           <div className="w-full max-w-xs">
-            <LoginForm />
+            <LoginForm  />
           </div>
         </div>
       </div>
