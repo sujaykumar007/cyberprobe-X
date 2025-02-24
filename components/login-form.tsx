@@ -2,43 +2,51 @@ import { cn } from "@/lib/utils"
 import { Button } from "@/components/ui/button"
 import { Input } from "@/components/ui/input"
 import { Label } from "@/components/ui/label"
+import { useState } from "react"
+import axios from "axios"
 
 
-export function LoginForm({
-  className,
-  ...props
-}: React.ComponentPropsWithoutRef<"form">) {
+
+export function LoginForm({ className, ...props }: React.ComponentPropsWithoutRef<"form">) {
+  const [formData, setFormData] = useState({
+    name: "",
+    email: "",
+    number: "",
+  })
+
+  function handleChange(e: React.ChangeEvent<HTMLInputElement>) {
+    setFormData({
+      ...formData,
+      [e.target.id]: e.target.value,
+    })
+  }
+
+  function handleSubmit(e: React.FormEvent<HTMLFormElement>) {
+    e.preventDefault()
+    console.log("Form Data:", formData)
+    axios.post("/api/email", formData).then((res) => {
+      console.log(res)
+    })
+  }
+
   return (
-    <form className={cn("flex flex-col gap-6", className)} {...props}>
-      <div className="flex flex-col items-center gap-2 text-center">
-        <h1 className="text-4xl font-bold text-primary-yellow">Want Help!</h1>
-        <p className="text-balance text-sm text-muted-foreground">
-          Enter you details below
-        </p>
-      </div>
+    <form className={cn("flex flex-col gap-6 border p-14 rounded-xl", className)} {...props} onSubmit={handleSubmit}>
       <div className="grid gap-6">
-        <div className="grid gap-2 text-white">
-          <Label htmlFor="email" >Email</Label>
-          <Input id="email" type="email" placeholder="m@example.com" required />
+        <div className="grid gap-2 text-primary-yellow">
+          <Label htmlFor="name">Name</Label>
+          <Input id="name" type="text" placeholder="adam" required className="text-white" value={formData.name} onChange={handleChange} />
         </div>
-        <div className="grid gap-2 text-white">
-          <div className="flex items-center">
-            <Label htmlFor="password" >Phone No.</Label>
-            
-          </div>
-          <Input id="number" type="text" required placeholder="+91 1234567890" />
+        <div className="grid gap-2 text-primary-yellow">
+          <Label htmlFor="email">Email</Label>
+          <Input id="email" type="email" placeholder="xyz@example.com" required className="text-white" value={formData.email} onChange={handleChange} />
         </div>
-        
-    
-        <Button variant="outline" className="w-full">
-         Submit 
+        <div className="grid gap-2 text-primary-yellow">
+          <Label htmlFor="number">Phone No.</Label>
+          <Input id="number" type="text" required placeholder="+91 1234567890" className="text-white" value={formData.number} onChange={handleChange} />
+        </div>
+        <Button variant="outline" className="w-full" type="submit">
+          Submit
         </Button>
-      </div>
-      <div className="text-center text-sm">
-        Don&apos;t have an account?{" "}
-        <a href="#" className="underline underline-offset-4">
-          Sign up
-        </a>
       </div>
     </form>
   )
