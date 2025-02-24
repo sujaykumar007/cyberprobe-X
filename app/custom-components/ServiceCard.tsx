@@ -62,33 +62,33 @@ const services = [
   },
   {
     id: 9,
-    name: "web application pentestisting",
-    description: "Enter your credentials to access your account.",
+    name: "web application Pentestisting",
+    description: "Identifying and fixing security vulnerabilities in web applications",
   },
   {
     id: 10,
     name: "Cloud Penetration Testing",
-    description: "Enter your credentials to access your account.",
+    description: "Assessing cloud environments for misconfigurations and security risks.",
   },
   {
     id: 11,
-    name: "web application pentestisting",
-    description: "Enter your credentials to access your account.",
+    name: "API Pentestisting",
+    description: "Securing APIs by identifying vulnerabilities that could lead to data breaches.",
   },
   {
     id: 12,
-    name: "web application pentestisting",
-    description: "Enter your credentials to access your account.",
+    name: "Network Pentestisting",
+    description: "Evaluating network infrastructure to detect and mitigate security flaws",
   },
   {
     id: 13,
-    name: "web application pentestisting",
-    description: "Enter your credentials to access your account.",
+    name: "Mobile application Pentestisting",
+    description: "Testing mobile applications for vulnerabilities in storage, communication, and authentication",
   },
   {
     id: 14,
-    name: "web application pentestisting",
-    description: "Enter your credentials to access your account.",
+    name: "IoT Pentestisting",
+    description: "Uncovering security weaknesses in IoT devices and their ecosyste",
   },
 ];
 
