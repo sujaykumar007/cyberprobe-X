@@ -75,4 +75,9 @@ body {
     @apply bg-background text-foreground;
   }
 }
+/* .swiper-pagination {
+  position: relative !important;
+  margin-top: 20px;
+  color:white;
+} */
 
