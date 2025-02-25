@@ -43,7 +43,7 @@ export default function ServiceHero() {
       className=" rounded-lg bg-black h-[1100px] md:h-[750px]  lg:h-[530px]"
       color={["#A07CFE", "#FE8FB5", "#FFBE7B"]}
     >
-         <h1 className="text-2xl sm:text-4xl md:text-5xl lg:text-5xl font-extrabold py-10 text-white">
+         <h1 className="text-2xl sm:text-4xl md:text-5xl lg:text-5xl font-extrabold py-10 text-white items-center justify-center">
               Major  services
         </h1>
       <div className=" grid md:grid-cols-3 grid-cols-1 h-[500px] w-full gap-6 lg:h-[250px] lg:flex-row my-10 px-10">

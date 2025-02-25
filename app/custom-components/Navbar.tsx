@@ -61,7 +61,7 @@ export default function Navbar() {
             <Image 
                 src={isScroll ? assets.menu_bar : assets.menubutton} 
                 alt="Menu" 
-                className="w-6 block lg:hidden ml-3"
+                className="w-6 block lg:hidden ml-3" 
             />
         </button>
       
