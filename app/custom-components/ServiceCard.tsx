@@ -35,9 +35,9 @@ const services = [
     id: 4,
     name: "Regulatory Compliance",
     description: "Gap analysis against regional frameworks (SAMA, NESA, PDPL, CBB, etc.)",
-    description1: "Compliance roadmap development and implementation guidance"
+    description1: "Compliance roadmap development & implementation guidances"
   }
-]
+
 
 export function ServiceCard() {
   return (
