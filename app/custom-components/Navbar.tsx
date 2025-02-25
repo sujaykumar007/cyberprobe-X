@@ -5,6 +5,7 @@ import Image from "next/image"
 import { useState, useEffect } from "react"
 import Link from 'next/link'
 
+
 export default function Navbar() {
     const [isScroll, setIsScroll] = useState(false)
     const [isMenuOpen, setIsMenuOpen] = useState(false)
@@ -27,6 +28,8 @@ export default function Navbar() {
     }, [])
 
     return (
+        <>
+        
         <nav className={`w-full pt-10 lg:pt-4 fixed px-5 lg:px-16 xl:px-[10%] py-4 flex items-center justify-between z-50 transition-all duration-300 ${isScroll ? "bg-white backdrop-blur-lg shadow-md" : ""}`}> 
 
             
@@ -86,6 +89,9 @@ export default function Navbar() {
                 <li className="text-lg font-medium text-gray-800 my-4"><Link onClick={closeMenu} href="/services">Services</Link></li>
                 <li className="text-lg font-medium text-gray-800 my-4"><Link onClick={closeMenu} href="/contact">Contact Us</Link></li>
             </ul>
+        
         </nav>
+        </>
+
     )
 }

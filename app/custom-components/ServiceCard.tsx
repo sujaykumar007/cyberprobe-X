@@ -9,6 +9,7 @@ import {
   CardTitle
 } from "@/components/ui/card"
 import { motion, useInView } from "framer-motion"
+import Image from "next/image"
 import { useRef } from "react"
 
 const services = [
@@ -111,6 +112,7 @@ export function ServiceCard() {
           >
             <Card className="relative py-12 overflow-hidden bg-black border-opacity-35 border-gray-700 w-full">
               <CardHeader>
+                <Image src={`/icons/${service.id}.png`} alt="icon" width={80} height={80} className="rounded-full border mb-6 border-white" /> 
                 <CardTitle className="text-white text-2xl">{service.name}</CardTitle>
                 <CardDescription className="text-gray-300">
                   {service.description}
