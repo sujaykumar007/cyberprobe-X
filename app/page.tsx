@@ -1,3 +1,5 @@
+import { motion } from "motion/react"
+
 import { Header } from "./custom-components/Header";
 import { VelocityScrolling } from "./custom-components/VelocityScrolling";
 import WhyUs from "./custom-components/whyUs";
@@ -12,6 +14,7 @@ export default function Home(){
  
   return (
     <div className="w-full pb-40 max-h-full flex flex-col gap-y-40 items-center justify-center bg-black ">
+      
       <div className={`text-center  w-[95%]  rounded-3xl mt-16 md:mt-8 lg:mt-20 overflow-hidden `}  style={{ backgroundColor: "var(--primary-blue)"}}>
         <Header />
       </div>

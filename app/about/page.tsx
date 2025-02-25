@@ -2,32 +2,20 @@ import { Card, CardContent, CardHeader, CardTitle } from "@/components/ui/card";
 import { MarqueeDemo} from "../custom-components/clients";
 import { Carousel, CarouselContent, CarouselItem, CarouselNext, CarouselPrevious } from "@/components/ui/carousel";
 
+
 export default function About() {
   const services = [
     {
-      title: "Penetration Testing Services",
-      desc: "Assess and measure your cyber security through Penetration Testing to allow you to manage the identified issues",
+      id: 1,
+      title: "VISION",
+      desc: "To be the top cybersecurity partner by providing businesses with through security solutions, expert-led penetration testing, and proactive defensive tactics that help them fend off changing online threats.",
     },
     {
-      title: "Penetration Testing Services",
-      desc: "Assess and measure your cyber security through Penetration Testing to allow you to manage the identified issues",
+      id: 2,
+      title: "MISSION",
+      desc: "By providing professional penetration testing, risk assessments, and compliance assistance, CyberProbeX is dedicated to enhancing cybersecurity.  We guarantee that enterprises remain resilient against changing threats by offering ongoing protection and actionable information.",
     },
-    {
-      title: "Penetration Testing Services",
-      desc: "Assess and measure your cyber security through Penetration Testing to allow you to manage the identified issues",
-    },
-    {
-      title: "Penetration Testing Services",
-      desc: "Assess and measure your cyber security through Penetration Testing to allow you to manage the identified issues",
-    },
-    {
-      title: "Penetration Testing Services",
-      desc: "Assess and measure your cyber security through Penetration Testing to allow you to manage the identified issues",
-    },
-    {
-      title: "Penetration Testing Services",
-      desc: "Assess and measure your cyber security through Penetration Testing to allow you to manage the identified issues",
-    },
+    
   ];
 
   const WhyUs = [
@@ -49,6 +37,8 @@ export default function About() {
     }
   ];
 
+ 
+
   return (
     <div className="w-[100%] py-24 md:py-32  md:px-12  bg-black">
       {/* Main Container */}
@@ -57,8 +47,8 @@ export default function About() {
         {/* Heading and Description */}
         <div className="absolute top-10 left-1/2 transform -translate-x-1/2 w-full md:w-[70%] text-center">
           <h1 className="text-4xl md:text-6xl font-bold mb-6 text-primary-yellow">Cyberprob X</h1>
-          <p className="text-lg md:text-2xl font-semibold">
-            Security consultancy focusing on bringing the benefits of Penetration Testing
+          <p className="text-lg md:text-2xl font-semibold container px-4">
+          Don't just assess risks—take control with CyberProbeX. From pen testing to compliance, we help secure your organization against evolving threats.
           </p>
         </div>    
 
@@ -78,6 +68,36 @@ export default function About() {
           ))}
         </div>
       </div>
+
+<div className="flex  items-center justify-center py-5">
+
+      <h1 className="text-4xl md:text-6xl font-bold mb-6 text-primary-yellow">VISION & MISSION</h1>
+</div>
+
+      <div className="grid grid-cols-1 md:grid-cols-2 gap-20 items-center  w-full px-4 overflow-hidden  pb-16 ">
+
+
+
+          {services.map((service, index) => (
+            
+             <div
+             key={service.id}
+             className={`w-full max-w-[300px] md:max-w-[550px] container mx-auto flex items-center md:${service.id % 2 === 0 ? "justify-start self-start" : "justify-end self-end"} justify-center`}
+           >
+            <Card key={index} className="bg-black text-white shadow-lg">
+              <CardHeader>
+                <CardTitle className="text-xl font-semibold text-primary-yellow">{service.title}</CardTitle>
+              </CardHeader>
+              <CardContent className="text-md  px-6 pb-6">
+                {service.desc}
+              </CardContent>
+            </Card>
+            </div>
+          ))}
+
+      </div>  
+
+
 
   {/* Why Us Section */}
 <div className="px-4 md:ml-10 md:px-12 py-16 w-80% sm:max-[20%] md:max-[10%]  flex flex-col md:flex-row items-center justify-center overflow-hidden m-4 ">
