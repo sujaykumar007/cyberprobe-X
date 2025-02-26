@@ -1,42 +1,36 @@
-import { NextResponse } from "next/server"
-import nodemailer from "nodemailer"
+import { NextResponse } from 'next/server'
+import emailjs from '@emailjs/nodejs'
 
 export async function POST(req: Request) {
   try {
-    // Parse request body
-    const details = await req.json()
+    const { name, email, message } = await req.json()
 
-    // Create a Nodemailer transporter
-    const transporter = nodemailer.createTransport({
-        host :"smtp.hostinger.com",
-        port:465,
-        secure:true,
-        auth: {
-            user: 'info@hacfy.com', 
-            pass: 'QAZmlp1@*?)0'   
-        }
-      });
-
-    // Email content
-    const mailOptions = {
-    to: details.email, // Send to the provided email
-      from: 'info@hacfy.com',
-      subject: "",
-      text: `Hello ${details.name},\n\nYour details have been received.\n\nDetails: ${JSON.stringify(details, null, 2)}`,
+    // Validate input
+    if (!name || !email || !message) {
+      return NextResponse.json({ success: false, message: 'All fields are required.' }, { status: 400 })
     }
 
-    // Send email
-    await transporter.sendMail(mailOptions)
-
-    return NextResponse.json({
-      message: "User  email sent successfully",
-      valid: true,
-    })
-  } catch (error) {
-    console.error("Email error:", error)
-    return NextResponse.json(
-      { message: "Failed to send email", valid: false },
-      { status: 500 }
+   if (!process.env.EMAILJS_SERVICE_ID || !process.env.EMAILJS_TEMPLATE_ID || !process.env.EMAILJS_PUBLIC_KEY) {
+      return NextResponse.json({ success: false, message: 'Email.js credentials are not set.' }, { status: 500 })
+    } 
+    const response = await emailjs.send(
+      process.env.EMAILJS_SERVICE_ID,
+      process.env.EMAILJS_TEMPLATE_ID,
+      {
+        to_name: 'Support Team',
+        from_name: name,
+        from_email: email,
+        message: message
+      },
+      {
+        publicKey: process.env.EMAILJS_PUBLIC_KEY!,
+        privateKey: process.env.EMAILJS_PRIVATE_KEY!, // Add this for additional security
+      }
     )
+console.log(response)
+    return NextResponse.json({ success: true, message: 'Email sent successfully!' })
+  } catch (error) {
+    console.error('Error sending email:', error)
+    return NextResponse.json({ success: false, message: 'Failed to send email.' }, { status: 500 })
   }
 }

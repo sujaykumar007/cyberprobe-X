@@ -35,10 +35,63 @@ const services = [
     id: 4,
     name: "Regulatory Compliance",
     description: "Gap analysis against regional frameworks (SAMA, NESA, PDPL, CBB, etc.)",
-    description1: "Compliance roadmap development & implementation guidances"
+    description1: "Compliance roadmap development and implementation guidance"
+  },
+  {
+    id: 5,
+    name: "Regulatory Assessment",
+    description: "Incident response and advanced threat hunting",
+    description1: "Evidence collection and chain of custody management"
+  },
+  {
+    id: 6,
+    name: "ISO 27001 Certification",
+    description: "ISMS framework development and implementation",
+    description1: "Pre-certification readiness assessment and audit support"
+  },
+  {
+    id: 7,
+    name: "Penetration Testing",
+    description: "Security control implementation guidance",
+    description1: "Mitigation strategy development and execution support"
+  },
+  {
+    id: 8,
+    name: "PCI DSS Compliance",
+    description: "Gap assessment against latest PCI DSS requirements",
+    description1: "Remediation planning and certification preparation"
+  },
+  {
+    id: 9,
+    name: "Web Application Penetration Testing",
+    description: "Identifying and fixing security vulnerabilities in web applications"
+  },
+  {
+    id: 10,
+    name: "Cloud Penetration Testing",
+    description: "Assessing cloud environments for misconfigurations and security risks."
+  },
+  {
+    id: 11,
+    name: "API Penetration Testing",
+    description: "Securing APIs by identifying vulnerabilities that could lead to data breaches."
+  },
+  {
+    id: 12,
+    name: "Network Penetration Testing",
+    description: "Evaluating network infrastructure to detect and mitigate security flaws"
+  },
+  {
+    id: 13,
+    name: "Mobile Application Penetration Testing",
+    description: "Testing mobile applications for vulnerabilities in storage, communication, and authentication"
+  },
+  {
+    id: 14,
+    name: "IoT Penetration Testing",
+    description: "Uncovering security weaknesses in IoT devices and their ecosystem"
   }
-
-
+]
 export function ServiceCard() {
   return (
     <div className="grid grid-cols-1 md:grid-cols-1 gap-8 w-full px-4 md:px-12">
@@ -54,7 +107,7 @@ export function ServiceCard() {
             ref={ref}
             initial={{ opacity: 0, x: isEven ? -100 : 100 }}
             animate={{ opacity: isInView ? 1 : 0, x: isInView ? 0 : isEven ? -100 : 100 }}
-            transition={{ duration: 0.9, delay: index * 0.1 }}
+            transition={{ duration: 0.7, delay: index * 0.1 }}
             className="grid grid-cols-2 items-center w-full"
           >
 
