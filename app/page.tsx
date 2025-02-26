@@ -1,4 +1,4 @@
-import { motion } from "motion/react"
+
 
 import { Header } from "./custom-components/Header";
 import { VelocityScrolling } from "./custom-components/VelocityScrolling";

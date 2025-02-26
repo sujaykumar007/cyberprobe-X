@@ -92,77 +92,77 @@ const services = [
     description: "Uncovering security weaknesses in IoT devices and their ecosystem"
   }
 ]
+
+const ServiceCardItem = ({ service, index }:{service:any,index:number}) => {
+  const ref = useRef(null);
+  const isInView = useInView(ref, { once: false, margin: "-50px" });
+  const isEven = (index + 1) % 2 === 0;
+  const number = (index + 1).toString().padStart(2, "0"); // Format as "01", "02"...  
+
+  return (
+    <motion.div
+      key={service.id}
+      ref={ref}
+      initial={{ opacity: 0, x: isEven ? -100 : 100 }}
+      animate={{ opacity: isInView ? 1 : 0, x: isInView ? 0 : isEven ? -100 : 100 }}
+      transition={{ duration: 0.7, delay: index * 0.1 }}
+      className="grid grid-cols-2 items-center w-full"
+    >
+      {isEven ? (
+        <div className="flex justify-center">
+          <Card className="relative py-12 overflow-hidden bg-black border-opacity-35 border-gray-700 w-full max-w-md">
+            <CardHeader>
+              <Image src={`/icons/${service.id}.png`} alt="icon" width={80} height={80} className="rounded-full border mb-6 border-white" />
+              <CardTitle className="text-white text-2xl">{service.name}</CardTitle>
+              <CardDescription className="text-gray-300">
+                {service.description}
+              </CardDescription>
+              {service.description1 && (
+                <CardDescription>{service.description1}</CardDescription>
+              )}
+            </CardHeader>
+            <CardContent></CardContent>
+            <BorderBeam duration={8} size={100} />
+          </Card>
+        </div>
+      ) : (
+        <div className="flex justify-center">
+          <span className="text-white text-8xl font-bold opacity-30">{number}</span>
+        </div>
+      )}
+
+      {isEven ? (
+        <div className="flex justify-center">
+          <span className="text-white text-8xl font-bold opacity-30">{number}</span>
+        </div>
+      ) : (
+        <div className="flex justify-center">
+          <Card className="relative py-12 overflow-hidden bg-black border-opacity-35 border-gray-700 w-full max-w-md">
+            <CardHeader>
+              <Image src={`/icons/${service.id}.png`} alt="icon" width={80} height={80} className="rounded-full border mb-6 border-white" />
+              <CardTitle className="text-white text-2xl">{service.name}</CardTitle>
+              <CardDescription className="text-gray-300">
+                {service.description}
+              </CardDescription>
+              {service.description1 && (
+                <CardDescription>{service.description1}</CardDescription>
+              )}
+            </CardHeader>
+            <CardContent></CardContent>
+            <BorderBeam duration={8} size={100} />
+          </Card>
+        </div>
+      )}
+    </motion.div>
+  );
+};
+
 export function ServiceCard() {
   return (
     <div className="grid grid-cols-1 md:grid-cols-1 gap-8 w-full px-4 md:px-12">
-      {services.map((service, index) => {
-        const ref = useRef(null)
-        const isInView = useInView(ref, { once: false, margin: "-50px" })
-        const isEven = (index + 1) % 2 === 0
-        const number = (index + 1).toString().padStart(2, "0") // Format as "01", "02"...
-
-        return (
-          <motion.div
-            key={service.id}
-            ref={ref}
-            initial={{ opacity: 0, x: isEven ? -100 : 100 }}
-            animate={{ opacity: isInView ? 1 : 0, x: isInView ? 0 : isEven ? -100 : 100 }}
-            transition={{ duration: 0.7, delay: index * 0.1 }}
-            className="grid grid-cols-2 items-center w-full"
-          >
-
-      
-            {isEven ? (
-              <div className="flex justify-center">
-                <Card className="relative py-12 overflow-hidden bg-black border-opacity-35 border-gray-700 w-full max-w-md">
-                
-                <CardHeader>
-                <Image src={`/icons/${service.id}.png`} alt="icon" width={80} height={80} className="rounded-full border mb-6 border-white" /> 
-                <CardTitle className="text-white text-2xl">{service.name}</CardTitle>
-                <CardDescription className="text-gray-300">
-                  {service.description}
-                </CardDescription>
-                {service.description1 && (
-                  <CardDescription>{service.description1}</CardDescription>
-                )}
-              </CardHeader>
-                  <CardContent></CardContent>
-                  <BorderBeam duration={8} size={100} />
-                </Card>
-              </div>
-            ) : (
-              <div className="flex justify-center">
-                <span className="text-white text-8xl font-bold opacity-30">{number}</span>
-              </div>
-            )}
-
-          
-            {isEven ? (
-              <div className="flex justify-center">
-                <span className="text-white text-8xl font-bold opacity-30">{number}</span>
-              </div>
-            ) : (
-              <div className="flex justify-center">
-                <Card className="relative py-12 overflow-hidden bg-black border-opacity-35 border-gray-700 w-full max-w-md">
-                <CardHeader>
-                <Image src={`/icons/${service.id}.png`} alt="icon" width={80} height={80} className="rounded-full border mb-6 border-white" /> 
-                <CardTitle className="text-white text-2xl">{service.name}</CardTitle>
-                <CardDescription className="text-gray-300">
-                  {service.description}
-                </CardDescription>
-                {service.description1 && (
-                  <CardDescription>{service.description1}</CardDescription>
-                )}
-              </CardHeader>
-                  <CardContent></CardContent>
-                  <BorderBeam duration={8} size={100} />
-                </Card>
-              </div>
-            )}
-
-          </motion.div>
-        )
-      })}
+      {services.map((service, index) => (
+        <ServiceCardItem key={service.id} service={service} index={index} />
+      ))}
     </div>
-  )
+  );
 }
