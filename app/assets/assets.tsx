@@ -6,7 +6,9 @@ import menubutton from './menu-white.png'
 import newlogo from "./cyberprobex.png"
 import logoX from "./twitter.png"
 import astra from './Dashbord.webp'
-
+import linkedin from "./linkedin.png"
+import instagram from "./instagram.png"
+import youtube from "./youtube.png"
 import whitelogo from './cyberprobex white.png'
 import card1 from './card1.jpg'
 import card2 from './card2.jpg'
@@ -34,9 +36,10 @@ export const assets={
       card3,
       card4,
       card5,
-      card6
-
-
+      card6,
+     linkedin,
+     instagram,
+     youtube
      
 }
 export const serviceData = [

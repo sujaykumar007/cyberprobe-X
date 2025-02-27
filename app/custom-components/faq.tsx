@@ -29,26 +29,41 @@ export function AccordionDemo() {
           <Accordion type="single" collapsible className="w-full">
             <AccordionItem value="item-1">
               <AccordionTrigger className="text-primary-yellow">
-                Is it accessible?
+              What is CyberProbeX?  
               </AccordionTrigger>
               <AccordionContent>
-                Yes. It adheres to the WAI-ARIA design pattern.
+              CyberProbeX is a cybersecurity company offering penetration testing, compliance, and risk management services across India, the UK, and Dubai. We specialize in proactive security solutions to protect businesses from evolving cyber threats.
               </AccordionContent>
             </AccordionItem>
             <AccordionItem value="item-2">
               <AccordionTrigger className="text-primary-yellow">
-                Is it styled?
+              What makes CyberprobeX different from other cybersecurity companies?
               </AccordionTrigger>
               <AccordionContent>
-                Yes. It comes with default styles that match the other components' aesthetic.
+              Our philosophy is simple — “Defense Starts with Offense.” We combine offensive cybersecurity techniques with industry-standard compliance solutions to provide end-to-end protection for your business.
               </AccordionContent>
             </AccordionItem>
             <AccordionItem value="item-3">
               <AccordionTrigger className="text-primary-yellow">
-                Is it animated?
+              How can CyberprobeX help with Risk Assessment?
               </AccordionTrigger>
               <AccordionContent>
-                Yes. It's animated by default, but you can disable it if you prefer.
+              We conduct detailed risk assessments to identify vulnerabilities, assess their impact, and provide risk mitigation strategies to secure your digital assets.
+              </AccordionContent>
+            </AccordionItem>
+            <AccordionItem value="item-4">
+              <AccordionTrigger className="text-primary-yellow">
+              How are your services priced?
+              </AccordionTrigger>
+              <AccordionContent>
+              Our pricing is customized based on the project scope, complexity, and region. Contact us for a free consultation and get a tailored quote.
+              </AccordionContent>
+            </AccordionItem> <AccordionItem value="item-5">
+              <AccordionTrigger className="text-primary-yellow">
+              Do you offer retainer services?
+              </AccordionTrigger>
+              <AccordionContent>
+              Yes, we offer monthly, quarterly, and yearly retainer packages for ongoing security assessments and compliance management.
               </AccordionContent>
             </AccordionItem>
           </Accordion>

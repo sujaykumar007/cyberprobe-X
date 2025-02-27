@@ -18,9 +18,11 @@ export default function Footer() {
               CyberProbex specializes in Network Security, API Security, Mobile & Web Application Security Audits, ISO 27001 Compliance, and vCISO Services. We help businesses strengthen their security posture with cutting-edge solutions and expert assessments.              </p>
 
               <button className="hover:opacity-300 transition flex gap-5 mt-4">
-              <Image src={assets.logoX} className="w-5" alt="twitter" />
-              <Image src={assets.logoX} className="w-5" alt="twitter" />
-              <Image src={assets.logoX} className="w-5" alt="twitter" />
+              <Image src={assets.logoX} className="w-8" alt="" />
+              <Image src={assets.linkedin} className="w-8" alt="" />
+              <Image src={assets.instagram} className="w-8" alt="" />
+              <Image src={assets.youtube} className="w-8" alt="" />
+
         </button>
 
     
@@ -29,11 +31,11 @@ export default function Footer() {
             <div>
               <h3 className="font-semibold text-primary-light">Services</h3>
               <ul className="mt-3 space-y-2 text-primary-white">
-                <li className="hover:text-[#b1d450] cursor-pointer"> <Link href={"/services"}>web application Pentestisting</Link> </li>
+                <li className="hover:text-[#b1d450] cursor-pointer"> <Link href={"/services"}>web application Penetration Testing</Link> </li>
                 <li className="hover:text-[#b1d450] cursor-pointer"><Link href={"/services"}>Cloud Penetration Testing</Link></li>
-                <li className="hover:text-[#b1d450] cursor-pointer"><Link href={"/services"}>Network Pentestisting</Link></li>
-                <li className="hover:text-[#b1d450] cursor-pointer"><Link href={"/services"}>Mobile application Pentestisting</Link></li>
-                <li className="hover:text-[#b1d450] cursor-pointer"><Link href={"/services"}>IoT PentestistingLink</Link></li>
+                <li className="hover:text-[#b1d450] cursor-pointer"><Link href={"/services"}>Network Penetration Testing</Link></li>
+                <li className="hover:text-[#b1d450] cursor-pointer"><Link href={"/services"}>Mobile application Penetration Testing</Link></li>
+                <li className="hover:text-[#b1d450] cursor-pointer"><Link href={"/services"}>IoT Penetration Testing</Link></li>
               </ul>
             </div>
 
@@ -52,7 +54,7 @@ export default function Footer() {
           </div>
 
           <div className="border-t border-gray-700 mt-8 pt-6 flex flex-col md:flex-row justify-between text-sm text-gray-400">
-            <p>Copyright © 2025 Astra. All Rights Reserved.</p>
+            <p>Copyright © 2025 CyberProbeX. All Rights Reserved.</p>
             <div className="flex gap-4 mt-2 md:mt-0">
               <a href="#" className="hover:text-primary-hover">User Terms & Conditions</a>
               <span>|</span>

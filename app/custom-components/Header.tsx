@@ -15,8 +15,8 @@ export const Header = () => {
         <source src="/vedieo.mp4" type="video/mp4" />
       </video>
       <div className="absolute inset-0 flex items-center justify-center bg-black bg-opacity-70">
-        <h1 className="text-white text-5xl md:text-7xl font-bold drop-shadow-lg sm:mb-14 md:mb-7 lg:mb-5">
-          <span className="text-primary-yellow">Defense</span> Starts with <span className="text-primary-yellow">Offence</span>
+        <h1 className="text-white text-5xl md:text-8xl font-bold drop-shadow-lg sm:mb-14 md:mb-7 lg:mb-5">
+          <span className="text-primary-yellow">Defense</span> Starts with <span className="text-primary-yellow">Offense</span>
         
         </h1>
       </div>

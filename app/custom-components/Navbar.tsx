@@ -33,28 +33,28 @@ export default function Navbar() {
 
     return (
         <>
-        <nav className={`w-full pt-10 lg:pt-4 fixed px-5 lg:px-16 xl:px-[10%] py-4 flex items-center justify-between z-50 transition-all duration-300 ${isScroll ? "bg-white backdrop-blur-lg shadow-md" : ""}`}>   
+        <nav className={`w-full pt-10 lg:pt-4 fixed px-5 lg:px-16 xl:px-[10%] py-4 flex items-center justify-between z-50 transition-all duration-300 ${isScroll ? "bg-black backdrop-blur-lg shadow-md" : "bg-white"}`}>   
             {/* Logo */}
             <Link href="#top">
             
                 <Image 
-                src={isScroll ? assets.newlogo : assets.whitelogo} 
+                src={isScroll ? assets.whitelogo : assets.newlogo} 
                 alt="Menu" 
                 className="w-[100%] cursor-pointer h-10"
             />
             </Link>
 
             {/* ✅ Desktop Menu */}
-            <ul className={`hidden lg:flex items-center gap-6 lg:gap-10 rounded-full px-12 py-3 font-medium text-lg text-gray-800 ${isScroll ? "" : "text-white"}`}>
+            <ul className={`hidden lg:flex items-center gap-6 lg:gap-10 rounded-full px-12 py-3 font-medium text-lg text-black ${isScroll ? "text-white" : "text-black"}`}>
                 <li><Link  href="/" >Home</Link></li>
                 <li><Link  href="/about" >About Us</Link></li>
                 <li><Link  href="/services" >Services</Link></li>
             </ul>
 
             {/* ✅ Right Section */}
-            <div className={`flex items-center gap-4 ${isScroll ? "" : "text-white"}`}>
+            <div className={`flex items-center gap-4 ${isScroll ? "" : "text-black"}`}>
                 
-                <Link href="/contact" className={`hidden lg:flex items-center gap-3 px-10 py-2.5 border font-medium text-lg border-gray-500 rounded-2xl ml-4 relative overflow-hidden group transition-colors duration-500 text-gray-800 hover:text-black ${isScroll ? "" : "text-white"}`}>
+                <Link href="/contact" className={`hidden lg:flex items-center gap-3 px-10 py-2.5 border font-medium text-lg border-gray-500 rounded-2xl ml-4 relative overflow-hidden group transition-colors duration-500  hover:text-black ${isScroll ? "text-white" : "text-black"}`}>
                     <span className="relative z-10">Contact Us</span>
                     <span className="absolute inset-0 bg-[#b1d450] scale-x-0 origin-left transition-transform duration-1000 ease-out group-hover:scale-x-100"></span>
                 </Link>
@@ -63,7 +63,7 @@ export default function Navbar() {
                 {/* ✅ Hamburger Menu */}
                 <button onClick={openMenu}>
             <Image 
-                src={isScroll ? assets.menu_bar : assets.menubutton} 
+                src={isScroll ?   assets.menubutton : assets.menu_bar} 
                 alt="Menu" 
                 className="w-6 block lg:hidden ml-3" 
             />

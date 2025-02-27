@@ -16,13 +16,13 @@ export default function ContactUs() {
         height={900}
       />
       
-      <div className="relative flex flex-col justify-center items-center gap-14 min-h-screen px-4 md:px-0">
+      <div className="relative flex flex-col justify-center items-center gap-y-28 min-h-screen px-4 md:px-0">
         <div className="text-center">
           <h1 className="text-4xl md:text-6xl font-bold mb-4 text-primary-yellow">Get in Touch</h1>
-          <p className="text-xl md:text-3xl font-semibold text-white">With Our Team</p>
+          <p className="text-lg md:text-3xl  text-white">With Our Team</p>
         </div>
 
-        <div className="flex flex-col items-center w-full">
+        <div className="flex flex-col items-center w-[40%]">
           <div className="w-full max-w-lg md:max-w-xl lg:max-w-2xl xl:max-w-3xl rounded-2xl">
             <ContactForm />
           </div>

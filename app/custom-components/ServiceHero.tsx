@@ -53,7 +53,7 @@ export default function ServiceHero() {
             className="cursor-pointer flex flex-col items-center justify-center p-6 text-center text-white text-lg bg-gray-900 rounded-lg shadow-md hover:shadow-lg transition"
             gradientColor="#262626"
           >
-            <h3 className="text-xl font-semibold mb-2 text-gray-500">{advantage.name}</h3>
+            <h3 className="text-xl font-semibold mb-2 text-primary-yellow">{advantage.name}</h3>
             {/* <p className="text-md opacity-80">{advantage.desc}</p> */}
           </MagicCard>
         ))}

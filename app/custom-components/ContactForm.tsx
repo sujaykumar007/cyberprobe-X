@@ -30,8 +30,8 @@ export default function ContactForm() {
   }
 
   return (
-    <form onSubmit={handleSubmit} className="space-y-4 bg-gray-900 p-6 rounded-2xl shadow-lg text-white">
-      <h2 className="text-2xl font-bold text-primary-yellow">Send Us a Message</h2>
+    <form onSubmit={handleSubmit} className="space-y-4 bg-gray-900 p-6 rounded-2xl shadow-lg flex flex-col  justify-center items-center text-white">
+      <h2 className="text-2xl  text-primary-yellow">Send Us a Message</h2>
       
       {status && <p className="text-green-500">{status}</p>}
 

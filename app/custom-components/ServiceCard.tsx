@@ -108,7 +108,7 @@ const ServiceCardItem = ({ service, index }: { service: any; index: number }) =>
       ref={ref}
       initial={{ opacity: 0, x: isEven ? -100 : 100 }}
       animate={{ opacity: isInView ? 1 : 0, x: isInView ? 0 : isEven ? -100 : 100 }}
-      transition={{ duration: 0.7, delay: index * 0.1 }}
+      transition={{ duration: 0.5, delay: index * 0.1 }}
       className="grid grid-cols-1 md:grid-cols-2 items-center justify-center w-full gap-4 px-4 md:px-8"
     >
       {isEven ? (
@@ -118,8 +118,8 @@ const ServiceCardItem = ({ service, index }: { service: any; index: number }) =>
               <Image
                 src={`/icons/${service.id}.png`}
                 alt="icon"
-                width={80}
-                height={80}
+                width={100}
+                height={100}
                 className="rounded-full border mb-6 border-white"
               />
               <CardTitle className="text-white text-xl md:text-2xl">{service.name}</CardTitle>
@@ -166,7 +166,7 @@ const ServiceCardItem = ({ service, index }: { service: any; index: number }) =>
 
 export function ServiceCard() {
   return (
-    <div className="grid grid-cols-1 gap-8 w-full px-4 md:px-12 overflow-x-hidden">
+    <div className="grid grid-cols-1 gap-8 w-full px-4 pb-16 md:px-12 overflow-x-hidden">
       {services.map((service, index) => (
         <ServiceCardItem key={service.id} service={service} index={index} />
       ))}

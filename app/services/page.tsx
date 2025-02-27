@@ -11,12 +11,7 @@ export default function Services() {
         className="w-full pt-44  pb-10 flex flex-col items-center  justify-evenly px-4 md:px-12 rounded-3xl text-white"
         style={{ backgroundColor: "var(--primary-blue)" }}
       >
-        <h1
-          className="text-3xl md:pb-10 sm:text-4xl md:text-5xl lg:text-6xl font-bold mb-6"
-          style={{ color: "var(--primary-yellow)" }}
-        >
-          Pentesting Services
-        </h1>
+        
         <div className="w-full max-w-[95%] sm:max-w-3xl md:max-w-6xl px-4 sm:px-6">
           <ServiceHero />
         </div>  
