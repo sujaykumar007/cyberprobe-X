@@ -100,14 +100,14 @@ const SwiperComponent: React.FC = () => {
             effect={"cards"}
             grabCursor={true}
 
-            autoplay={{ delay: 3000, disableOnInteraction: false }}
+            autoplay={{ delay: 1000, disableOnInteraction: false }}
             modules={[EffectCards,Autoplay]}
             className="w-full max-w-xs sm:max-w-sm md:max-w-md lg:max-w-lg xl:max-w-xl h-[300px]"
 
           >
            { content.map((item, index) => (
-            <SwiperSlide className="flex items-center justify-center  bg-black border text-white text-xl font-bold p-8 rounded-lg" key={index}>
-              <div className="flex flex-col items-center justify-center mt-5 ">
+            <SwiperSlide className="flex items-center justify-center  bg-black border text-white text-xl font-bold md:p-8 rounded-lg" key={index}>
+              <div className="flex flex-col items-center justify-center my-5 md:my-10">
                 <h2 className="text-2xl font-bold text-primary-yellow ">{item.name}</h2>
                 <p className="text-md text-white m-10 pb-10">{item.description}</p>
               </div>          

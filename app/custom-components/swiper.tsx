@@ -56,7 +56,7 @@ const SwiperComponent: React.FC = () => {
       grabCursor={true}
       centeredSlides={true}
       loop={true}
-      autoplay={{ delay: 3000, disableOnInteraction: false }}
+      autoplay={{ delay: 1500, disableOnInteraction: false }}
       spaceBetween={20}
       slidesPerView={1} // Default for mobile
       breakpoints={{

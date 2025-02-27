@@ -13,9 +13,9 @@ import { Traning } from "./custom-components/Traning";
 export default function Home(){  
  
   return (
-    <div className="w-full pb-40 max-h-full flex flex-col gap-y-40 items-center justify-center bg-black ">
+    <div className="w-full pb-40 max-h-full flex flex-col gap-y-20 md:gap-y-32 items-center justify-center bg-black ">
       
-      <div className={`text-center  w-[95%]  rounded-3xl mt-16 md:mt-8 lg:mt-20 overflow-hidden `}  style={{ backgroundColor: "var(--primary-blue)"}}>
+      <div className={`text-center  w-[95%]  rounded-3xl mt-16 md:mt-8 lg:mt-20 overflow-hidden pt-10 md:pt-0`}  style={{ backgroundColor: "var(--primary-blue)"}}>
         <Header />
       </div>
       <div style={{ marginTop: -40 }}>
@@ -25,8 +25,8 @@ export default function Home(){
         <WhyUs />
       </div>
      
-      <div className=" flex flex-col gap-20" >
-        <h1 className="text-2xl sm:text-4xl md:text-5xl lg:text-5xl font-extrabold  text-white">
+      <div className=" flex flex-col items-center justify-center text-center  px-4">J
+        <h1 className="text-2xl sm:text-4xl md:text-5xl lg:text-5xl font-extrabold pb-14 text-white">
         Comprehensive <span className="text-primary-yellow">Cybersecurity</span> Services
         </h1>
       <SwiperComponent/>

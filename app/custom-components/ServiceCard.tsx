@@ -97,7 +97,7 @@ const ServiceCardItem = ({ service, index }:{service:any,index:number}) => {
   const ref = useRef(null);
   const isInView = useInView(ref, { once: false, margin: "-50px" });
   const isEven = (index + 1) % 2 === 0;
-  const number = (index + 1).toString().padStart(2, "0"); // Format as "01", "02"...  
+  const number = (index + 1).toString().padStart(2, "0")  
 
   return (
     <motion.div

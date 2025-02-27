@@ -19,7 +19,7 @@ export function Traning(){
         ];
 
     return (
-           <div className="w-full px-4 max-h-full flex flex-col gap-y-20 items-center justify-center bg-black mb-40 md:mb-0">
+           <div className="w-full px-4 max-h-full flex flex-col gap-y-2 items-center justify-center bg-black mb-40 md:mb-0">
                  <h1 className="text-2xl  sm:text-4xl md:text-5xl lg:text-5xl font-extrabold  text-white flex flex-col items-center justify-center gap-6">
             <span>Practical Security Training By</span>  <span className="text-primary-yellow">Cyberprobe-X</span>
             </h1>

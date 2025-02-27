@@ -44,13 +44,10 @@ export default function About() {
       {services.map((service, index) => (
   <div
     key={index}
-    className="flex flex-col md:flex-row justify-between items-center mx-40 w-full md:w-[80%] px-4 md:px-12 py-16 md:py-6 space-y-6 md:space-y-0"
-  >
-    {/* Vision appears first, then its description, then Mission */}
-    <span className={`text-white text-8xl font-bold opacity-30 ${index % 2 === 0 ? 'md:order-1' : 'md:order-2'}`}>
+    className="flex flex-col md:flex-row justify-between items-center  w-full md:w-[80%] px-4 md:px-12 py-16 md:py-6 space-y-6 md:space-y-0 ">
+    <span className={`text-white text-5xl md:text-8xl font-bold opacity-30 ${index % 2 === 0 ? 'md:order-1' : 'md:order-2'}`}>
       {service.title}
     </span>
-    
     <Card className={`relative py-8 overflow-hidden bg-black border-opacity-35 border-gray-700 w-full max-w-md ${index % 2 === 0 ? 'md:order-2' : 'md:order-1'}`}>
       <CardHeader>
         <CardDescription className="text-gray-300 text-sm md:text-lg">{service.desc}</CardDescription>
