@@ -5,7 +5,7 @@ import ServiceHero from "../custom-components/ServiceHero"
 
 export default function Services() {
   return (
-    <div className="w-full px-4 md:px-8 lg:px-12 mx-auto bg-black">
+    <div className="w-full px-4 md:px-8 lg:px-12 mx-auto bg-black overflow-hidden flex-col">
       {/* Title Section */}
       <div
         className="w-full pt-44  pb-10 flex flex-col items-center  justify-evenly px-4 md:px-12 rounded-3xl text-white"
