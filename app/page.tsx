@@ -7,8 +7,11 @@ import SwiperComponent from "./custom-components/swiper";
 import SwiperComponents from "./custom-components/swiperComponents";
 import Advantage from "./custom-components/Advantage";
 import Stats from "./custom-components/stats";
-import { Traning } from "./custom-components/Traning";
+import { Training } from "./custom-components/Training";
 import ContactForm from "./custom-components/ContactForm";
+import { AccordionDemo } from "./custom-components/faq";
+
+
 
     
 export default function Home(){  
@@ -42,7 +45,10 @@ export default function Home(){
         <Stats/>
       </div>
       <div className="w-[100%] container">
-        <Traning />
+    <Training/>
+      </div>
+      <div className="text-white w-[100%] conatiner">
+ <AccordionDemo/>
       </div>
       <div className="md:w-[30%] w-[70%] mt-28 md:mt-0 container">
       <div className="text-center pb-10">
