@@ -8,6 +8,7 @@ import SwiperComponents from "./custom-components/swiperComponents";
 import Advantage from "./custom-components/Advantage";
 import Stats from "./custom-components/stats";
 import { Traning } from "./custom-components/Traning";
+import ContactForm from "./custom-components/ContactForm";
 
     
 export default function Home(){  
@@ -40,8 +41,15 @@ export default function Home(){
       <div className="w-[100%] container">
         <Stats/>
       </div>
-      <div className="w-[100%] container">``
+      <div className="w-[100%] container">
         <Traning />
+      </div>
+      <div className="md:w-[30%] w-[70%] mt-28 md:mt-0 container">
+      <div className="text-center pb-10">
+          <h1 className="text-4xl md:text-6xl font-bold mb-4 text-primary-yellow">Get in Touch</h1>
+          <p className="text-xl md:text-3xl font-semibold text-white">With Our Team</p>
+        </div>
+        <ContactForm />
       </div>
     </div>
   );

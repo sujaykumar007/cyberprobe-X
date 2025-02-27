@@ -5,7 +5,6 @@ export async function POST(req: Request) {
   try {
     const { name, email, message } = await req.json()
 
-    // Validate input
     if (!name || !email || !message) {
       return NextResponse.json({ success: false, message: 'All fields are required.' }, { status: 400 })
     }
@@ -13,7 +12,9 @@ export async function POST(req: Request) {
    if (!process.env.EMAILJS_SERVICE_ID || !process.env.EMAILJS_TEMPLATE_ID || !process.env.EMAILJS_PUBLIC_KEY) {
       return NextResponse.json({ success: false, message: 'Email.js credentials are not set.' }, { status: 500 })
     } 
+ 
     const response = await emailjs.send(
+   
       process.env.EMAILJS_SERVICE_ID,
       process.env.EMAILJS_TEMPLATE_ID,
       {
@@ -27,7 +28,6 @@ export async function POST(req: Request) {
         privateKey: process.env.EMAILJS_PRIVATE_KEY!, // Add this for additional security
       }
     )
-console.log(response)
     return NextResponse.json({ success: true, message: 'Email sent successfully!' })
   } catch (error) {
     console.error('Error sending email:', error)
