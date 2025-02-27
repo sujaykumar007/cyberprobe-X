@@ -19,27 +19,27 @@ export default function Advantage() {
 
   return (
     <div className="w-full px-5 max-h-full flex flex-col gap-y-20 items-center justify-center bg-black ">
-        <h1 className="text-2xl sm:text-4xl md:text-5xl lg:text-5xl font-extrabold  text-white">
-        The <span className="text-primary-yellow">CyberProbeX </span> Advantage
-        </h1>
-    <ShineBorder
-      className=" rounded-lg bg-black h-[900px] md:h-[700px] lg:h-[400px]"
-      color={["#A07CFE", "#FE8FB5", "#FFBE7B"]}
-    >
-        
-      <div className=" grid md:grid-cols-3 grid-cols-1 h-[500px] w-full gap-6 lg:h-[250px] lg:flex-row my-10 px-10">
-        {advantages.map((advantage, index) => (
-          <MagicCard
-            key={index}
-            className="cursor-pointer flex flex-col items-center justify-center p-6 text-center text-white text-lg bg-gray-900 rounded-lg shadow-md hover:shadow-lg transition"
-            gradientColor="#262626"
-          >
-            <h3 className="text-xl font-semibold mb-2 text-primary-yellow">{advantage.title}</h3>
-            <p className="text-md opacity-80">{advantage.desc}</p>
-          </MagicCard>
-        ))}
-      </div>
-    </ShineBorder>
+  <h1 className="text-2xl sm:text-4xl md:text-5xl lg:text-5xl font-extrabold text-white">
+    The <span className="text-primary-yellow">CyberProbeX</span> Advantage
+  </h1>
+
+  <ShineBorder
+    className="rounded-lg bg-black w-full max-w-6xl p-6 relative"
+    color={["#A07CFE", "#FE8FB5", "#FFBE7B"]}
+  >
+    <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6 w-full p-6">
+      {advantages.map((advantage, index) => (
+        <MagicCard
+          key={index}
+          className="cursor-pointer flex flex-col items-center justify-center p-6 text-center text-white text-lg bg-gray-900 rounded-lg shadow-md hover:shadow-lg transition"
+          gradientColor="#262626"
+        >
+          <h3 className="text-xl font-semibold mb-2 text-primary-yellow">{advantage.title}</h3>
+          <p className="text-md opacity-80">{advantage.desc}</p>
+        </MagicCard>
+      ))}
     </div>
-  );
+  </ShineBorder>
+</div>
+  )
 }

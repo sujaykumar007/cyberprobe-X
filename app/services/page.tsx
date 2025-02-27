@@ -30,7 +30,7 @@ export default function Services() {
       </div>
 
       {/* Service Cards Section */}
-      <div className="w-full py-10 container md:mx-20">
+      <div>
         <ServiceCard />
       </div>
     </div>

@@ -37,7 +37,7 @@ export default function ServiceHero() {
       
 
   return (
-    <div className="w-full px-5   md:max-h-full  flex flex-col gap-y-20 items-center justify-center bg-black ">
+    <div className="w-full px-5 md:max-h-full  flex flex-col gap-y-20 items-center justify-center bg-black ">
        
     <ShineBorder
       className=" rounded-lg bg-black h-[1100px] md:h-[750px]  lg:h-[530px]"

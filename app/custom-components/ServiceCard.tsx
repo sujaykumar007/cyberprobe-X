@@ -1,3 +1,4 @@
+
 "use client"
 
 import { BorderBeam } from "@/components/magicui/border-beam"
@@ -13,6 +14,7 @@ import Image from "next/image"
 import { useRef } from "react"
 
 const services = [
+
   {
     id: 1,
     name: "Cyber Insurance Advisory & Consultancy",
@@ -97,7 +99,8 @@ const ServiceCardItem = ({ service, index }: { service: any; index: number }) =>
   const ref = useRef(null);
   const isInView = useInView(ref, { once: false, margin: "-50px" });
   const isEven = (index + 1) % 2 === 0;
-  const number = (index + 1).toString().padStart(2, "0");
+  const number = (index + 1).toString().padStart(2, "0")  
+
 
   return (
     <motion.div
@@ -128,13 +131,13 @@ const ServiceCardItem = ({ service, index }: { service: any; index: number }) =>
           </Card>
         </div>
       ) : (
-        <div className="hidden md:flex justify-center w-full">
+        <div className="hidden md:flex justify-center">
           <span className="text-white text-8xl font-bold opacity-30">{number}</span>
         </div>
       )}
 
       {isEven ? (
-        <div className="hidden md:flex justify-center w-full">
+        <div className="hidden md:flex justify-center">
           <span className="text-white text-8xl font-bold opacity-30">{number}</span>
         </div>
       ) : (
