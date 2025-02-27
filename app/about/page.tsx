@@ -21,7 +21,7 @@ export default function About() {
       <div className="w-full min-h-[600px] flex flex-col items-center py-16 md:py-6 rounded-3xl bg-black text-white px-6 md:px-12 relative">
         <div className="absolute top-10 left-1/2 transform -translate-x-1/2 w-full md:w-[80%] text-center px-4">
           <h1 className="text-3xl md:text-5xl font-bold mb-6 text-primary-yellow">CyberProbeX</h1>
-          <p className="text-sm md:text-lg font-semibold">CyberProbeX is a premier cybersecurity consultancy delivering advanced security solutions across UAE, Saudi Arabia, UK, and India. We operate on the fundamental principle that proactive offense creates the strongest defense—systematically identifying and neutralizing threats before they can be exploited.</p>
+          <p className="text-sm md:text-lg font-light">CyberProbeX is a premier cybersecurity consultancy delivering advanced security solutions across UAE, Saudi Arabia, UK, and India. We operate on the fundamental principle that proactive offense creates the strongest defense—systematically identifying and neutralizing threats before they can be exploited.</p>
         </div>
         
         <div className="mt-64 w-full grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-6 px-4 md:px-12">

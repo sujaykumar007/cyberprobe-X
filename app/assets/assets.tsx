@@ -3,11 +3,11 @@ import menu_bar from './menu.png'
 import dashbord from './Dashbord.webp'
 import whiteastra from './detect.jpg'
 import menubutton from './menu-white.png'
-import newlogo from "./black.png"
+import newlogo from "./cyberprobex.png"
 import logoX from "./twitter.png"
 import astra from './Dashbord.webp'
 
-import whitelogo from './white.png'
+import whitelogo from './cyberprobex white.png'
 import card1 from './card1.jpg'
 import card2 from './card2.jpg'
 import card3 from './card3.jpeg'
