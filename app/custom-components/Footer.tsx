@@ -9,7 +9,7 @@ export default function Footer() {
           <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-4 gap-8">
           
             <div>
-              <div className="flex items-center gap-2">
+              <div className="flex items-center  gap-2">
 
                 <Image src={assets.whitelogo} alt="Logo" width={80}   />
 
@@ -27,25 +27,13 @@ export default function Footer() {
             </div>
 
             <div>
-              <h3 className="font-semibold text-primary-light">Pentest</h3>
-              <ul className="mt-3 space-y-2 text-primary-white">
-                <li className="hover:text-[#b1d450] cursor-pointer">Pentest Platform</li>
-                <li className="hover:text-[#b1d450] cursor-pointer">DAST Scanner</li>
-                <li className="hover:text-[#b1d450] cursor-pointer">API Security</li>
-                <li className="hover:text-[#b1d450] cursor-pointer">Web Pentest</li>
-                <li className="hover:text-[#b1d450] cursor-pointer">Mobile Pentest</li>
-                <li className="hover:text-[#b1d450] cursor-pointer">Network Pentest</li>
-              </ul>
-            </div>
-
-            <div>
               <h3 className="font-semibold text-primary-light">Services</h3>
               <ul className="mt-3 space-y-2 text-primary-white">
-                <li className="hover:text-[#b1d450] cursor-pointer">Cloud Security</li>
-                <li className="hover:text-[#b1d450] cursor-pointer">Compliance</li>
-                <li className="hover:text-[#b1d450] cursor-pointer">Threat Detection</li>
-                <li className="hover:text-[#b1d450] cursor-pointer">SOC Monitoring</li>
-                <li className="hover:text-[#b1d450] cursor-pointer">Risk Assessment</li>
+                <li className="hover:text-[#b1d450] cursor-pointer"> <Link href={"/services"}>web application Pentestisting</Link> </li>
+                <li className="hover:text-[#b1d450] cursor-pointer"><Link href={"/services"}>Cloud Penetration Testing</Link></li>
+                <li className="hover:text-[#b1d450] cursor-pointer"><Link href={"/services"}>Network Pentestisting</Link></li>
+                <li className="hover:text-[#b1d450] cursor-pointer"><Link href={"/services"}>Mobile application Pentestisting</Link></li>
+                <li className="hover:text-[#b1d450] cursor-pointer"><Link href={"/services"}>IoT PentestistingLink</Link></li>
               </ul>
             </div>
 
