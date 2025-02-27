@@ -95,7 +95,7 @@ const services = [
   }
 ]
 
-const ServiceCardItem = ({ service, index }:{service:any,index:number}) => {
+const ServiceCardItem = ({ service, index }: { service: any; index: number }) => {
   const ref = useRef(null);
   const isInView = useInView(ref, { once: false, margin: "-50px" });
   const isEven = (index + 1) % 2 === 0;
@@ -109,20 +109,22 @@ const ServiceCardItem = ({ service, index }:{service:any,index:number}) => {
       initial={{ opacity: 0, x: isEven ? -100 : 100 }}
       animate={{ opacity: isInView ? 1 : 0, x: isInView ? 0 : isEven ? -100 : 100 }}
       transition={{ duration: 0.7, delay: index * 0.1 }}
-      className="grid grid-cols-2 items-center w-full"
+      className="grid grid-cols-1 md:grid-cols-2 items-center justify-center w-full gap-4 px-4 md:px-8"
     >
       {isEven ? (
-        <div className="flex justify-center">
-          <Card className="relative py-12 overflow-hidden bg-black border-opacity-35 border-gray-700 w-full max-w-md">
+        <div className="flex justify-center w-full">
+          <Card className="relative py-8 md:py-12 overflow-hidden bg-black border-opacity-35 border-gray-700 w-full max-w-xs sm:max-w-sm md:max-w-md lg:max-w-lg">
             <CardHeader>
-              <Image src={`/icons/${service.id}.png`} alt="icon" width={80} height={80} className="rounded-full border mb-6 border-white" />
-              <CardTitle className="text-white text-2xl">{service.name}</CardTitle>
-              <CardDescription className="text-gray-300">
-                {service.description}
-              </CardDescription>
-              {service.description1 && (
-                <CardDescription>{service.description1}</CardDescription>
-              )}
+              <Image
+                src={`/icons/${service.id}.png`}
+                alt="icon"
+                width={80}
+                height={80}
+                className="rounded-full border mb-6 border-white"
+              />
+              <CardTitle className="text-white text-xl md:text-2xl">{service.name}</CardTitle>
+              <CardDescription className="text-gray-300 text-sm md:text-base">{service.description}</CardDescription>
+              {service.description1 && <CardDescription className="text-sm md:text-base">{service.description1}</CardDescription>}
             </CardHeader>
             <CardContent></CardContent>
             <BorderBeam duration={8} size={100} />
@@ -139,17 +141,19 @@ const ServiceCardItem = ({ service, index }:{service:any,index:number}) => {
           <span className="text-white text-8xl font-bold opacity-30">{number}</span>
         </div>
       ) : (
-        <div className="flex justify-center">
-          <Card className="relative py-12 overflow-hidden bg-black border-opacity-35 border-gray-700 w-full max-w-md">
+        <div className="flex justify-center w-full">
+          <Card className="relative py-8 md:py-12 overflow-hidden bg-black border-opacity-35 border-gray-700 w-full max-w-xs sm:max-w-sm md:max-w-md lg:max-w-lg">
             <CardHeader>
-              <Image src={`/icons/${service.id}.png`} alt="icon" width={80} height={80} className="rounded-full border mb-6 border-white" />
-              <CardTitle className="text-white text-2xl">{service.name}</CardTitle>
-              <CardDescription className="text-gray-300">
-                {service.description}
-              </CardDescription>
-              {service.description1 && (
-                <CardDescription>{service.description1}</CardDescription>
-              )}
+              <Image
+                src={`/icons/${service.id}.png`}
+                alt="icon"
+                width={80}
+                height={80}
+                className="rounded-full border mb-6 border-white"
+              />
+              <CardTitle className="text-white text-xl md:text-2xl">{service.name}</CardTitle>
+              <CardDescription className="text-gray-300 text-sm md:text-base">{service.description}</CardDescription>
+              {service.description1 && <CardDescription className="text-sm md:text-base">{service.description1}</CardDescription>}
             </CardHeader>
             <CardContent></CardContent>
             <BorderBeam duration={8} size={100} />
@@ -162,10 +166,11 @@ const ServiceCardItem = ({ service, index }:{service:any,index:number}) => {
 
 export function ServiceCard() {
   return (
-    <div className="grid grid-cols-1 md:grid-cols-1 gap-8 w-full px-4 md:px-12">
+    <div className="grid grid-cols-1 gap-8 w-full px-4 md:px-12 overflow-x-hidden">
       {services.map((service, index) => (
         <ServiceCardItem key={service.id} service={service} index={index} />
       ))}
     </div>
   );
 }
+
