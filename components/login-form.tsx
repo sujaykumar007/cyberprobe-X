@@ -22,9 +22,9 @@ export function LoginForm({ className, ...props }: React.ComponentPropsWithoutRe
   }
 
   function handleSubmit(e: React.FormEvent<HTMLFormElement>) {
-    console.log("Form Data:", formData)
+    // console.log("Form Data:", formData)
     axios.post("/api/email", formData).then((res) => {
-      console.log(res)
+      console.log(e)
     })
   }
 

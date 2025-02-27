@@ -1,4 +1,4 @@
-import Image from "next/image";
+
 import ConatctUs from "../custom-components/contactSection";
 
 export default function Contact() {
