@@ -77,7 +77,7 @@ const SwiperComponent: React.FC = () => {
       className="w-full max-w-[90vw] lg:max-w-[60vw] py-10"
     >
       {cardData.map((card, index) => (
-        <SwiperSlide key={index} className="w-full border-2 border-white shadow-xl rounded-lg">
+        <SwiperSlide key={index} className="w-full border-2 border-white shadow-xl rounded-lg ">
           <div className="bg-black rounded-xl  shadow-lg p-5 text-center flex flex-col items-center text-white gap-4">
           <h3 className="text-lg font-semibold text-primary-yellow ">{card.title}</h3>
             <Image
