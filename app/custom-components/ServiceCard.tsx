@@ -122,7 +122,7 @@ const ServiceCardItem = ({ service, index }: { service: any; index: number }) =>
                 height={100}
                 className="rounded-full border mb-6 border-white"
               />
-              <CardTitle className="text-white text-xl md:text-2xl">{service.name}</CardTitle>
+              <CardTitle className="text-primary-yellow text-xl md:text-2xl">{service.name}</CardTitle>
               <CardDescription className="text-gray-300 text-sm md:text-base">{service.description}</CardDescription>
               {service.description1 && <CardDescription className="text-sm md:text-base">{service.description1}</CardDescription>}
             </CardHeader>
@@ -151,7 +151,7 @@ const ServiceCardItem = ({ service, index }: { service: any; index: number }) =>
                 height={80}
                 className="rounded-full border mb-6 border-white"
               />
-              <CardTitle className="text-white text-xl md:text-2xl">{service.name}</CardTitle>
+              <CardTitle className="text-primary-yellow text-xl md:text-2xl">{service.name}</CardTitle>
               <CardDescription className="text-gray-300 text-sm md:text-base">{service.description}</CardDescription>
               {service.description1 && <CardDescription className="text-sm md:text-base">{service.description1}</CardDescription>}
             </CardHeader>
