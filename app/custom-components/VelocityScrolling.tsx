@@ -6,8 +6,8 @@ export function VelocityScrolling() {
     <div className="relative flex w-full flex-col items-center justify-center overflow-hidden">
     
       <div className="w-full max-w-xs sm:max-w-md md:max-w-xl lg:max-w-7xl overflow-hidden overflow-y-hidden">
-        <VelocityScroll className="text-white text-2xl">
-          Pentesting
+        <VelocityScroll className="text-white text-sm">
+        Our offensive security approach transforms reactive protection into proactive resilience, safeguarding your most valuable digital assets .
         </VelocityScroll>
       </div>
 

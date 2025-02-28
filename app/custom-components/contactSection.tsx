@@ -16,7 +16,7 @@ export default function ContactUs() {
         height={900}
       />
       
-      <div className="relative flex flex-col justify-center items-center gap-y-28 min-h-screen px-4 md:px-0">
+      <div className="relative flex flex-col justify-center items-center min-h-screen px-4 md:px-0">
         <div className="text-center">
           <h1 className="text-4xl md:text-6xl font-bold mb-4 text-primary-yellow">Get in Touch</h1>
           <p className="text-lg md:text-3xl  text-white">With Our Team</p>

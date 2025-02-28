@@ -50,7 +50,7 @@ export default function Stats() {
   }, [])
 
   return (
-    <div ref={sectionRef} className="w-full px-5 max-h-full flex flex-col gap-10 items-center justify-center bg-black">
+    <div ref={sectionRef} className="w-full px-5 max-h-full flex flex-col gap-y-10 items-center justify-center bg-black">
       <h1 className="text-2xl sm:text-4xl md:text-5xl lg:text-5xl font-extrabold text-white">
         Key <span className="text-primary-yellow">Cybersecurity </span> Stats
       </h1>

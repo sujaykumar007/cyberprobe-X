@@ -5,8 +5,8 @@ import { BorderBeam } from "@/components/magicui/border-beam";
 
 export default function About() {
   const services = [
-    { id: 1, title: "VISION", desc: "To be the top cybersecurity partner by providing businesses with thorough security solutions, expert-led penetration testing, and proactive defensive tactics that help them fend off changing online threats." },
-    { id: 2, title: "MISSION", desc: "By providing professional penetration testing, risk assessments, and compliance assistance, CyberProbeX is dedicated to enhancing cybersecurity. We guarantee that enterprises remain resilient against changing threats by offering ongoing protection and actionable information." }
+    { id: 1, title: "VISION", desc: "To be recognized as the preeminent cybersecurity partner of choice, empowering organizations across global markets with comprehensive security intelligence, elite penetration testing expertise, and innovative defensive strategies that transform vulnerability into resilience in an ever-evolving threat landscape." },
+    { id: 2, title: "MISSION", desc: "CyberProbeX is committed to fortifying organizational security postures through advanced penetration testing methodologies, strategic risk intelligence, and comprehensive compliance frameworks. We empower enterprises to navigate the evolving threat landscape with confidence by delivering actionable security insights, adaptive defense mechanisms, and sustainable resilience strategies that transform security from a barrier into a business enabler" }
   ];
 
   const WhyUs = [
@@ -45,10 +45,10 @@ export default function About() {
   <div
     key={index}
     className="flex flex-col md:flex-row justify-between items-center mx-auto  w-full md:w-[80%] px-4 md:px-12 py-10 md:py-6 space-y-6 md:space-y-0 ">
-    <span className={`text-white text-5xl md:text-8xl font-bold opacity-30 ${index % 2 === 0 ? 'md:order-1' : 'md:order-2'}`}>
+    <span className={`text-primary-yellow text-5xl md:text-8xl font-bold  ${index % 2 === 0 ? 'md:order-1' : 'md:order-2'}`}>
       {service.title}
     </span>
-    <Card className={`relative py-8 overflow-hidden bg-black border-opacity-35 border-gray-700 w-full max-w-md ${index % 2 === 0 ? 'md:order-2' : 'md:order-1'}`}>
+    <Card className={`relative py-8 overflow-hidden bg-black border-opacity-35 border-gray-700 w-full max-w-xl ${index % 2 === 0 ? 'md:order-2' : 'md:order-1'}`}>
       <CardHeader>
         <CardDescription className="text-gray-300 text-sm md:text-lg">{service.desc}</CardDescription>
       </CardHeader>
@@ -60,7 +60,7 @@ export default function About() {
 
 
       {/* Why Us Section */}
-      <div className="flex flex-col md:flex-row items-center justify-center px-4 md:px-12 py-16 w-full md:w-[80%] mx-auto">
+      <div className="flex flex-col md:flex-row items-center justify-center px-4 md:px-12 py-36  w-full md:w-[80%] mx-auto">
         <div className="text-center md:text-left w-full md:w-[40%] mb-10 md:mb-0">
           <h1 className="text-3xl md:text-5xl font-extrabold leading-tight text-white">Why Choose</h1>
           <h1 className="text-primary-yellow text-3xl md:text-6xl font-extrabold mt-3">CyberProbeX</h1>
