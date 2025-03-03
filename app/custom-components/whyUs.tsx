@@ -31,11 +31,12 @@ export default function About() {
           Why Choose
         </h1>
         <h1 className="text-primary-yellow text-3xl sm:text-5xl md:text-6xl lg:text-7xl font-extrabold mt-3">
-          CyberProbeX
+          CyberProbeX 
+          {/* <span className="text-3xl sm:text-5xl md:text-6xl lg:text-7xl font-extrabold leading-tight text-white mt-3">
+          ?
+        </span> */}
         </h1>
-        <h1 className="text-2xl sm:text-4xl md:text-5xl lg:text-6xl font-extrabold leading-tight text-white mt-3">
-          Pen Testing
-        </h1>
+        
       </div>
 
       {/* Carousel Section */}

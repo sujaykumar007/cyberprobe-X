@@ -17,7 +17,7 @@ const services = [
 
   {
     id: 1,
-    name: "Cyber Insurance Advisory & Consultancy",
+    name: "Cyber Advisory & Consultancy",
     description: "Gap analysis against regional frameworks (SAMA, NESA, PDPL, CBB, etc.)",
     description1: "Compliance roadmap development and implementation guidance"
   },
@@ -53,45 +53,9 @@ const services = [
   },
   {
     id: 7,
-    name: "Penetration Testing",
-    description: "Security control implementation guidance",
-    description1: "Mitigation strategy development and execution support"
-  },
-  {
-    id: 8,
     name: "PCI DSS Compliance",
     description: "Gap assessment against latest PCI DSS requirements",
     description1: "Remediation planning and certification preparation"
-  },
-  {
-    id: 9,
-    name: "Web Application Penetration Testing",
-    description: "Identifying and fixing security vulnerabilities in web applications"
-  },
-  {
-    id: 10,
-    name: "Cloud Penetration Testing",
-    description: "Assessing cloud environments for misconfigurations and security risks."
-  },
-  {
-    id: 11,
-    name: "API Penetration Testing",
-    description: "Securing APIs by identifying vulnerabilities that could lead to data breaches."
-  },
-  {
-    id: 12,
-    name: "Network Penetration Testing",
-    description: "Evaluating network infrastructure to detect and mitigate security flaws"
-  },
-  {
-    id: 13,
-    name: "Mobile Application Penetration Testing",
-    description: "Testing mobile applications for vulnerabilities in storage, communication, and authentication"
-  },
-  {
-    id: 14,
-    name: "IoT Penetration Testing",
-    description: "Uncovering security weaknesses in IoT devices and their ecosystem"
   }
 ]
 

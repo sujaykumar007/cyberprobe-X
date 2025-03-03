@@ -5,7 +5,7 @@ export default function ServiceHero() {
     const services = [
         {
           id: 1,
-          name: "web application Pentestisting",
+          name: "Web Application Pentestisting",
           description: "Identifying and fixing security vulnerabilities in web applications",
         },
         {
@@ -44,7 +44,7 @@ export default function ServiceHero() {
       color={["#A07CFE", "#FE8FB5", "#FFBE7B"]}
     >
          <h1 className="text-2xl sm:text-4xl md:text-5xl lg:text-5xl font-extrabold py-10 text-white"  style={{textAlign:'center'}}>
-              Major  services
+            Core Services
         </h1>
       <div className=" grid md:grid-cols-3 grid-cols-1 h-[500px] w-full gap-6 lg:h-[250px] lg:flex-row my-10 px-10">
         {services.map((advantage, index) => (

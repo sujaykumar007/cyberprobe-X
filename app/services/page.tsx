@@ -20,7 +20,7 @@ export default function Services() {
       {/* Services Heading */}
       <div className="flex items-center justify-center text-center px-4">
         <h1 className="text-2xl sm:text-4xl md:text-5xl lg:text-6xl font-extrabold py-10 text-white">
-          All Services
+          Cyber Resilience Services
         </h1>
       </div>
 

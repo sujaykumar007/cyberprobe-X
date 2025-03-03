@@ -5,7 +5,7 @@ import {
   AccordionTrigger,
 } from "@/components/ui/accordion";
 
-export function AccordionDemo() {
+export function Traning() {
   return (
     <div className="w-full px-4 md:px-8 py-12 bg-black text-white">
       <div className="max-w-6xl mx-auto grid grid-cols-1 md:grid-cols-2 gap-10 items-center text-center md:text-left">
@@ -27,14 +27,6 @@ export function AccordionDemo() {
         {/* Accordion Section */}
         <div className="w-full">
           <Accordion type="single" collapsible className="w-full">
-            <AccordionItem value="item-1">
-              <AccordionTrigger className="text-primary-yellow">
-              What is CyberProbeX?  
-              </AccordionTrigger>
-              <AccordionContent>
-              CyberProbeX is a cybersecurity company offering penetration testing, compliance, and risk management services across India, the UK, and Dubai. We specialize in proactive security solutions to protect businesses from evolving cyber threats.
-              </AccordionContent>
-            </AccordionItem>
             <AccordionItem value="item-2">
               <AccordionTrigger className="text-primary-yellow">
               What makes CyberprobeX different from other cybersecurity companies?

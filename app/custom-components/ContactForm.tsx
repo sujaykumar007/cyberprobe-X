@@ -3,7 +3,14 @@
 import { useState } from 'react'
 
 export default function ContactForm() {
-  const [formData, setFormData] = useState({ name: '', email: '', message: '' })
+  const [formData, setFormData] = useState({
+    name: '',
+    email: '',
+    companyName: '',
+    designation: '',
+    phone: '',
+    message: '',
+  })
   const [status, setStatus] = useState('')
 
   const handleChange = (e: React.ChangeEvent<HTMLInputElement | HTMLTextAreaElement>) => {
@@ -25,20 +32,26 @@ export default function ContactForm() {
     setStatus(data.message)
 
     if (data.success) {
-      setFormData({ name: '', email: '', message: '' }) // Reset form
+      setFormData({ name: '', email: '', companyName: '', designation: '', phone: '', message: '' }) 
     }
   }
 
   return (
-    <form onSubmit={handleSubmit} className="space-y-4 bg-gray-900 p-6 rounded-2xl shadow-lg flex flex-col  justify-center items-center text-white">
-      <h2 className="text-2xl  text-primary-yellow">Send Us a Message</h2>
-      
+    <form onSubmit={handleSubmit} className="space-y-4 bg-gray-900 p-6 rounded-2xl shadow-lg flex flex-col justify-center items-center text-white">
+      <h2 className="text-2xl text-primary-yellow">Send Us a Message</h2>
+
       {status && <p className="text-green-500">{status}</p>}
 
       <input type="text" name="name" placeholder="Your Name" value={formData.name} onChange={handleChange} className="w-full p-2 border border-gray-600 rounded bg-gray-800 text-white" required />
       
-      <input type="email" name="email" placeholder="Your Email" value={formData.email} onChange={handleChange} className="w-full p-2 border border-gray-600 rounded bg-gray-800 text-white" required />
+      <input type="email" name="email" placeholder="Work Email" value={formData.email} onChange={handleChange} className="w-full p-2 border border-gray-600 rounded bg-gray-800 text-white" required />
       
+      <input type="text" name="companyName" placeholder="Company Name" value={formData.companyName} onChange={handleChange} className="w-full p-2 border border-gray-600 rounded bg-gray-800 text-white" required />
+      
+      <input type="text" name="designation" placeholder="Designation" value={formData.designation} onChange={handleChange} className="w-full p-2 border border-gray-600 rounded bg-gray-800 text-white" required />
+
+      <input type="number" name="phone" placeholder="Phone Number" value={formData.phone} onChange={handleChange} className="w-full p-2 border border-gray-600 rounded bg-gray-800 text-white" required />    
+
       <textarea name="message" placeholder="Your Message" value={formData.message} onChange={handleChange} className="w-full p-2 border border-gray-600 rounded bg-gray-800 text-white" required></textarea>
 
       <button type="submit" className="w-full bg-primary-yellow text-black p-2 rounded font-semibold">Send Email</button>
