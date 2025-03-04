@@ -9,54 +9,6 @@ const SwiperComponent: React.FC = () => {
 
   const content = [
     {
-      id: 1,
-      name: "Cyber Insurance Advisory & Consultancy",
-      description: "Gap analysis against regional frameworks (SAMA, NESA, PDPL, CBB, etc.)",
-      description1: "Compliance roadmap development and implementation guidance"
-    },
-    {
-      id: 2,
-      name: "vCISO",
-      description: "Strategic security roadmap development and implementation oversight",
-      description1: "Security governance framework design and continuous security posture improvement"
-    },
-    {
-      id: 3,
-      name: "vDPO",
-      description: "Strategic security roadmap development and implementation oversight",
-      description1: "Security governance framework design and continuous security posture improvement"
-    },
-    {
-      id: 4,
-      name: "Regulatory Compliance",
-      description: "Gap analysis against regional frameworks (SAMA, NESA, PDPL, CBB, etc.)",
-      description1: "Compliance roadmap development and implementation guidance"
-    },
-    {
-      id: 5,
-      name: "Regulatory Assessment",
-      description: "Incident response and advanced threat hunting",
-      description1: "Evidence collection and chain of custody management"
-    },
-    {
-      id: 6,
-      name: "ISO 27001 Certification",
-      description: "ISMS framework development and implementation",
-      description1: "Pre-certification readiness assessment and audit support"
-    },
-    {
-      id: 7,
-      name: "Penetration Testing",
-      description: "Security control implementation guidance",
-      description1: "Mitigation strategy development and execution support"
-    },
-    {
-      id: 8,
-      name: "PCI DSS Compliance",
-      description: "Gap assessment against latest PCI DSS requirements",
-      description1: "Remediation planning and certification preparation"
-    },
-    {
       id: 9,
       name: "Web Application Penetration Testing",
       description: "Identifying and fixing security vulnerabilities in web applications"
@@ -92,7 +44,7 @@ const SwiperComponent: React.FC = () => {
   return (
     <div className="flex flex-col lg:flex-row items-center justify-center  text-white  text-center  overflow-hidden">
       <div className="text-2xl sm:text-3xl md:text-4xl lg:text-5xl font-extrabold leading-tight max-w-5xl">
-        <h1 className="mb-2">What are the different types of <span className="text-primary-yellow">penetration testing</span>?</h1>
+        <h1 className="mb-2">Different Types of  <span className="text-primary-yellow">Penetration testing</span></h1>
       </div>
       <div className="flex flex-col items-center justify-center mt-14 space-y-8 w-full px-4">
         <div className="w-full max-w-md sm:max-w-lg md:max-w-xl lg:max-w-3xl">

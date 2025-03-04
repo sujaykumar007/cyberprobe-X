@@ -1,6 +1,11 @@
 'use client'
 
 import { useState } from 'react'
+import { Card, CardContent } from '@/components/ui/card'
+import { Button } from '@/components/ui/button'
+import { Input } from '@/components/ui/input'
+import { Textarea } from '@/components/ui/textarea'
+
 
 export default function ContactForm() {
   const [formData, setFormData] = useState({
@@ -13,13 +18,12 @@ export default function ContactForm() {
   })
   const [status, setStatus] = useState('')
 
-  const handleChange = (e: React.ChangeEvent<HTMLInputElement | HTMLTextAreaElement>) => {
+  const handleChange = (e:any) => {
     setFormData({ ...formData, [e.target.name]: e.target.value })
   }
 
-  const handleSubmit = async (e: React.FormEvent) => {
+  const handleSubmit = async (e:any) => {
     e.preventDefault()
-
     setStatus('Sending...')
 
     const res = await fetch('/api/email', {
@@ -37,24 +41,27 @@ export default function ContactForm() {
   }
 
   return (
-    <form onSubmit={handleSubmit} className="space-y-4 bg-gray-900 p-6 rounded-2xl shadow-lg flex flex-col justify-center items-center text-white">
-      <h2 className="text-2xl text-primary-yellow">Send Us a Message</h2>
+    <Card className="flex flex-col md:flex-row bg-black text-white p-10 rounded-2xl shadow-lg w-full ">
+    
+      <div className="flex-1 flex flex-col justify-center p-6 space-y-4">
 
-      {status && <p className="text-green-500">{status}</p>}
+        <p className="text-gray-300">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Phasellus nec iaculis mauris.</p>
+      </div>
 
-      <input type="text" name="name" placeholder="Your Name" value={formData.name} onChange={handleChange} className="w-full p-2 border border-gray-600 rounded bg-gray-800 text-white" required />
-      
-      <input type="email" name="email" placeholder="Work Email" value={formData.email} onChange={handleChange} className="w-full p-2 border border-gray-600 rounded bg-gray-800 text-white" required />
-      
-      <input type="text" name="companyName" placeholder="Company Name" value={formData.companyName} onChange={handleChange} className="w-full p-2 border border-gray-600 rounded bg-gray-800 text-white" required />
-      
-      <input type="text" name="designation" placeholder="Designation" value={formData.designation} onChange={handleChange} className="w-full p-2 border border-gray-600 rounded bg-gray-800 text-white" required />
+      <CardContent className="flex-1 ">
+        <form onSubmit={handleSubmit} className="space-y-6 md:w-[85%] w-full">
+          {status && <p className="text-primary-yellow">{status}</p>}
 
-      <input type="number" name="phone" placeholder="Phone Number" value={formData.phone} onChange={handleChange} className="w-full p-2 border border-gray-600 rounded bg-gray-800 text-white" required />    
+          <Input type="text" name="name" placeholder="Your Name" value={formData.name} onChange={handleChange} required className="bg-gray-800 py-5   text-white" />
+          <Input type="email" name="email" placeholder="Work Email" value={formData.email} onChange={handleChange} required className="bg-gray-800 py-5  text-white" />
+          <Input type="text" name="companyName" placeholder="Company Name" value={formData.companyName} onChange={handleChange} required className="bg-gray-800 py-5  text-white" />
+          <Input type="text" name="designation" placeholder="Designation" value={formData.designation} onChange={handleChange} required className="bg-gray-800 py-5  text-white" />
+          <Input type="number" name="phone" placeholder="Phone Number" value={formData.phone} onChange={handleChange} required className="bg-gray-800 py-5  text-white" />
+          <Textarea name="message" placeholder="Your Message" value={formData.message} onChange={handleChange} required className="bg-gray-800 py-5  text-white" />
 
-      <textarea name="message" placeholder="Your Message" value={formData.message} onChange={handleChange} className="w-full p-2 border border-gray-600 rounded bg-gray-800 text-white" required></textarea>
-
-      <button type="submit" className="w-full bg-primary-yellow text-black p-2 rounded font-semibold">Send Email</button>
-    </form>
+          <Button type="submit" className="w-full bg-primary-yellow text-black font-semibold hover:bg-primary-yellow">Send Email</Button>
+        </form>
+      </CardContent>
+    </Card>
   )
 }

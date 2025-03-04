@@ -27,10 +27,10 @@ export default function About() {
     
       {/* Text Section */}
       <div className="text-center md:text-left w-full md:w-[40%] mb-10 md:mb-0">
-        <h1 className="text-2xl sm:text-4xl md:text-5xl lg:text-6xl font-extrabold leading-tight text-white">
-          Why Choose
+        <h1 className="text-2xl sm:text-4xl md:text-5xl lg:text-6xl font-extrabold leading-tight text-white text-center">
+          Why 
         </h1>
-        <h1 className="text-primary-yellow text-3xl sm:text-5xl md:text-6xl lg:text-7xl font-extrabold mt-3">
+        <h1 className="text-primary-yellow text-3xl sm:text-5xl md:text-6xl lg:text-7xl font-extrabold mt-3 text-center">
           CyberProbeX 
           {/* <span className="text-3xl sm:text-5xl md:text-6xl lg:text-7xl font-extrabold leading-tight text-white mt-3">
           ?
@@ -40,7 +40,7 @@ export default function About() {
       </div>
 
       {/* Carousel Section */}
-      <div className="w-full max-w-[90%] sm:max-w-[40%] md:max-w-[60%] lg:max-w-[50%]">
+      <div className="w-full max-w-[90%] sm:max-w-[40%] md:max-w-[60%] lg:max-w-[50%] pl-14">
         <Carousel className="container ">
           <CarouselContent className="flex">
             {WhyUs.map((service, index) => (
