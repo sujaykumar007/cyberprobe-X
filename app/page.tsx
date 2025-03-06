@@ -18,13 +18,7 @@ export default function Home(){
         <Header />
       </div>
 
-      <div className="text-white text-2xl md:text-4xl w-[70%] font-semibold text-balance flex  text-center ">
-        <h1 className="leading-[1.75]">
-           <span className="text-4xl md:text-6xl">"</span> Our offensive security approach transforms reactive protection into proactive resilience, safeguarding your most valuable digital assets <span className="text-4xl md:text-6xl">"</span>
-        </h1>
-      </div>
-
-      <div className="w-[100%] container gap-y-20">
+      <div className="w-[100%] container gap-y-20 ">
         <WhyUs />
       </div>
      

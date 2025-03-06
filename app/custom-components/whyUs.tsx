@@ -32,15 +32,12 @@ export default function About() {
         </h1>
         <h1 className="text-primary-yellow text-3xl sm:text-5xl md:text-6xl lg:text-7xl font-extrabold mt-3 text-center">
           CyberProbeX 
-          {/* <span className="text-3xl sm:text-5xl md:text-6xl lg:text-7xl font-extrabold leading-tight text-white mt-3">
-          ?
-        </span> */}
         </h1>
         
       </div>
 
       {/* Carousel Section */}
-      <div className="w-full max-w-[90%] sm:max-w-[40%] md:max-w-[60%] lg:max-w-[50%] pl-14">
+      <div className="w-full max-w-[90%] sm:max-w-[40%] md:max-w-[60%] lg:max-w-[50%] ">
         <Carousel className="container ">
           <CarouselContent className="flex">
             {WhyUs.map((service, index) => (

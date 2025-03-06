@@ -42,8 +42,8 @@ export default function ContactForm() {
 
   return (
     <Card className="flex flex-col md:flex-row bg-black text-white py-10 px-5 rounded-2xl shadow-lg w-full ">
-      <div className="flex-1 flex flex-col justify-center px-16 space-y-4">
-        <p className="text-gray-300">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Phasellus nec iaculis mauris.</p>
+      <div className="flex-1 md:flex flex-col justify-center md:px-16 px-12 space-y-4 text-balance hidden">
+        <p className="text-gray-300 ">"Feel free to reach out to us with any questions or inquiries—we’re here to help!</p>
       </div>
 
       <CardContent className="flex-1 pt-10 md:pt-0 ">
