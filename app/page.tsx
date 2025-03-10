@@ -15,9 +15,9 @@ import Approach from "./custom-components/approach";
 export default function Home(){  
  
   return (
-    <div className="w-full pb-40 h-full flex flex-col gap-y-20 md:gap-y-28 items-center justify-center bg-black ">
+    <div className="w-full pb-40 h-full flex flex-col gap-y-10 md:gap-y-10 items-center justify-center bg-black ">
       
-      <div className={`text-center  w-[95%]  rounded-3xl  overflow-hidden mt-20 md:mt-0 pt-10 md:pt-0`}  style={{ backgroundColor: "var(--primary-blue)"}}>
+      <div className={`text-center  w-[100%]  rounded-3xl  overflow-hidden mt-20 md:mt-0 pt-10 md:pt-0`}  style={{ backgroundColor: "var(--primary-blue)"}}>
         <Header />
       </div>
 
