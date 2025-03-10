@@ -42,8 +42,8 @@ const SwiperComponent: React.FC = () => {
 
 
   return (
-    <div className="flex flex-col lg:flex-row items-center justify-center  text-white  text-center  overflow-hidden">
-      <div className="text-2xl sm:text-3xl md:text-4xl lg:text-5xl font-extrabold leading-tight max-w-5xl">
+    <div className="flex flex-col lg:flex-row items-center justify-between  text-white  text-center  overflow-hidden">
+      <div className="text-2xl sm:text-3xl md:text-4xl lg:text-5xl font-extrabold leading-tight max-w-5xl flex flex-col md:text-start text-center">
         <h1 className="mb-2">Different Types of  <span className="text-primary-yellow">Penetration testing</span></h1>
       </div>
       <div className="flex flex-col items-center justify-center mt-14 space-y-8 w-full px-4">
@@ -58,7 +58,7 @@ const SwiperComponent: React.FC = () => {
 
           >
            { content.map((item, index) => (
-            <SwiperSlide className="flex items-center justify-center bg-black border text-white text-xl font-bold md:p-8 rounded-lg" key={index}>
+            <SwiperSlide className="flex items-center justify-center bg-black border-2 text-white text-xl font-bold md:p-8 rounded-lg" key={index}>
               <div className="flex flex-col items-center justify-center my-5 md:my-10">
                 <h2 className="text-2xl font-bold text-primary-yellow ">{item.name}</h2>
                 <p className="text-md text-white m-10 pb-10">{item.description}</p>

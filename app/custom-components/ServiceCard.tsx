@@ -19,43 +19,43 @@ const services = [
     id: 1,
     name: "Cyber Advisory & Consultancy",
     description: "Gap analysis against regional frameworks (SAMA, NESA, PDPL, CBB, etc.)",
-    description1: "Compliance roadmap development and implementation guidance"
+    description1: "Transform security from a barrier into a business enabler with our strategic cyber advisory services. We analyze your unique threat landscape, design resilient security architecture, and develop roadmaps that align with your business objectives. Our consultants bridge the gap between technical security and organizational strategy, ensuring your cybersecurity investments deliver measurable business value and competitive advantage."
   },
   {
     id: 2,
     name: "vCISO",
     description: "Strategic security roadmap development and implementation oversight",
-    description1: "Security governance framework design and continuous security posture improvement"
+    description1: "Access executive-level security leadership without the full-time overhead through our vCISO service. Our experienced security leaders integrate seamlessly with your team, providing strategic guidance, board-level reporting, and program oversight tailored to your organization's maturity level. We develop and execute security roadmaps that align with your business goals, filling critical security leadership gaps while building internal capabilities."
   },
   {
     id: 3,
     name: "vDPO",
     description: "Strategic security roadmap development and implementation oversight",
-    description1: "Security governance framework design and continuous security posture improvement"
+    description1: "Ensure privacy compliance and build customer trust with our Virtual Data Protection Officer service. Our seasoned privacy professionals help you navigate complex data protection regulations across multiple jurisdictions, implementing practical privacy frameworks and response procedures. We transform privacy from a compliance burden into a competitive differentiator, protecting your reputation while enabling responsible data innovation."
   },
   {
     id: 4,
     name: "Regulatory Compliance",
     description: "Gap analysis against regional frameworks (SAMA, NESA, PDPL, CBB, etc.)",
-    description1: "Compliance roadmap development and implementation guidance"
+    description1: "Navigate complex regulatory frameworks with confidence through our specialized compliance services. We translate dense regulatory requirements into practical implementation plans tailored to your organization's specific context. Our experts help you build sustainable compliance programs that satisfy auditors while enhancing your security posture, turning compliance from a checkbox exercise into a strategic asset that builds trust with customers and partners."
   },
   {
     id: 5,
-    name: "Regulatory Assessment",
+    name: " Cyber Risk Assessment",
     description: "Incident response and advanced threat hunting",
-    description1: "Evidence collection and chain of custody management"
+    description1: "Gain unprecedented visibility into your organization's security landscape with our comprehensive risk assessment methodology. We identify, analyze, and prioritize risks based on your business context, moving beyond generic vulnerability scanning to deliver actionable intelligence. Our assessments provide a clear hierarchy of remediation priorities, helping you allocate resources efficiently and demonstrate due diligence to stakeholders."
   },
   {
     id: 6,
     name: "ISO 27001 Certification",
     description: "ISMS framework development and implementation",
-    description1: "Pre-certification readiness assessment and audit support"
+    description1: "Achieve internationally recognized security credentials with our ISO 27001 certification services. We demystify the certification process by translating complex requirements into practical security controls that work within your organizational context. Our structured methodology takes you from initial gap analysis through implementation and successful certification, building a sustainable information security management system that delivers ongoing business value beyond the certificate."
   },
   {
     id: 7,
     name: "PCI DSS Compliance",
     description: "Gap assessment against latest PCI DSS requirements",
-    description1: "Remediation planning and certification preparation"
+    description1: "Secure payment ecosystems and reduce breach risk with our specialized PCI DSS compliance services. We guide you through the entire compliance journey—from gap assessment and remediation to documentation and validation—creating a sustainable program that exceeds audit requirements. Our pragmatic approach focuses on both technical controls and business processes, minimizing scope where possible while maintaining robust cardholder data protection."
   }
 ]
 
@@ -63,7 +63,7 @@ const ServiceCardItem = ({ service, index }: { service: any; index: number }) =>
   const ref = useRef(null);
   const isInView = useInView(ref, { once: false, margin: "-50px" });
   const isEven = (index + 1) % 2 === 0;
-  const number = (index + 1).toString().padStart(2, "0")  
+  // const number = (index + 1).toString().padStart(2, "0")  
 
 
   return (
@@ -84,42 +84,41 @@ const ServiceCardItem = ({ service, index }: { service: any; index: number }) =>
                 alt="icon"
                 width={100}
                 height={100}
-                className="rounded-full border mb-6 border-white"
+                className="rounded-full border-2 mb-6 border-white"
               />
-              <CardTitle className="text-primary-yellow text-xl md:text-2xl">{service.name}</CardTitle>
-              <CardDescription className="text-gray-300 text-sm md:text-base">{service.description}</CardDescription>
-              {service.description1 && <CardDescription className="text-sm md:text-base">{service.description1}</CardDescription>}
+             <CardTitle className=" block md:hidden text-primary-yellow text-xl md:text-2xl">{service.name}</CardTitle> 
+             <CardDescription className="block md:hidden text-gray-300 text-sm md:text-base">{service.description}</CardDescription> 
+              {service.description1 && <CardDescription className="text-sm md:text-base md:text-white ">{service.description1}</CardDescription>}
             </CardHeader>
-            <CardContent></CardContent>
+           
             <BorderBeam duration={8} size={100} />
           </Card>
         </div>
       ) : (
         <div className="hidden md:flex justify-center">
-          <span className="text-white text-8xl font-bold opacity-30">{number}</span>
+          <span className="text-primary-yellow text-6xl font-bold ">{service.name}</span>
         </div>
       )}
 
       {isEven ? (
         <div className="hidden md:flex justify-center">
-          <span className="text-white text-8xl font-bold opacity-30">{number}</span>
+          <span className="text-primary-yellow text-6xl font-bold o">{service.name}</span>
         </div>
       ) : (
         <div className="flex justify-center w-full">
-          <Card className="relative py-8 md:py-12 overflow-hidden bg-black border-opacity-35 border-gray-700 w-full max-w-xs sm:max-w-sm md:max-w-md lg:max-w-lg">
+          <Card className="relative py-8 md:py-12 overflow-hidden bg-black border-opacity-35  border-gray-700 w-full max-w-xs sm:max-w-sm md:max-w-md lg:max-w-lg">
             <CardHeader>
               <Image
                 src={`/icons/${service.id}.png`}
                 alt="icon"
                 width={80}
                 height={80}
-                className="rounded-full border mb-6 border-white"
+                className="rounded-full border-2 mb-6 border-white"
               />
-              <CardTitle className="text-primary-yellow text-xl md:text-2xl">{service.name}</CardTitle>
-              <CardDescription className="text-gray-300 text-sm md:text-base">{service.description}</CardDescription>
-              {service.description1 && <CardDescription className="text-sm md:text-base">{service.description1}</CardDescription>}
+            <CardTitle className=" block md:hidden text-primary-yellow text-xl md:text-2xl">{service.name}</CardTitle> 
+            <CardDescription className="block md:hidden text-gray-300 text-sm md:text-base">{service.description}</CardDescription> 
+              {service.description1 && <CardDescription className="text-sm md:text-base md:text-white">{service.description1}</CardDescription>}
             </CardHeader>
-            <CardContent></CardContent>
             <BorderBeam duration={8} size={100} />
           </Card>
         </div>

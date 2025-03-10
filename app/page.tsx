@@ -7,6 +7,9 @@ import SwiperComponents from "./custom-components/swiperComponents";
 import Advantage from "./custom-components/Advantage";
 import { Training } from "./custom-components/Training";
 import ContactForm from "./custom-components/ContactForm";
+import HeaderBelowText from "./custom-components/HeaderBelowText";
+import App from "next/app";
+import Approach from "./custom-components/approach";
 
 
 export default function Home(){  
@@ -19,13 +22,24 @@ export default function Home(){
       </div>
 
       <div className="w-[100%] container gap-y-20 ">
+        <HeaderBelowText />
+      </div>
+     
+
+      <div className="w-[100%] container gap-y-20 ">
         <WhyUs />
       </div>
      
       <div className="w-[100%] container gap-y-20 md:mb-16">
       <SwiperComponents/>
       </div>
-      <div className=" w-[100%] flex flex-col items-center justify-center text-center px-4 container gap-y-20 md:mb-16">
+
+       
+      <div className="w-[100%] container gap-y-20 md:mb-24">
+        <Approach/>
+      </div>
+       
+      <div className=" w-[100%] flex flex-col items-center justify-center text-center px-4 container gap-y-10 md:mb-16">
         <h1 className="text-2xl sm:text-4xl md:text-5xl lg:text-5xl font-extrabold  text-white">
         Comprehensive <span className="text-primary-yellow">Cybersecurity</span> Services
         </h1>
@@ -36,10 +50,6 @@ export default function Home(){
       <div className="w-[100%] container gap-y-20 md:mb-12">
         <Advantage/>
       </div>
-
-      {/* <div className="w-[100%] container gap-y-20">
-        <Stats/>
-      </div> */}
 
       <div className="w-[100%] container gap-y-20"> 
     <Training/>

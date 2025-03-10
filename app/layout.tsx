@@ -5,6 +5,7 @@ import "./globals.css";
 
 import Navbar from "./custom-components/Navbar";
 import Footer from "./custom-components/Footer";
+import ChatBot from "./custom-components/ChatBot";
 
 
 const geistSans = Geist({
@@ -42,12 +43,18 @@ export default function RootLayout({
 }>) {
   return (
     <html lang="en">
+      <head>
+    
+      </head>
       <body
         className={`${geistSans.variable} ${poppins.variable} ${geistMono.variable} antialiased`}
       >
         <Navbar/>
         {children}
+       
         <Footer></Footer>
+        <script src="https://cdn.botpress.cloud/webchat/v2.3/inject.js"></script>
+        <script src="https://files.bpcontent.cloud/2025/03/10/09/20250310091526-8VRBLBG7.js"></script>
       </body>
     </html>
   );

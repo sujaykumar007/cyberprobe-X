@@ -18,10 +18,9 @@ export default function Footer() {
               CyberProbex specializes in Network Security, API Security, Mobile & Web Application Security Audits, ISO 27001 Compliance, and vCISO Services. We help businesses strengthen their security posture with cutting-edge solutions and expert assessments.              </p>
 
               <button className="hover:opacity-300 transition flex gap-5 mt-4">
-              <Image src={assets.logoX} className="w-8" alt="" />
-              <Image src={assets.linkedin} className="w-8" alt="" />
-              <Image src={assets.instagram} className="w-8" alt="" />
-              <Image src={assets.youtube} className="w-8" alt="" />
+             <Link href="https://x.com/CyberprobeX" > <Image src={assets.logoX} className="w-8" alt=""/></Link> 
+             <Link href="https://www.linkedin.com/company/cyberprobex/" > <Image src={assets.linkedin} className="w-8" alt=""/></Link> 
+             <Link href="https://www.instagram.com/cyberprobex/" > <Image src={assets.instagram} className="w-8" alt=""/></Link> 
 
         </button>
 

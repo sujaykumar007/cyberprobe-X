@@ -18,7 +18,7 @@ export default function Advantage() {
   ];
 
   return (
-    <div className="w-full px-5 max-h-full flex flex-col gap-y-20 items-center justify-center bg-black ">
+    <div className="w-full px-5 max-h-full flex flex-col gap-y-10 items-center justify-center bg-black ">
   <h1 className="text-2xl sm:text-4xl md:text-5xl lg:text-5xl font-extrabold text-white">
     The <span className="text-primary-yellow">CyberProbeX</span> Advantage
   </h1>

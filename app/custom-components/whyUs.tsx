@@ -23,16 +23,14 @@ export default function About() {
 
   return (
    
-    <div className="flex flex-col lg:flex-row items-center justify-center  px-4 md:py-12 text-center container md:[w-60%] sm:[w-80%]">
+    <div className="flex flex-col lg:flex-row items-center justify-between  px-4 md:py-12 text-center container md:[w-60%] sm:[w-80%]">
     
       {/* Text Section */}
-      <div className="text-center md:text-left w-full md:w-[40%] mb-10 md:mb-0">
-        <h1 className="text-2xl sm:text-4xl md:text-5xl lg:text-6xl font-extrabold leading-tight text-white text-center">
-          Why 
+      <div className="text-center md:text-left w-full md:w-[40%] mb-10 md:mb-0 text-2xl sm:text-3xl md:text-4xl lg:text-6xl">
+        <h1 className=" font-extrabold leading-tight text-white ">
+          Why <span className=" font-extrabold mt-3  text-primary-yellow">CyberProbeX </span>
         </h1>
-        <h1 className="text-primary-yellow text-3xl sm:text-5xl md:text-6xl lg:text-7xl font-extrabold mt-3 text-center">
-          CyberProbeX 
-        </h1>
+        
         
       </div>
 
