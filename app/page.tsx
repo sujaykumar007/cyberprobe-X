@@ -43,7 +43,9 @@ export default function Home(){
         <h1 className="text-2xl sm:text-4xl md:text-5xl lg:text-5xl font-extrabold  text-white">
         Comprehensive <span className="text-primary-yellow">Cybersecurity</span> Services
         </h1>
+        <div>
       <SwiperComponent/>
+      </div>
       </div>
 
 

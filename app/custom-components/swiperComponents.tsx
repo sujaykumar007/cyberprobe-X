@@ -51,6 +51,7 @@ const SwiperComponent: React.FC = () => {
           <Swiper
             effect={"cards"}
             grabCursor={true}
+            loop={true}
 
             autoplay={{ delay: 1000, disableOnInteraction: false }}
             modules={[EffectCards,Autoplay]}
