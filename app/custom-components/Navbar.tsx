@@ -55,7 +55,7 @@ export default function Navbar() {
             <div className={`flex items-center gap-4 ${isScroll ? "" : "text-black"}`}>
                 
                 <Link href="/contact" className={`hidden lg:flex items-center gap-3 px-10 py-2.5 border font-medium text-lg border-gray-500 rounded-2xl ml-4 relative overflow-hidden group transition-colors duration-500  hover:text-black ${isScroll ? "text-white" : "text-black"}`}>
-                    <span className="relative z-10">Schedule Demo</span>
+                    <span className="relative z-10">Speak to Sales</span>
                     <span className="absolute inset-0 bg-[#b1d450] scale-x-0 origin-left transition-transform duration-1000 ease-out group-hover:scale-x-100"></span>
                 </Link>
 
