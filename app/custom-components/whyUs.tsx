@@ -23,15 +23,13 @@ export default function About() {
 
   return (
    
-    <div className="flex flex-col lg:flex-row items-center justify-between  px-4 md:py-12 text-center container md:[w-60%] sm:[w-80%]">
+    <div className="flex flex-col lg:flex-row items-center lg:justify-around xl:justify-between  px-4 md:py-12 text-center container md:[w-60%] sm:[w-80%]">
     
       {/* Text Section */}
-      <div className="text-center md:text-left w-full md:w-[40%] mb-10 md:mb-0 text-2xl sm:text-3xl md:text-4xl lg:text-6xl">
-        <h1 className=" font-extrabold leading-tight text-white ">
-          Why <span className=" font-extrabold mt-3  text-primary-yellow">CyberProbeX </span>
-        </h1>
-        
-        
+      <div className="text-center  w-full md:w-[30%]  mb-10 md:mb-0 text-2xl sm:text-3xl md:text-4xl lg:text-4xl xl:text-5xl">
+        <h1 className="flex justify-center gap-x-4 font-extrabold leading-tight text-white ">
+          Why <span className=" font-extrabold   text-primary-yellow">CyberProbeX </span>
+        </h1>   
       </div>
 
       {/* Carousel Section */}

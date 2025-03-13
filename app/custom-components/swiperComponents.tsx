@@ -42,12 +42,12 @@ const SwiperComponent: React.FC = () => {
 
 
   return (
-    <div className="flex flex-col lg:flex-row items-center justify-between  text-white  text-center  overflow-hidden">
-      <div className="text-2xl sm:text-3xl md:text-4xl lg:text-5xl font-extrabold leading-tight max-w-5xl flex flex-col md:text-start text-center">
+    <div className="flex flex-col lg:flex-row items-center lg:justify-around xl:justify-between  text-white  text-center  overflow-hidden">
+      <div className="text-2xl sm:text-3xl md:text-4xl lg:text-4xl xl:text-5xl   font-extrabold leading-tight max-w-5xl flex flex-col xl:text-start text-center">
         <h1 className="mb-2">Different Types of  <span className="text-primary-yellow">Penetration testing</span></h1>
       </div>
-      <div className="flex flex-col items-center justify-center mt-14 space-y-8 w-full px-4">
-        <div className="w-full max-w-md sm:max-w-lg md:max-w-xl lg:max-w-3xl">
+      <div className="flex flex-col items-center justify-center mt-14 space-y-8 w-full px-4 lg:ml-4  xl:ml-28">
+        <div className="w-full max-w-md sm:max-w-lg md:max-w-xl lg:max-w-md">
           <Swiper
             effect={"cards"}
             grabCursor={true}

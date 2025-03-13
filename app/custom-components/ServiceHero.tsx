@@ -1,64 +1,71 @@
-import { MagicCard } from "@/components/magicui/magic-card";
-import { ShineBorder } from "@/components/magicui/shine-border";
+"use client"
+
+import { MagicCard } from "@/components/magicui/magic-card"
+import { ShineBorder } from "@/components/magicui/shine-border"
+import { motion } from "framer-motion"
+import Image from "next/image"
 
 export default function ServiceHero() {
-    const services = [
-        {
-          id: 1,
-          name: "Web Application Pentestisting",
-          description: "Identifying and fixing security vulnerabilities in web applications",
-        },
-        {
-          id: 2,
-          name: "Cloud Penetration Testing",
-          description: "Assessing cloud environments for misconfigurations and security risks.",
-        },
-        {
-          id: 3,
-          name: "API Pentestisting",
-          description: "Securing APIs by identifying vulnerabilities that could lead to data breaches.",
-        },
-        {
-          id: 4,
-          name: "Network Pentestisting",
-          description: "Evaluating network infrastructure to detect and mitigate security flaws",
-        },
-        {
-          id: 5,
-          name: "Mobile application Pentestisting",
-          description: "Testing mobile applications for vulnerabilities in storage, communication, and authentication",
-        },
-        {
-          id: 6,
-          name: "IoT Pentestisting",
-          description: "Uncovering security weaknesses in IoT devices and their ecosyste",
-        },
-      ];
-      
+  const services = [
+    { id: 9, name: "Web Application Pentesting", description: "Identifying and fixing security vulnerabilities in web applications" },
+    { id: 10, name: "Cloud Penetration Testing", description: "Assessing cloud environments for misconfigurations and security risks." },
+    { id: 11, name: "API Pentesting", description: "Securing APIs by identifying vulnerabilities that could lead to data breaches." },
+    { id: 12, name: "Network Pentesting", description: "Evaluating network infrastructure to detect and mitigate security flaws" },
+    { id: 13, name: "Mobile Application Pentesting", description: "Testing mobile applications for vulnerabilities in storage, communication, and authentication" },
+    { id: 14, name: "IoT Pentesting", description: "Uncovering security weaknesses in IoT devices and their ecosystem" },
+  ]
 
   return (
-    <div className="w-full px-5 md:max-h-full  flex flex-col gap-y-20 items-center justify-center bg-black ">
-       
-    <ShineBorder
-      className=" rounded-lg bg-black h-[1100px] md:h-[750px]  lg:h-[530px]"
-      color={["#A07CFE", "#FE8FB5", "#FFBE7B"]}
-    >
-         <h1 className="text-2xl sm:text-4xl md:text-5xl lg:text-5xl font-extrabold py-10 text-white"  style={{textAlign:'center'}}>
-            Core Services
-        </h1>
-      <div className=" grid md:grid-cols-3 grid-cols-1 h-[500px] w-full gap-6 lg:h-[250px] lg:flex-row my-10 px-10">
-        {services.map((advantage, index) => (
-          <MagicCard
+    <div className="w-screen h-[70%] flex flex-col items-center justify-center bg-black">
+      {/* Title with animation */}
+      <motion.h1
+        className="text-5xl sm:text-5xl md:text-5xl lg:text-7xl font-bold text-white text-center pb-10"
+        initial={{ opacity: 0, y: -20 }}
+        animate={{ opacity: 1, y: 0 }}
+        transition={{ duration: 0.8, ease: "easeOut" }}
+      >
+        Core Services
+      </motion.h1>
+
+      {/* Services Grid */}
+      <motion.div
+        className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 gap-6 w-full w-7xl px-10 py-10 h-full"
+        initial="hidden"
+        animate="visible"
+        variants={{
+          hidden: { opacity: 0 },
+          visible: { opacity: 1, transition: { staggerChildren: 0.2 } }
+        }}
+      >
+        {services.map((service, index) => (
+          <motion.div
             key={index}
-            className="cursor-pointer flex flex-col items-center justify-center p-6 text-center text-white text-lg bg-gray-900 rounded-lg shadow-md hover:shadow-lg transition"
-            gradientColor="#262626"
+            variants={{
+              hidden: { opacity: 0, scale: 0.8, y: 30 },
+              visible: { opacity: 1, scale: 1, y: 0, transition: { duration: 0.6, ease: "easeOut" } }
+            }}
           >
-            <h3 className="text-xl font-semibold mb-2 text-primary-yellow">{advantage.name}</h3>
-            {/* <p className="text-md opacity-80">{advantage.desc}</p> */}
-          </MagicCard>
+            <MagicCard
+              className="cursor-pointer flex flex-col items-center justify-center p-6 text-center text-white text-lg bg-gray-900 rounded-lg shadow-md hover:shadow-lg transition w-full"
+              gradientColor="#262626"
+            >
+              {/* Image first, then text */}
+              <div className="flex flex-col items-center">
+                <Image
+                  src={`/icons/${service.id}.png`}
+                  alt="icon"
+                  width={80}
+                  height={80}
+                  className="rounded-full border-2 border-white mb-4"
+                />
+                <h3 className="text-xl font-semibold text-primary-yellow">
+                  {service.name}
+                </h3>
+              </div>
+            </MagicCard>
+          </motion.div>
         ))}
-      </div>
-    </ShineBorder>  
+      </motion.div>
     </div>
-  );
+  )
 }

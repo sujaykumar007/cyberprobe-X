@@ -96,13 +96,13 @@ const ServiceCardItem = ({ service, index }: { service: any; index: number }) =>
         </div>
       ) : (
         <div className="hidden md:flex justify-center">
-          <span className="text-primary-yellow text-6xl font-bold ">{service.name}</span>
+          <span className="text-primary-yellow text-5xl font-bold ">{service.name}</span>
         </div>
       )}
 
       {isEven ? (
         <div className="hidden md:flex justify-center">
-          <span className="text-primary-yellow text-6xl font-bold o">{service.name}</span>
+          <span className="text-primary-yellow text-5xl font-bold o">{service.name}</span>
         </div>
       ) : (
         <div className="flex justify-center w-full">

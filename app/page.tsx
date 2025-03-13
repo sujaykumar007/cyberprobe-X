@@ -21,26 +21,26 @@ export default function Home(){
         <Header />
       </div>
 
-      <div className="w-[100%] container gap-y-20 ">
+      <div className="lg:w-[100%] md:w-[90%] container gap-y-20 "> 
         <HeaderBelowText />
       </div>
      
 
-      <div className="w-[100%] container gap-y-20 ">
+      <div className="lg:w-[100%] md:w-[90%] container gap-y-20 ">
         <WhyUs />
       </div>
      
-      <div className="w-[100%] container gap-y-20 md:mb-16">
+      <div className="lg:w-[100%] md:w-[90%] container gap-y-20 md:mb-16">
       <SwiperComponents/>
       </div>
 
        
-      <div className="w-[100%] container gap-y-20 md:mb-24">
+      <div className="lg:w-[100%] md:w-[90%] container gap-y-20 md:mb-24">
         <Approach/>
       </div>
        
-      <div className=" w-[100%] flex flex-col items-center justify-center text-center px-4 container gap-y-10 md:mb-16">
-        <h1 className="text-2xl sm:text-4xl md:text-5xl lg:text-5xl font-extrabold  text-white">
+      <div className=" lg:w-[100%] md:w-[90%] flex flex-col items-center justify-center text-center px-4 container gap-y-10 md:mb-16">
+        <h1 className="text-2xl sm:text-4xl md:text-4xl xl:text-5xl font-extrabold  text-white">
         Comprehensive <span className="text-primary-yellow">Cybersecurity</span> Services
         </h1>
         <div>
@@ -49,11 +49,11 @@ export default function Home(){
       </div>
 
 
-      <div className="w-[100%] container gap-y-20 md:mb-12">
+      <div className="lg:w-[100%] md:w-[90%] container gap-y-20 md:mb-12">
         <Advantage/>
       </div>
 
-      <div className="w-[100%] container gap-y-20"> 
+      <div className="lg:w-[100%] md:w-[90%] container gap-y-20"> 
     <Training/>
       </div>
 
@@ -64,7 +64,7 @@ export default function Home(){
         </div>
         <ContactForm />
       </div>
-
+    
     </div>
   );
 }

@@ -21,7 +21,7 @@ export function Training() {
 
   return (
     <div className="w-full flex flex-col items-center justify-center bg-black py-12">
-      <h1 className="text-2xl sm:text-4xl md:text-5xl lg:text-5xl font-extrabold text-white text-center">
+      <h1 className="text-2xl sm:text-4xl md:text-4xl xl:text-5xl font-extrabold text-white text-center">
         Practical Security Training By{" "}
         <span className="text-primary-yellow">CyberProbeX</span>
       </h1>

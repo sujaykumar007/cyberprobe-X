@@ -74,7 +74,7 @@ const SwiperComponent: React.FC = () => {
       }}
       pagination={{ clickable: true }}
       modules={[EffectCoverflow, Pagination, Autoplay]}
-      className="w-full max-w-[90vw] lg:max-w-[60vw] py-10"
+      className="w-full max-w-[90vw] lg:max-w-[85vw] xl:max-w-[60vw] py-10"
     >
       {cardData.map((card, index) => (
         <SwiperSlide key={index} className="w-full border-2 border-white shadow-xl rounded-lg ">

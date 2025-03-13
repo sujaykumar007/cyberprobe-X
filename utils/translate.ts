@@ -17,6 +17,6 @@ export const translateText = async (text:any, targetLanguage:any) => {
     return response.data.data.translations[0].translatedText
   } catch (error) {
     console.error('Translation Error:', error)
-    return text // Return original text if translation fails
+    return text 
   }
 }

@@ -1,7 +1,6 @@
 "use client"
 
 import { Card, CardContent, CardDescription, CardHeader, CardTitle } from "@/components/ui/card";
-import { MarqueeDemo } from "../custom-components/clients";
 import { Carousel, CarouselContent, CarouselItem, CarouselNext, CarouselPrevious } from "@/components/ui/carousel";
 import { BorderBeam } from "@/components/magicui/border-beam";
 import { NumberTicker } from "@/components/magicui/number-ticker";
@@ -21,12 +20,12 @@ export default function About() {
   ];
 
   return (
-    <div className="w-full py-24 md:py-36 px-4 md:px-12 bg-black">
+    <div className="  w-full py-24 md:py-36 px-4 md:px-12 bg-black">
       <motion.div 
         initial={{ opacity: 0 ,x:-100}}
         animate={{ opacity: 1 ,x:0}}
         transition={{ duration: 0.5, delay: 0.5 }} 
-        className="w-full h-[790px] flex flex-col items-center rounded-3xl bg-black text-white px-6 md:px-12 relative"
+        className="w-full  flex flex-col items-center rounded-3xl bg-black text-white px-6 md:px-12 relative"
       >
         <div className="absolute top-10 left-1/2 transform -translate-x-1/2 w-full md:w-[80%] text-center px-4">
           <h1 className="text-3xl md:text-5xl font-bold mb-6 text-primary-yellow">CyberProbeX</h1>
@@ -64,10 +63,10 @@ export default function About() {
 {services.map((service, index) => (
   <div
     key={index}
-    className={`flex flex-col md:flex-row justify-between items-center mx-auto w-full md:w-[80%] px-4 md:px-12 py-10 md:py-6 space-y-6 md:space-y-0 ${index === 0 ? 'mt-10 md:mt-24' : ''}`}
+    className={`flex flex-col xl:flex-row justify-around items-center md:gap-y-10 mx-auto w-full md:w-full px-4 md:px-12 py-10 md:py-6 space-y-6 md:space-y-0 ${index === 0 ? 'mt-10 md:mt-24' : ''}`}
   >
     <span
-      className={`text-primary-yellow text-5xl md:text-8xl font-bold ${index % 2 === 0 ? 'md:order-1' : 'md:order-2'}`}
+      className={`text-primary-yellow text-5xl lg:text-6xl xl:text-8xl font-bold ${index % 2 === 0 ? 'xl:order-1' : 'xl:order-2'}`}
     >
       {service.title}
     </span>
@@ -83,7 +82,7 @@ export default function About() {
   </div>
 ))}
 
-      {/* Why Us Section */}
+      {/* Why Us Section
       <div className="flex flex-col md:flex-row items-center justify-between px-4 py-36 w-full gap-x-8 md:w-[80%] mx-auto">
         <div className="text-center md:text-left w-full md:w-[40%] mb-10 md:mb-0">
           <h1 className="text-3xl md:text-5xl font-extrabold leading-tight text-white flex gap-x-4">Why <span className="text-primary-yellow">CyberProbeX</span></h1>
@@ -107,7 +106,7 @@ export default function About() {
             <CarouselNext />
           </Carousel>
         </div>
-      </div>
+      </div> */}
 
       {/* Clients Section */}
       {/* <div className="text-center mt-14 px-4">
