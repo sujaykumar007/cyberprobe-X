@@ -156,7 +156,7 @@ export default function Navbar() {
   <div className="mt-6">
     <Listbox value={selectedLanguage} onChange={(lang) => changeLanguage(lang.code)}>
       <div className="relative">
-        <Listbox.Button className="w-full px-4 py-2 border border-gray-300 rounded-lg text-lg flex justify-between items-center">
+        <Listbox.Button className="w-20 px-4 py-2 border border-gray-300 rounded-lg text-lg flex justify-between items-center">
           {selectedLanguage.label} <ChevronDown size={18} />
         </Listbox.Button>
 
