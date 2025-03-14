@@ -15,7 +15,8 @@ export default function LanguageSwitcher() {
       if (!document.querySelector("#google-translate-script")) {
         const script = document.createElement("script");
         script.id = "google-translate-script";
-        script.src = "//translate.google.com/translate_a/element.js?cb=TranslateInit";
+        script.src = "https://translate.google.com/translate_a/element.js?cb=TranslateInit";
+
         script.async = true;
         document.body.appendChild(script);
       }

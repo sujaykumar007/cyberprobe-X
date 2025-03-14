@@ -31,17 +31,19 @@ export default function Navbar() {
   }, []);
 
   const changeLanguage = (lang: string) => {
-    const newLang = languages.find((l) => l.code === lang) || languages[0];
-    setSelectedLanguage(newLang);
-
+    setSelectedLanguage(languages.find((l) => l.code === lang) || languages[0]);
+  
     setTimeout(() => {
       const selectElement = document.querySelector(".goog-te-combo") as HTMLSelectElement;
       if (selectElement) {
         selectElement.value = lang;
         selectElement.dispatchEvent(new Event("change"));
+      } else {
+        console.error("Google Translate dropdown not found.");
       }
-    }, 100);
+    }, 1000);
   };
+  
 
   return (
     <>
