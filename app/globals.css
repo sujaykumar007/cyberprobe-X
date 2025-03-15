@@ -97,3 +97,23 @@ input[type="number"] {
   }
 }
 
+.goog-te-banner-frame {
+  display: none !important;
+}
+
+body {
+  top: 0px !important;
+}
+/* Hide the Google Translate toolbar */
+#goog-gt-tt, .goog-te-banner-frame, .goog-te-balloon-frame {
+  display: none !important;
+  visibility: hidden !important;
+  height: 0 !important;
+}
+
+/* Prevent layout shifting */
+body {
+  top: 0px !important;
+  position: static !important;
+}
+
