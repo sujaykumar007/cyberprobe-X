@@ -157,36 +157,44 @@ export default function Navbar() {
   </li>
 
  
-  <div className="mt-6">
-    <Listbox value={selectedLanguage} onChange={(lang) => changeLanguage(lang.code)}>
-      <div className="relative">
-        <Listbox.Button className="w-20 px-4 py-2 border border-gray-300 rounded-lg text-lg flex justify-between items-center">
-          {selectedLanguage.label} <ChevronDown size={18} />
-        </Listbox.Button>
+  <div className="relative  lg:block notranslate mt-6" lang="en"> 
+  <Listbox value={selectedLanguage} onChange={(lang) => changeLanguage(lang.code)}>
+    <div className="relative">
+      <Listbox.Button
+        className={`flex items-center justify-between w-20 px-4 py-2 rounded-lg text-lg border ${
+          isScroll ? "bg-gray-800 text-white" : "bg-gray-100 text-black"
+        }`}
+      >
+        {selectedLanguage.label}
+        <ChevronDown size={18} />
+      </Listbox.Button>
 
-        <Transition
-          as={Fragment}
-          enter="transition ease-out duration-300"
-          enterFrom="opacity-0 scale-95"
-          enterTo="opacity-100 scale-100"
-          leave="transition ease-in duration-200"
-          leaveFrom="opacity-100 scale-100"
-          leaveTo="opacity-0 scale-95"
+      <Transition
+        as={Fragment}
+        enter="transition ease-out duration-300"
+        enterFrom="opacity-0 scale-95"
+        enterTo="opacity-100 scale-100"
+        leave="transition ease-in duration-200"
+        leaveFrom="opacity-100 scale-100"
+        leaveTo="opacity-0 scale-95"
+      >
+        <Listbox.Options
+          className="absolute left-0 mt-2 w-full max-h-60 overflow-y-auto bg-white shadow-lg rounded-lg py-2 z-50 notranslate"
+          lang="en"
         >
-          <Listbox.Options className="absolute left-0 mt-2 w-full bg-white shadow-lg rounded-lg py-2 z-50">
-            {languages.map((lang) => (
-              <Listbox.Option
-                key={lang.code}
-                value={lang}
-                className="cursor-pointer px-4 py-2 hover:bg-gray-200 text-black"
-              >
-                {lang.label}
-              </Listbox.Option>
-            ))}
-          </Listbox.Options>
-        </Transition>
-      </div>
-    </Listbox>
+          {languages.map((lang) => (
+            <Listbox.Option
+              key={lang.code}
+              value={lang}
+              className="cursor-pointer px-4 py-2 hover:bg-gray-200 text-black"
+            >
+              {lang.label}
+            </Listbox.Option>
+          ))}
+        </Listbox.Options>
+      </Transition>
+    </div>
+  </Listbox>
   </div>
 </ul>
 
