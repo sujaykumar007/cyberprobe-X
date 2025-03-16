@@ -3,7 +3,8 @@ import { Geist, Geist_Mono, Poppins, Inter } from "next/font/google";
 import "./globals.css";
 import Navbar from "./custom-components/Navbar";
 import Footer from "./custom-components/Footer";
-import LanguageSwitcher from "@/components/languge-switch";// ✅ Import
+import LanguageSwitcher from "@/components/languge-switch";
+import ChatBot from "./custom-components/ChatBot";
 
 const geistSans = Geist({ variable: "--font-geist-sans", subsets: ["latin"] });
 const geistMono = Geist_Mono({ variable: "--font-geist-mono", subsets: ["latin"] });
@@ -28,10 +29,10 @@ export default function RootLayout({ children }: { children: React.ReactNode }) 
       
         <Navbar />
         <LanguageSwitcher />
-        {/* ✅ Page Content */}
+        <ChatBot/>
         {children}
 
-        {/* ✅ Footer */}
+       
         <Footer />
       </body>
     </html>

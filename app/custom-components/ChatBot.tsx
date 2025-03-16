@@ -22,7 +22,8 @@ export default function ChatBot() {
 
     const script = document.createElement("script")
     script.id = "botpress-script"
-    script.src = "https://cdn.botpress.cloud/webchat/v2/inject.js"
+    // script.src = "https://cdn.botpress.cloud/webchat/v2/inject.js"
+    script.src = "https://cdn.botpress.cloud/webchat/v2.2/shareable.html?configUrl=https://files.bpcontent.cloud/2025/03/10/09/20250310091527-9UZXGDSE.json"
     script.async = true
     document.body.appendChild(script)
 
@@ -60,7 +61,7 @@ export default function ChatBot() {
       setTimeout(() => {
         clearInterval(checkBotPress)
         if (!botLoaded) {
-          console.error("❌ BotPress WebChat did not initialize.")
+          console.error("BotPress WebChat did not initialize.")
         }
       }, 10000)
     }
