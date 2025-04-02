@@ -4,14 +4,14 @@ export default function Forensics() {
   return (
     <div className="w-full px-5 max-h-full flex flex-col gap-y-10 items-center justify-center bg-black">
       <h1 className="text-2xl sm:text-4xl md:text-4xl xl:text-5xl font-extrabold text-white text-center">
-        The <span className="text-primary-yellow">Digital</span> Forensics
+         <span className="text-primary-yellow">Digital</span> Forensics
       </h1>
       <h2 className="text-primary-yellow text-xl sm:text-2xl md:text-3xl font-semibold text-center">
         Export analysis. Defensible results. Digital clarity when it matters most.
       </h2>
       <div>
         <Link
-          href="/"
+          href="/Forensics"
           className=" lg:flex items-center gap-3 px-10 py-2.5 border font-medium text-lg border-gray-500 text-white rounded-2xl relative overflow-hidden group transition-colors duration-500 hover:text-black"
         >
           <span className="relative z-10">Contact Us Today</span>
