@@ -27,7 +27,7 @@ import {
             What Can You Expect From A Digital Forensic Investigation?
           </h1>
           <p className="text-lg font-normal mt-3">
-          At CyberWhite, our experts can help you recover, extract, investigate and analyse evidence from working and non-working (mechanically failed), deleted and corrupted digital data storage devices, including cloud-hosted locations that may have been used during an incident, to determine and report the who, what, when, where, why and how of an incident.
+          At CyberProbeX, our experts can help you recover, extract, investigate and analyse evidence from working and non-working (mechanically failed), deleted and corrupted digital data storage devices, including cloud-hosted locations that may have been used during an incident, to determine and report the who, what, when, where, why and how of an incident.
           </p>
         </div>
   
