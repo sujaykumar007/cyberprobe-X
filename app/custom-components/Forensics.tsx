@@ -15,7 +15,7 @@ export default function Forensics() {
           className=" lg:flex items-center gap-3 px-10 py-2.5 border font-medium text-lg border-gray-500 text-white rounded-2xl relative overflow-hidden group transition-colors duration-500 hover:text-black"
         >
           <span className="relative z-10">Contact Us Today</span>
-          <span className="absolute inset-0 bg-[#b1d450] scale-x-0 origin-left transition-transform duration-1000 ease-out group-hover:scale-x-100"></span>
+          <span className="absolute inset-0 lg:bg-[#b1d450] scale-x-0 origin-left transition-transform duration-1000 ease-out group-hover:scale-x-100"></span>
         </Link>
       </div>
     </div>
