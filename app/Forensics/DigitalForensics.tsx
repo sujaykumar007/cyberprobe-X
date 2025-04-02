@@ -1,5 +1,5 @@
 import Image from "next/image";
-import fingerprint from "../assets/ADOBE.jpg";
+import fingerprint from "../assets/blueimage.png";
 import Link from "next/link";
 
 export default function DigitalForensics() {
