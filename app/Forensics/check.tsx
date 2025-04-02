@@ -19,7 +19,8 @@ export default function AreasOfExpertise() {
       {/* Wrapping inside a div for better styling */}
       <div className="relative w-full md:w-3/4 p-6 md:p-8 rounded-lg bg-gray-900 text-white">
         {/* Border Beam Effect */}
-        <BorderBeam borderWidth={2} className="absolute inset-0 rounded-lg" />
+        <BorderBeam style={{ borderWidth: "2px" }} className="absolute inset-0 rounded-lg border-[#b1d450]" />
+
 
         {/* Content */}
         <h2 className="text-2xl font-extrabold mb-6 text-center md:text-left text-[#b1d450]">

@@ -33,7 +33,7 @@ import {
   
         <div className="relative w-full md:w-1/2 text-white p-5 md:p-20 border-2 border-gray-700 rounded-lg">
       {/* BorderBeam Effect */}
-      <BorderBeam borderWidth={2} className="absolute inset-0 rounded-lg" />
+      <BorderBeam style={{ borderWidth: "2px" }}  className="absolute inset-0 rounded-lg" />
 
       {/* Content */}
       <h3 className="font-semibold mb-4 text-[#b1d450]">
