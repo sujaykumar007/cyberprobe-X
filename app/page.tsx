@@ -7,8 +7,9 @@ import Advantage from "./custom-components/Advantage";
 import { Training } from "./custom-components/Training";
 import ContactForm from "./custom-components/ContactForm";
 import HeaderBelowText from "./custom-components/HeaderBelowText";
-import { Header } from "./custom-components/Header";
 import Approach from "./custom-components/approach";
+import HeaderSection from "./custom-components/HeaderSection";
+import Forensics from "./custom-components/Forensics";
 
 
 export default function Home(){  
@@ -17,10 +18,13 @@ export default function Home(){
     <div className="w-full pb-40 h-full flex flex-col gap-y-10 md:gap-y-10 items-center justify-center bg-black ">
       
       <div className="text-center  w-[100%]  rounded-3xl  overflow-hidden mt-20 md:mt-0 pt-10 md:pt-0">
-      <Header/>
+     <HeaderSection/>
       </div>
+      <div className="container mx-auto md:w-[90%] lg:w-full gap-y-20 mt-0 lg:mt-20 ">
+  <Forensics />
+</div>
 
-      <div className="lg:w-[100%] md:w-[90%] container gap-y-20 "> 
+      <div className="lg:w-[100%] md:w-[90%] container gap-y-20  mt-0 lg:mt-20 md:mt-10 sm:mt-8 "> 
         <HeaderBelowText />
       </div>
      
