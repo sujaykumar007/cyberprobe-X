@@ -1,6 +1,5 @@
 
 
-import { Header } from "./custom-components/Header";
 import WhyUs from "./custom-components/whyUs";
 import SwiperComponent from "./custom-components/swiper";
 import SwiperComponents from "./custom-components/swiperComponents";
@@ -8,7 +7,7 @@ import Advantage from "./custom-components/Advantage";
 import { Training } from "./custom-components/Training";
 import ContactForm from "./custom-components/ContactForm";
 import HeaderBelowText from "./custom-components/HeaderBelowText";
-import App from "next/app";
+import { Header } from "./custom-components/Header";
 import Approach from "./custom-components/approach";
 
 
@@ -17,8 +16,8 @@ export default function Home(){
   return (
     <div className="w-full pb-40 h-full flex flex-col gap-y-10 md:gap-y-10 items-center justify-center bg-black ">
       
-      <div className={`text-center  w-[100%]  rounded-3xl  overflow-hidden mt-20 md:mt-0 pt-10 md:pt-0`}  style={{ backgroundColor: "var(--primary-blue)"}}>
-        <Header />
+      <div className="text-center  w-[100%]  rounded-3xl  overflow-hidden mt-20 md:mt-0 pt-10 md:pt-0">
+      <Header/>
       </div>
 
       <div className="lg:w-[100%] md:w-[90%] container gap-y-20 "> 

@@ -161,7 +161,7 @@ export default function Navbar() {
   <Listbox value={selectedLanguage} onChange={(lang) => changeLanguage(lang.code)}>
     <div className="relative">
       <Listbox.Button
-        className={`flex items-center justify-between w-20 px-4 py-2 rounded-lg text-lg border ${
+        className={`flex items-center justify-between w-20 px-4 py-2 rounded-lg text-lg  ${
           isScroll ? "bg-gray-800 text-white" : "bg-gray-100 text-black"
         }`}
       >

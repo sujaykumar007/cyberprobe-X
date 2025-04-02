@@ -3,7 +3,7 @@ import "../styles/colors.css";
 
 export const Header = () => {
   return (
-    <header className="relative w-full h-screen overflow-hidden">
+    <header className="relative w-full  overflow-hidden">
       <video 
         autoPlay 
         loop 
