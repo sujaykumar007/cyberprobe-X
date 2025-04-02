@@ -17,7 +17,7 @@ export default function Home(){
   return (
     <div className="w-full pb-40 h-full flex flex-col gap-y-10 md:gap-y-10 items-center justify-center bg-black ">
       
-      <div className="text-center  w-[100%]  rounded-3xl  overflow-hidden mt-20 md:mt-0 pt-10 md:pt-0">
+      <div className="text-center  w-[100%]  rounded-3xl  overflow-hidden  md:mt-0  md:pt-0">
      <HeaderSection/>
       </div>
       <div className="container mx-auto md:w-[90%] lg:w-full gap-y-20 mt-0 lg:mt-20 ">

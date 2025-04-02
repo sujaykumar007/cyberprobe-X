@@ -120,3 +120,11 @@ body {
 iframe.skiptranslate {
   display: none !important;
 }
+@keyframes colorChange {
+  0% { color: white; }
+  100% { color: #b1d450; }
+}
+
+.animate-color-change {
+  animation: colorChange 2s ease-in-out infinite alternate;
+}
