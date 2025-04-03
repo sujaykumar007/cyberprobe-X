@@ -4,9 +4,9 @@ export default function Forensics() {
   return (
     <div className="w-full px-5 max-h-full flex flex-col gap-y-10 items-center justify-center bg-black">
       <h1 className="text-2xl sm:text-4xl md:text-4xl xl:text-5xl font-extrabold text-white text-center">
-         <span className="text-primary-yellow">Digital</span> Forensics
+         <span className="text-primary-yellow">Digital Forensics </span>
       </h1>
-      <h2 className="text-primary-yellow text-xl sm:text-2xl md:text-3xl font-semibold text-center">
+      <h2 className="text-white text-xl sm:text-2xl md:text-3xl font-semibold text-center">
         Export analysis. Defensible results. Digital clarity when it matters most.
       </h2>
       <div>
