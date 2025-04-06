@@ -10,7 +10,7 @@ import Script from "next/script"
 const geistSans = Geist({ variable: "--font-geist-sans", subsets: ["latin"] })
 const geistMono = Geist_Mono({ variable: "--font-geist-mono", subsets: ["latin"] })
 const poppins = Poppins({ variable: "--font-geist-popins", subsets: ["latin"], weight: ["300", "400", "500", "600", "700"] })
-const inter = Inter({ subsets: ["latin"] })
+const inter = Inter({ subsets: ["latin"] });
 
 export const metadata: Metadata = {
   title: "CyberProbeX",
