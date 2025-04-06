@@ -1,11 +1,11 @@
 import Image from "next/image";
-import fingerprint from "../assets/blueimage.png";
+import fingerprint from "../assets/Blueiamge.png"
 import Link from "next/link";
 
 export default function DigitalForensics() {
   return (
     <div className="relative w-full h-[50vh] flex items-center justify-center">
-      {/* Background Image */}
+    
       <Image 
         src={fingerprint} 
         alt="contact"  
