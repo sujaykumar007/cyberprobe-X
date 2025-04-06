@@ -19,6 +19,8 @@ export const metadata: Metadata = {
   keywords: [
     "cyberprobex",
     "cyberprobe",
+    "CyberProbeX", "penetration testing", "web app pentest", "cloud security testing", "API security", "mobile app testing", "cyber advisory", "cyber consultancy", "vCISO services", "vDPO services", "cyber risk assessment", "ISO 27001 certification", "PCI DSS compliance", "regulatory compliance", "cybersecurity consultancy", "cyber resilience", "virtual CISO", "virtual DPO", "security architecture", "information security", "business-aligned security", "strategic cybersecurity"
+
   ],
 }
 
