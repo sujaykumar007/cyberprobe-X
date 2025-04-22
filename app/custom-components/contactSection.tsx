@@ -17,46 +17,57 @@ const servicesList = [
 export default function ContactUs() {
   const [phone, setPhone] = useState('');
   const [checkedServices, setCheckedServices] = useState<string[]>([]);
+  const [status, setStatus] = useState<string | null>(null);
 
   const handleCheckboxChange = (service: string) => {
     setCheckedServices((prev) =>
-      prev.includes(service) ? prev.filter((s) => s !== service) : [...prev, service]
+      prev.includes(service)
+        ? prev.filter((s) => s !== service)
+        : [...prev, service]
     );
   };
 
   const handleSubmit = async (e: React.FormEvent) => {
     e.preventDefault();
-  
+    setStatus('Sending...');
+    console.log("Sending")
     const fullNameInput = document.querySelector('input[placeholder="Enter your full name"]') as HTMLInputElement;
     const emailInput = document.querySelector('input[placeholder="Enter your work email"]') as HTMLInputElement;
     const messageInput = document.querySelector('textarea[placeholder="Enter your message here"]') as HTMLTextAreaElement;
-  
+
     const fullName = fullNameInput?.value.trim();
     const email = emailInput?.value.trim();
     const message = messageInput?.value.trim();
     const trimmedPhone = phone.trim();
-  
+
     if (!fullName || !email || !trimmedPhone) {
-      alert("Please fill in all required fields.");
+      alert('Please fill in all required fields.');
+      setStatus(null);
       return;
     }
-  
-    const res = await fetch('/api/contact', {
-      method: 'POST',
-      headers: { 'Content-Type': 'application/json' },
-      body: JSON.stringify({
-        fullName,
-        email,
-        phone: trimmedPhone,
-        message,
-        services: checkedServices,
-      }),
-    });
-  
-    const result = await res.json();
-    alert(result.message);
+
+    try {
+      const res = await fetch('/api/contact', {
+        method: 'POST',
+        headers: { 'Content-Type': 'application/json' },
+        body: JSON.stringify({
+          fullName,
+          email,
+          phone: trimmedPhone,
+          message,
+          services: checkedServices,
+        }),
+      });
+
+      const result = await res.json();
+      alert(result.message);
+    } catch (err) {
+      console.error('Error sending:', err);
+      alert('Something went wrong. Please try again later.');
+    } finally {
+      setStatus(null);
+    }
   };
-  
 
   return (
     <form
@@ -85,7 +96,7 @@ export default function ContactUs() {
         <div>
           <label className="block text-sm font-medium border-none text-white">Phone Number</label>
           <PhoneInput
-            country={'us'}  
+            country={'us'}
             value={phone}
             onChange={setPhone}
             inputClass="!w-full !p-2 !border !rounded !pl-10 "
@@ -127,7 +138,7 @@ export default function ContactUs() {
         type="submit"
         className="bg-[#b1d450] text-black font-bold px-6 py-2 rounded shadow transition"
       >
-        Send Message
+        {status || 'Send Message'}
       </button>
     </form>
   );
