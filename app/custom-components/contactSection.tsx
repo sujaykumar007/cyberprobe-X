@@ -10,7 +10,7 @@ const servicesList = [
   'IoT Pentesting',
   'API pentesting',
   'Cloud security assessment',
-  'I want to partner with qualysec',
+  'I want to partner with cyberProbex',
   'Others',
 ];
 
@@ -88,7 +88,7 @@ export default function ContactUs() {
     >
       <div className="grid grid-cols-1 sm:grid-cols-2 gap-4">
         <div>
-          <label className="block text-sm font-medium">Full Name</label>
+          <label className="block text-sm font-medium text-white">Full Name</label>
           <input
             type="text"
             placeholder="Enter your full name"
@@ -99,7 +99,7 @@ export default function ContactUs() {
           />
         </div>
         <div>
-          <label className="block text-sm font-medium border-none">Work Email</label>
+          <label className="block text-sm font-medium border-none text-white">Work Email</label>
           <input
             type="email"
             placeholder="Enter your work email"
