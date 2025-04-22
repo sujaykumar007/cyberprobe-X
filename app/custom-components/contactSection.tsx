@@ -26,32 +26,37 @@ export default function ContactUs() {
 
   const handleSubmit = async (e: React.FormEvent) => {
     e.preventDefault();
-
-    const fullName = (
-      document.querySelector('input[placeholder="Enter your full name"]') as HTMLInputElement
-    )?.value;
-    const email = (
-      document.querySelector('input[placeholder="Enter your work email"]') as HTMLInputElement
-    )?.value;
-    const message = (
-      document.querySelector('textarea[placeholder="Enter your message here"]') as HTMLTextAreaElement
-    )?.value;
-
+  
+    const fullNameInput = document.querySelector('input[placeholder="Enter your full name"]') as HTMLInputElement;
+    const emailInput = document.querySelector('input[placeholder="Enter your work email"]') as HTMLInputElement;
+    const messageInput = document.querySelector('textarea[placeholder="Enter your message here"]') as HTMLTextAreaElement;
+  
+    const fullName = fullNameInput?.value.trim();
+    const email = emailInput?.value.trim();
+    const message = messageInput?.value.trim();
+    const trimmedPhone = phone.trim();
+  
+    if (!fullName || !email || !trimmedPhone) {
+      alert("Please fill in all required fields.");
+      return;
+    }
+  
     const res = await fetch('/api/contact', {
       method: 'POST',
       headers: { 'Content-Type': 'application/json' },
       body: JSON.stringify({
         fullName,
         email,
-        phone,
+        phone: trimmedPhone,
         message,
         services: checkedServices,
       }),
     });
-
+  
     const result = await res.json();
     alert(result.message);
   };
+  
 
   return (
     <form
