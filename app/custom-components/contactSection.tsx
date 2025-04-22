@@ -15,6 +15,9 @@ const servicesList = [
 ];
 
 export default function ContactUs() {
+  const [fullName, setFullName] = useState('');
+  const [email, setEmail] = useState('');
+  const [message, setMessage] = useState('');
   const [phone, setPhone] = useState('');
   const [checkedServices, setCheckedServices] = useState<string[]>([]);
   const [status, setStatus] = useState<string | null>(null);
@@ -30,17 +33,8 @@ export default function ContactUs() {
   const handleSubmit = async (e: React.FormEvent) => {
     e.preventDefault();
     setStatus('Sending...');
-    console.log("Sending")
-    const fullNameInput = document.querySelector('input[placeholder="Enter your full name"]') as HTMLInputElement;
-    const emailInput = document.querySelector('input[placeholder="Enter your work email"]') as HTMLInputElement;
-    const messageInput = document.querySelector('textarea[placeholder="Enter your message here"]') as HTMLTextAreaElement;
 
-    const fullName = fullNameInput?.value.trim();
-    const email = emailInput?.value.trim();
-    const message = messageInput?.value.trim();
-    const trimmedPhone = phone.trim();
-
-    if (!fullName || !email || !trimmedPhone) {
+    if (!fullName.trim() || !email.trim() || !phone.trim()) {
       alert('Please fill in all required fields.');
       setStatus(null);
       return;
@@ -53,16 +47,26 @@ export default function ContactUs() {
         body: JSON.stringify({
           fullName,
           email,
-          phone: trimmedPhone,
+          phone,
           message,
           services: checkedServices,
         }),
       });
 
       const result = await res.json();
-      alert(result.message);
+
+      if (res.ok) {
+        alert(result.message || 'Email sent successfully!');
+        setFullName('');
+        setEmail('');
+        setPhone('');
+        setMessage('');
+        setCheckedServices([]);
+      } else {
+        alert(result.message || 'Something went wrong. Try again.');
+      }
     } catch (err) {
-      console.error('Error sending:', err);
+      console.error('Error sending email:', err);
       alert('Something went wrong. Please try again later.');
     } finally {
       setStatus(null);
@@ -80,6 +84,8 @@ export default function ContactUs() {
           <input
             type="text"
             placeholder="Enter your full name"
+            value={fullName}
+            onChange={(e) => setFullName(e.target.value)}
             className="w-full border p-2 rounded focus:outline-none focus:border-none"
             required
           />
@@ -89,6 +95,8 @@ export default function ContactUs() {
           <input
             type="email"
             placeholder="Enter your work email"
+            value={email}
+            onChange={(e) => setEmail(e.target.value)}
             className="w-full border-none p-2 rounded focus:outline-none focus:border-none"
             required
           />
@@ -98,8 +106,8 @@ export default function ContactUs() {
           <PhoneInput
             country={'us'}
             value={phone}
-            onChange={setPhone}
-            inputClass="!w-full !p-2 !border !rounded !pl-10 "
+            onChange={(value) => setPhone(value)}
+            inputClass="!w-full !p-2 !border !rounded !pl-10"
           />
         </div>
       </div>
@@ -117,6 +125,7 @@ export default function ContactUs() {
               <input
                 type="checkbox"
                 value={service}
+                checked={checkedServices.includes(service)}
                 onChange={() => handleCheckboxChange(service)}
                 className="accent-[#b1d450] w-4 h-4"
               />
@@ -130,6 +139,8 @@ export default function ContactUs() {
         <label className="block text-sm font-medium text-[#b1d450]">Message</label>
         <textarea
           placeholder="Enter your message here"
+          value={message}
+          onChange={(e) => setMessage(e.target.value)}
           className="w-full border-null p-2 rounded h-28 focus:outline-none focus:border-none"
         />
       </div>
