@@ -5,7 +5,7 @@ import SwiperComponent from "./custom-components/swiper";
 import SwiperComponents from "./custom-components/swiperComponents";
 import Advantage from "./custom-components/Advantage";
 import { Training } from "./custom-components/Training";
-import ContactForm from "./custom-components/ContactForm";
+
 import HeaderBelowText from "./custom-components/HeaderBelowText";
 import Approach from "./custom-components/approach";
 import HeaderSection from "./custom-components/HeaderSection";
