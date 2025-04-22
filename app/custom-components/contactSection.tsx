@@ -33,13 +33,15 @@ export default function ContactUs() {
   const handleSubmit = async (e: React.FormEvent) => {
     e.preventDefault();
     setStatus('Sending...');
-
-    if (!fullName.trim() || !email.trim() || !phone.trim()) {
+  
+    const trimmedPhone = phone.trim(); // ✅ Add this
+  
+    if (!fullName.trim() || !email.trim() || !trimmedPhone) {
       alert('Please fill in all required fields.');
       setStatus(null);
       return;
     }
-
+  
     try {
       const res = await fetch('/api/contact', {
         method: 'POST',
@@ -47,32 +49,38 @@ export default function ContactUs() {
         body: JSON.stringify({
           fullName,
           email,
-          phone,
+          phone: trimmedPhone,
           message,
           services: checkedServices,
         }),
       });
-
-      const result = await res.json();
-
-      if (res.ok) {
-        alert(result.message || 'Email sent successfully!');
+  
+      let result;
+      try {
+        result = await res.json();
+      } catch (err) {
+        alert('Something went wrong while parsing server response.');
+        setStatus(null);
+        return;
+      }
+  
+      if (!res.ok) {
+        alert(result?.message || 'Failed to send email.');
+      } else {
+        alert(result.message);
         setFullName('');
         setEmail('');
         setPhone('');
         setMessage('');
         setCheckedServices([]);
-      } else {
-        alert(result.message || 'Something went wrong. Try again.');
       }
-    } catch (err) {
-      console.error('Error sending email:', err);
-      alert('Something went wrong. Please try again later.');
-    } finally {
+      setStatus(null); // ✅ Reset status after response
+    } catch (error) {
+      alert('Error sending message. Please try again later.');
       setStatus(null);
     }
   };
-
+  
   return (
     <form
       onSubmit={handleSubmit}

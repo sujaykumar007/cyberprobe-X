@@ -1,3 +1,4 @@
+// /app/api/contact/route.ts
 import { NextResponse } from 'next/server';
 import emailjs from '@emailjs/nodejs';
 
@@ -12,11 +13,9 @@ export async function POST(req: Request) {
       );
     }
 
-    // Optional: Split name into first and last
     const [firstName, ...rest] = fullName.split(' ');
     const lastName = rest.join(' ') || '—';
 
-    // Check EmailJS environment variables
     if (
       !process.env.EMAILJS_SERVICE_ID ||
       !process.env.EMAILJS_TEMPLATE_ID ||
@@ -37,7 +36,7 @@ export async function POST(req: Request) {
         from_first_name: firstName,
         from_last_name: lastName,
         from_email: email,
-        phone: phone,
+        phone,
         message: message || '',
         selected_services: services?.join(', ') || 'No services selected',
       },
@@ -50,6 +49,9 @@ export async function POST(req: Request) {
     return NextResponse.json({ success: true, message: 'Email sent successfully!' });
   } catch (error) {
     console.error('Error sending email:', error);
-    return NextResponse.json({ success: false, message: 'Failed to send email.' }, { status: 500 });
+    return NextResponse.json(
+      { success: false, message: 'Failed to send email.' },
+      { status: 500 }
+    );
   }
 }
