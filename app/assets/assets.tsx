@@ -39,7 +39,9 @@ export const assets={
       card6,
      linkedin,
      instagram,
-     youtube
+     youtube,
+     
+
      
 }
 export const serviceData = [

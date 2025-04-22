@@ -4,7 +4,7 @@ import { Swiper, SwiperSlide } from "swiper/react";
 import "swiper/css";
 import "swiper/css/effect-cards";
 import { Autoplay, EffectCards } from "swiper/modules";
-
+import Image from "next/image";
 const SwiperComponent: React.FC = () => {
 
   const content = [
@@ -48,23 +48,33 @@ const SwiperComponent: React.FC = () => {
       </div>
       <div className="flex flex-col items-center justify-center mt-14 space-y-8 w-full px-4 lg:ml-4  xl:ml-28">
         <div className="w-full max-w-md sm:max-w-lg md:max-w-xl lg:max-w-md">
-          <Swiper
-            effect={"cards"}
+        <Swiper
+            effect="cards"
             grabCursor={true}
             loop={true}
-
-            autoplay={{ delay: 1000, disableOnInteraction: false }}
-            modules={[EffectCards,Autoplay]}
+            autoplay={{ delay: 2500, disableOnInteraction: false }}
+            modules={[EffectCards, Autoplay]}
             className="w-full max-w-xs sm:max-w-sm md:max-w-md lg:max-w-lg xl:max-w-xl h-[300px] mb-16"
-
           >
-           { content.map((item, index) => (
-            <SwiperSlide className="flex items-center justify-center bg-black border-2 text-white text-xl font-bold md:p-8 rounded-lg" key={index}>
-              <div className="flex flex-col items-center justify-center my-5 md:my-10">
-                <h2 className="text-2xl font-bold text-primary-yellow ">{item.name}</h2>
-                <p className="text-md text-white m-10 pb-10">{item.description}</p>
-              </div>          
-            </SwiperSlide>
+            {content.map((item, index) => (
+              <SwiperSlide
+                key={index}
+                className="flex items-center justify-center bg-black border-2 border-white text-white text-xl font-bold p-6 rounded-lg shadow-md hover:shadow-lg transition"
+              >
+                <div className="flex flex-col items-center justify-center text-center">
+                  <Image
+                    src={`/icons/${item.id}.png`}
+                    alt="icon"
+                    width={80}
+                    height={80}
+                    className="rounded-full border-2 border-white mb-4"
+                  />
+                  <h2 className="text-xl font-semibold text-primary-yellow">
+                    {item.name}
+                  </h2>
+                  <p className="text-sm mt-4">{item.description}</p>
+                </div>
+              </SwiperSlide>
             ))}
           </Swiper>
         </div>
