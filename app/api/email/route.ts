@@ -1,17 +1,32 @@
-import { NextResponse } from 'next/server'
-import emailjs from '@emailjs/nodejs'
+import { NextResponse } from 'next/server';
+import emailjs from '@emailjs/nodejs';
 
 export async function POST(req: Request) {
   try {
-    const { firstName, lastName, email, companyName,  phone, message } = await req.json()
+    const { fullName, email, phone, message, services } = await req.json();
 
-    if (!firstName || !lastName || !email || !companyName  || !phone ) {
-      return NextResponse.json({ success: false, message: 'All fields are required.' }, { status: 400 })
+    if (!fullName || !email || !phone) {
+      return NextResponse.json(
+        { success: false, message: 'Full name, email, and phone are required.' },
+        { status: 400 }
+      );
     }
 
+    // Optional: Split name into first and last
+    const [firstName, ...rest] = fullName.split(' ');
+    const lastName = rest.join(' ') || '—';
 
-    if (!process.env.EMAILJS_SERVICE_ID || !process.env.EMAILJS_TEMPLATE_ID || !process.env.EMAILJS_PUBLIC_KEY || !process.env.EMAILJS_PRIVATE_KEY) {
-      return NextResponse.json({ success: false, message: 'Email.js credentials are not set.' }, { status: 500 })
+    // Check EmailJS environment variables
+    if (
+      !process.env.EMAILJS_SERVICE_ID ||
+      !process.env.EMAILJS_TEMPLATE_ID ||
+      !process.env.EMAILJS_PUBLIC_KEY ||
+      !process.env.EMAILJS_PRIVATE_KEY
+    ) {
+      return NextResponse.json(
+        { success: false, message: 'EmailJS credentials are not set.' },
+        { status: 500 }
+      );
     }
 
     const response = await emailjs.send(
@@ -22,19 +37,19 @@ export async function POST(req: Request) {
         from_first_name: firstName,
         from_last_name: lastName,
         from_email: email,
-        company_name: companyName,
         phone: phone,
-        message: message
+        message: message || '',
+        selected_services: services?.join(', ') || 'No services selected',
       },
       {
         publicKey: process.env.EMAILJS_PUBLIC_KEY!,
         privateKey: process.env.EMAILJS_PRIVATE_KEY!,
       }
-    )
+    );
 
-    return NextResponse.json({ success: true, message: 'Email sent successfully!' })
+    return NextResponse.json({ success: true, message: 'Email sent successfully!' });
   } catch (error) {
-    console.error('Error sending email:', error)
-    return NextResponse.json({ success: false, message: 'Failed to send email.' }, { status: 500 })
+    console.error('Error sending email:', error);
+    return NextResponse.json({ success: false, message: 'Failed to send email.' }, { status: 500 });
   }
 }

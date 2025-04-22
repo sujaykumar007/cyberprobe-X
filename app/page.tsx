@@ -10,6 +10,7 @@ import HeaderBelowText from "./custom-components/HeaderBelowText";
 import Approach from "./custom-components/approach";
 import HeaderSection from "./custom-components/HeaderSection";
 import Forensics from "./custom-components/Forensics";
+import ContactUs from "./custom-components/contactSection";
 
 
 export default function Home(){  
@@ -65,7 +66,7 @@ export default function Home(){
           <h1 className="text-4xl md:text-6xl font-bold mb-4 text-primary-yellow">Get in Touch</h1>
           <p className="text-xl md:text-3xl font-semibold text-white">With Our Team</p>
         </div>
-        <ContactForm />
+        <ContactUs />
       </div>
     
     </div>
