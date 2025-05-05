@@ -7,7 +7,7 @@ export default function Forensics() {
          <span className="text-primary-yellow">Digital Forensics </span>
       </h1>
       <h2 className="text-white text-xl sm:text-2xl md:text-3xl font-semibold text-center">
-        Export analysis. Defensible results. Digital clarity when it matters most.
+        Expert analysis. Defensible results. Digital clarity when it matters most.
       </h2>
       <div>
         <Link
