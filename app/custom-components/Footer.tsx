@@ -1,11 +1,35 @@
 import { assets } from "../assets/assets";
 import Image from "next/image";
 import Link from "next/link";
+import { FaWhatsapp } from "react-icons/fa";
+
 export default function Footer() {
   return (
     <div className="bg-black">
       <footer className="px-4 py-10 sm:px-8  text-white pb-10 rounded-3xl w-[95%] mx-auto border-t border-gray-600">
-        <div className="container mx-auto px-4 sm:px-8 lg:px-16">
+    
+        <div className=" container mx-auto px-4 sm:px-8 lg:px-16">
+        <div className="w-full md:w-1/3  md:mb-0 flex items-center ">
+          {/* <img
+            src={phone}
+            alt="Phone"
+            className="border p-3 rounded-full mr-4"
+          /> */}
+          <div>
+            <h2 className="text-xl font-bold">Give Us A Call</h2>
+            <p className="md:text-lg text-md">+971 589788531</p>
+          </div>
+          <a
+            href="https://wa.me/971589788531"
+            target="_blank"
+            rel="noopener noreferrer"
+            className="ml-4 bg-green-500 hover:bg-green-600 p-2 md:px-4 md:py-3 rounded-full transition-all duration-300 hover:scale-110 flex items-center gap-2"
+          >
+            <FaWhatsapp size={20} className="text-white" />
+            <span className="text-white font-medium  text-[15px] ">Chat with us</span>
+          </a>
+        </div>
+        <br /><br />
           <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-4 gap-8">
           
             <div>
