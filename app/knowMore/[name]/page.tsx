@@ -101,7 +101,7 @@ const KnowMore: FC = () => {
   
     {pageData.extraSection && (
      <div className="max-w-5xl mx-auto text-white mb-24">
-     <Card className="bg-[#111111] border border-[#1f1f1f] shadow-lg p-14">
+     <Card className="bg-[#111111] border border-[#1f1f1f] shadow-lg p-2 md:p-14">
        <CardHeader>
          <CardTitle className="text-2xl md:text-4xl text-[#b1d450] font-semibold text-center ">
          {pageData.extraSection.heading}
