@@ -1,13 +1,16 @@
 "use client"
 
 import { MagicCard } from "@/components/magicui/magic-card"
-import { ShineBorder } from "@/components/magicui/shine-border"
+import { Button } from "@/components/ui/button"
 import { motion } from "framer-motion"
 import Image from "next/image"
+import { useRouter } from "next/navigation"
 
 export default function ServiceHero() {
+  const router = useRouter()
+
   const services = [
-    { id: 9, name: "Web Application Pentesting", description: "Identifying and fixing security vulnerabilities in web applications" },
+    { id: 9, name: "Web Application Pentesting", description: "Identifying and fixing security vulnerabilities in web applications",routeName:"web-application-pentesting" },
     { id: 10, name: "Cloud Penetration Testing", description: "Assessing cloud environments for misconfigurations and security risks." },
     { id: 11, name: "API Pentesting", description: "Securing APIs by identifying vulnerabilities that could lead to data breaches." },
     { id: 12, name: "Network Pentesting", description: "Evaluating network infrastructure to detect and mitigate security flaws" },
@@ -61,6 +64,9 @@ export default function ServiceHero() {
                 <h3 className="text-xl font-semibold text-primary-yellow">
                   {service.name}
                 </h3>
+              </div>
+              <div className="mt-4 ">
+              <Button onClick={() => router.push(`/knowMore/${service.routeName}`)} >Know More</Button>
               </div>
             </MagicCard>
           </motion.div>
