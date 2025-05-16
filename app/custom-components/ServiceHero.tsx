@@ -11,11 +11,11 @@ export default function ServiceHero() {
 
   const services = [
     { id: 9, name: "Web Application Pentesting", description: "Identifying and fixing security vulnerabilities in web applications",routeName:"web-application-pentesting" },
-    { id: 10, name: "Cloud Penetration Testing", description: "Assessing cloud environments for misconfigurations and security risks." },
-    { id: 11, name: "API Pentesting", description: "Securing APIs by identifying vulnerabilities that could lead to data breaches." },
-    { id: 12, name: "Network Pentesting", description: "Evaluating network infrastructure to detect and mitigate security flaws" },
-    { id: 13, name: "Mobile Application Pentesting", description: "Testing mobile applications for vulnerabilities in storage, communication, and authentication" },
-    { id: 14, name: "IoT Pentesting", description: "Uncovering security weaknesses in IoT devices and their ecosystem" },
+    { id: 10, name: "Cloud Penetration Testing", description: "Assessing cloud environments for misconfigurations and security risks.",routeName:"web-application-pentesting" },
+    { id: 11, name: "API Pentesting", description: "Securing APIs by identifying vulnerabilities that could lead to data breaches.",routeName:"web-application-pentesting" },
+    { id: 12, name: "Network Pentesting", description: "Evaluating network infrastructure to detect and mitigate security flaws",routeName:"web-application-pentesting" },
+    { id: 13, name: "Mobile Application Pentesting", description: "Testing mobile applications for vulnerabilities in storage, communication, and authentication",routeName:"web-application-pentesting" },
+    { id: 14, name: "IoT Pentesting", description: "Uncovering security weaknesses in IoT devices and their ecosystem",routeName:"web-application-pentesting" },
   ]
 
   return (
