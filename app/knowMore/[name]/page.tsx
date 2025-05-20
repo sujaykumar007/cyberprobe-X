@@ -52,8 +52,8 @@ const data: Record<string, PageData> = {
     image: "/cloud-hero-3.png",
     heading2: "Our Methodology",
     heading3: "Why Is Cloud Application Penetration Testing Important?",
-    image2: "/web-hero-3.png",
-    image3: "/web-hero-2.png",
+    image2: "/Untitled design (25).png",
+    image3: "/Untitled design (26).png",
     extraSection: {
       heading: "When To Conduct Cloud Application Penetration Testing",
       points: [
@@ -73,8 +73,8 @@ const data: Record<string, PageData> = {
     image: "/api-hero-1.png",
     heading2: "Our Methodology",
     heading3: "Why Is API Penetration Testing Important?",
-    image2: "/web-hero-3.png",
-    image3: "/web-hero-2.png",
+    image2: "/Untitled design (27).png",
+    image3: "/Untitled design (28).png",
     extraSection: {
       heading: "When To Conduct API Penetration Testing",
       points: [
@@ -94,8 +94,8 @@ const data: Record<string, PageData> = {
     image: "/web-hero-1.png",
     heading2: "Our Methodology",
     heading3: "Why Is Network  Penetration Testing Important?",
-    image2: "/web-hero-3.png",
-    image3: "/web-hero-2.png",
+    image2: "/Untitled design (29).png",
+    image3: "/Untitled design (30).png",
     extraSection: {
       heading: "When To Conduct Network Penetration Testing",
       points: [
@@ -115,8 +115,8 @@ const data: Record<string, PageData> = {
     image: "/web-hero-1.png",
     heading2: "Our Methodology",
     heading3: "Why Is Mobile Application Penetration Testing Important?",
-    image2: "/web-hero-3.png",
-    image3: "/web-hero-2.png",
+    image2: "/Untitled design (31).png",
+    image3: "/Untitled design (32).png",
     extraSection: {
       heading: "When To Conduct Mobile Application Penetration Testing",
       points: [
@@ -136,8 +136,8 @@ const data: Record<string, PageData> = {
     image: "/web-hero-1.png",
     heading2: "Our Methodology",
     heading3: "Why Is IoT Penetration Testing Important?",
-    image2: "/web-hero-3.png",
-    image3: "/web-hero-2.png",
+    image2: "/Untitled design (23).png",
+    image3: "/Untitled design (24).png",
     extraSection: {
       heading: "When To Conduct IoT Penetration Testing",
       points: [
