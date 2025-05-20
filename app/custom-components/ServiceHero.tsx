@@ -1,22 +1,58 @@
-"use client"
+"use client";
 
-import { MagicCard } from "@/components/magicui/magic-card"
-import { Button } from "@/components/ui/button"
-import { motion } from "framer-motion"
-import Image from "next/image"
-import { useRouter } from "next/navigation"
+import { MagicCard } from "@/components/magicui/magic-card";
+import { Button } from "@/components/ui/button";
+import { motion } from "framer-motion";
+import Image from "next/image";
+import { useRouter } from "next/navigation";
 
 export default function ServiceHero() {
-  const router = useRouter()
+  const router = useRouter();
 
   const services = [
-    { id: 9, name: "Web Application Pentesting", description: "Identifying and fixing security vulnerabilities in web applications",routeName:"web-application-pentesting" },
-    { id: 10, name: "Cloud Penetration Testing", description: "Assessing cloud environments for misconfigurations and security risks.",routeName:"web-application-pentesting" },
-    { id: 11, name: "API Pentesting", description: "Securing APIs by identifying vulnerabilities that could lead to data breaches.",routeName:"web-application-pentesting" },
-    { id: 12, name: "Network Pentesting", description: "Evaluating network infrastructure to detect and mitigate security flaws",routeName:"web-application-pentesting" },
-    { id: 13, name: "Mobile Application Pentesting", description: "Testing mobile applications for vulnerabilities in storage, communication, and authentication",routeName:"web-application-pentesting" },
-    { id: 14, name: "IoT Pentesting", description: "Uncovering security weaknesses in IoT devices and their ecosystem",routeName:"web-application-pentesting" },
-  ]
+    {
+      id: 9,
+      name: "Web Application Pentesting",
+      description:
+        "Identifying and fixing security vulnerabilities in web applications",
+      routeName: "web-application-pentesting",
+    },
+    {
+      id: 10,
+      name: "Cloud Penetration Testing",
+      description:
+        "Assessing cloud environments for misconfigurations and security risks.",
+      routeName: "cloud-application-pentesting",
+    },
+    {
+      id: 11,
+      name: "API Pentesting",
+      description:
+        "Securing APIs by identifying vulnerabilities that could lead to data breaches.",
+      routeName: "api-penetration-pentesting",
+    },
+    {
+      id: 12,
+      name: "Network Pentesting",
+      description:
+        "Evaluating network infrastructure to detect and mitigate security flaws",
+      routeName: "network-penetration-pentesting",
+    },
+    {
+      id: 13,
+      name: "Mobile Application Pentesting",
+      description:
+        "Testing mobile applications for vulnerabilities in storage, communication, and authentication",
+      routeName: "mobile-application-pentesting",
+    },
+    {
+      id: 14,
+      name: "IoT Pentesting",
+      description:
+        "Uncovering security weaknesses in IoT devices and their ecosystem",
+      routeName: "iot-penetration-pentesting",
+    },
+  ];
 
   return (
     <div className="w-screen h-[70%] flex flex-col items-center justify-center bg-black">
@@ -37,7 +73,7 @@ export default function ServiceHero() {
         animate="visible"
         variants={{
           hidden: { opacity: 0 },
-          visible: { opacity: 1, transition: { staggerChildren: 0.2 } }
+          visible: { opacity: 1, transition: { staggerChildren: 0.2 } },
         }}
       >
         {services.map((service, index) => (
@@ -45,7 +81,12 @@ export default function ServiceHero() {
             key={index}
             variants={{
               hidden: { opacity: 0, scale: 0.8, y: 30 },
-              visible: { opacity: 1, scale: 1, y: 0, transition: { duration: 0.6, ease: "easeOut" } }
+              visible: {
+                opacity: 1,
+                scale: 1,
+                y: 0,
+                transition: { duration: 0.6, ease: "easeOut" },
+              },
             }}
           >
             <MagicCard
@@ -66,12 +107,16 @@ export default function ServiceHero() {
                 </h3>
               </div>
               <div className="mt-4 ">
-              <Button onClick={() => router.push(`/knowMore/${service.routeName}`)} >Know More</Button>
+                <Button
+                  onClick={() => router.push(`/knowMore/${service.routeName}`)}
+                >
+                  Know More
+                </Button>
               </div>
             </MagicCard>
           </motion.div>
         ))}
       </motion.div>
     </div>
-  )
+  );
 }
