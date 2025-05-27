@@ -25,9 +25,9 @@ interface PageData {
 const data: Record<string, PageData> = {
   "web-application-pentesting": {
     title: "Web Application Pentesting",
-    heading: "What is a Web Application Penetration Test?",
+    heading: "What is a Web Application Penetration Testing?",
     content: `Web Application Penetration Testing is a proactive security assessment designed to identify and exploit vulnerabilities within web applications, APIs, and associated backend systems. By simulating real-world attack scenarios, we uncover security flaws that could lead to data breaches, unauthorised access, and business disruptions.`,
-    subContent: `This testing helps assess authentication mechanisms, session management, input validation, and overall security controls, ensuring your web applications can withstand cyber threats.`,
+    subContent: ``,
     image: "/web-hero-1.png",
     heading2: "Our Methodology",
     heading3: "Why Is Web Application Penetration Testing Important?",
@@ -187,7 +187,7 @@ const KnowMore: FC = () => {
           <Image
             src={pageData.image}
             alt={pageData.title}
-            width={ 900}
+            width={900}
             height={700}
           />
         </div>

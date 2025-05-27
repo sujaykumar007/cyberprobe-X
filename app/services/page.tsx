@@ -8,12 +8,12 @@ export default function Services() {
     <div className="w-full bg-black overflow-hidden flex flex-col">
       
       {/* Title Section */}
-      <div className="w-full min-h-[70vh] flex justify-center items-center px-4 sm:px-6 md:px-10 lg:px-16 xl:px-24 mt-40">
+      {/* <div className="w-full min-h-[70vh] flex justify-center items-center px-4 sm:px-6 md:px-10 lg:px-16 xl:px-24 mt-40">
         <ServiceHero />
-      </div>  
+      </div>   */}
 
       {/* Services Heading */}
-      <div className="flex items-center justify-center text-center px-4 sm:px-6 md:px-10 lg:px-16 xl:px-24">
+      <div className="flex items-center justify-center text-center px-4 sm:px-6 md:px-10 lg:px-16 xl:px-24 mt-4">
         <h1 className="text-4xl sm:text-3xl md:text-4xl lg:text-5xl xl:text-6xl font-bold py-6 sm:py-10 text-white">
           Cyber Resilience Services
         </h1>
