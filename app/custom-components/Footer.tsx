@@ -107,10 +107,10 @@ export default function Footer() {
             <div className="mr-4">
               <iframe
                  src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3612.5050501399555!2d55.37514627537925!3d25.11861057776157!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x3e5f6f9f1fbfb607%3A0x4db0a2f5f59532d9!2sIFZA%20Business%20Park!5e0!3m2!1sen!2sin!4v1748364533983!5m2!1sen!2sin"
-                className="w-[500px] "
+                className="w-[350px] md:w-[500px] "
                 height="300"
                 style={{ border: 0, borderRadius: "10px" }}
-                // allowFullScreen=""
+                allowFullScreen={true}
                 loading="lazy"
                 referrerPolicy="no-referrer-when-downgrade"
               ></iframe>
