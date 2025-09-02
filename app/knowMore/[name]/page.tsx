@@ -5,6 +5,7 @@ import { useParams, useRouter } from "next/navigation";
 import { FC } from "react";
 import { Card, CardContent, CardHeader, CardTitle } from "@/components/ui/card";
 import { CheckCircle } from "lucide-react";
+import ContactUs from "@/app/custom-components/contactSection";
 
 interface PageData {
   title: string;
@@ -91,7 +92,7 @@ const data: Record<string, PageData> = {
     heading: "What Is Network Penetration Testing?",
     content: `Network penetration testing is a comprehensive security assessment that evaluates your organization's network infrastructure for vulnerabilities and exploitable weaknesses. Our ethical hackers simulate real-world attacks against your network devices, servers, workstations, and security controls to identify security gaps before malicious actors can exploit them.`,
     subContent: ``,
-    image: "/web-hero-1.png",
+    image: "/network.png",
     heading2: "Our Methodology",
     heading3: "Why Is Network  Penetration Testing Important?",
     image2: "/Untitled design (29).png",
@@ -112,7 +113,7 @@ const data: Record<string, PageData> = {
     heading: "What is a Mobile Application Penetration Test?",
     content: `Mobile application penetration testing is a comprehensive security assessment that identifies vulnerabilities in your iOS and Android applications. Our expert testers evaluate your mobile apps for security weaknesses that could compromise user data, backend systems, or app functionality. This testing covers client-side security, data storage, network communications, authentication mechanisms, and server-side API interactions.`,
     subContent: ``,
-    image: "/web-hero-1.png",
+    image: "/mobile.png",
     heading2: "Our Methodology",
     heading3: "Why Is Mobile Application Penetration Testing Important?",
     image2: "/Untitled design (31).png",
@@ -133,7 +134,7 @@ const data: Record<string, PageData> = {
     heading: "What Is IoT Penetration Testing?",
     content: `IoT penetration testing is a specialized security assessment that evaluates the security of Internet of Things devices, their supporting infrastructure, and connected ecosystems. Our comprehensive testing identifies vulnerabilities across hardware, firmware, wireless`,
     subContent: ``,
-    image: "/web-hero-1.png",
+    image: "/iot.png",
     heading2: "Our Methodology",
     heading3: "Why Is IoT Penetration Testing Important?",
     image2: "/Untitled design (23).png",
@@ -238,6 +239,12 @@ const KnowMore: FC = () => {
           </Card>
         </div>
       )}
+      <div>
+        <h1 className="text-[#b1d450] text-4xl font-bold mb-6 text-center">
+          Contact Us
+        </h1>
+      <ContactUs />
+      </div>
     </div>
   );
 };

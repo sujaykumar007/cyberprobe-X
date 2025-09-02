@@ -8,9 +8,9 @@ export default function Services() {
     <div className="w-full bg-black overflow-hidden flex flex-col">
       
       {/* Title Section */}
-      {/* <div className="w-full min-h-[70vh] flex justify-center items-center px-4 sm:px-6 md:px-10 lg:px-16 xl:px-24 mt-40">
+      <div className="w-full min-h-[70vh] flex justify-center items-center px-4 sm:px-6 md:px-10 lg:px-16 xl:px-24 mt-40">
         <ServiceHero />
-      </div>   */}
+      </div>  
 
       {/* Services Heading */}
       <div className="flex items-center justify-center text-center px-4 sm:px-6 md:px-10 lg:px-16 xl:px-24 mt-4">
